@@ -69,29 +69,41 @@ export default function RefundPolicy() {
 
              {/* 2 & 3. Cancellations */}
             <div className="grid md:grid-cols-2 gap-6">
-                 {/* Before Start */}
+                 {/* User cancels */}
                  <section className="border rounded-xl p-6 transition-colors duration-300" style={{backgroundColor: 'var(--color-cream)', borderColor: 'var(--color-olive-dark)', border: '2px solid'}}>
-                    <h2 className="text-xl font-black text-black mb-3">2. BEFORE START</h2>
-                    <div className="inline-block px-3 py-1 bg-black text-white text-xs font-bold rounded-full mb-3">✅ Eligible for Full Refund</div>
+                    <h2 className="text-xl font-black text-black mb-3">2. IF YOU CANCEL</h2>
+                    <div className="inline-block px-3 py-1 bg-black text-white text-xs font-bold rounded-full mb-3">✅ 85% back, 15 min or more before the start</div>
                     <ul className="list-disc pl-5 space-y-1 text-sm mb-4" style={{color: 'var(--color-olive-dark)'}}>
-                        <li>User cancels before start time</li>
-                        <li>Companion cancels before start time</li>
-                        <li>Platform/Verification issues</li>
+                        <li>Cancel 15 minutes or more before the start: 85% of the amount paid is refunded</li>
+                        <li>The remaining 15% is a cancellation fee retained by prsnn. for payment, matching and the companion time held for you</li>
+                        <li>Less than 15 minutes before the start, or once the session has started: no refund</li>
                     </ul>
-                    <p className="text-xs font-bold" style={{color: 'var(--color-olive)'}}>Processed to original payment method.</p>
+                    <p className="text-xs font-bold" style={{color: 'var(--color-olive)'}}>Refunds go to the original payment method.</p>
                 </section>
 
-                {/* After Start */}
+                {/* Companion cancels / nobody accepts */}
                 <section className="rounded-xl p-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" style={{backgroundColor: 'var(--color-yellow-light)', border: '2px solid var(--color-olive-dark)'}}>
-                    <h2 className="text-xl font-black text-black mb-3">3. AFTER START</h2>
-                    <div className="inline-block px-3 py-1 text-black border border-black text-xs font-bold rounded-full mb-3" style={{backgroundColor: 'var(--color-cream)'}}>❌ No Automatic Refund</div>
+                    <h2 className="text-xl font-black text-black mb-3">3. IF WE CAN&rsquo;T GIVE YOU A COMPANION</h2>
+                    <div className="inline-block px-3 py-1 text-black border border-black text-xs font-bold rounded-full mb-3" style={{backgroundColor: 'var(--color-cream)'}}>✅ 100% refund</div>
                     <ul className="list-disc pl-5 space-y-1 text-sm mb-4" style={{color: 'var(--color-olive-dark)'}}>
-                        <li>Time has been reserved</li>
-                        <li>Companion has committed availability</li>
+                        <li>Your companion cancels after confirming</li>
+                        <li>No companion accepts by 1 hour before the start (your booking is offered to up to 3 companions in turn)</li>
+                        <li>Platform or verification issues</li>
                     </ul>
-                    <p className="text-xs font-bold" style={{color: 'var(--color-primary-black)'}}>Completed sessions are not eligible.</p>
+                    <p className="text-xs font-bold" style={{color: 'var(--color-primary-black)'}}>Payment does not guarantee a booking until a companion accepts.</p>
                 </section>
             </div>
+
+            {/* Pricing note */}
+            <section className="border rounded-xl p-6 transition-colors duration-300" style={{backgroundColor: 'var(--color-cream)', borderColor: 'var(--color-olive-dark)', border: '2px solid'}}>
+                <h2 className="text-xl font-black text-black mb-3">PRICES AND BACKUP COMPANIONS</h2>
+                <ul className="list-disc pl-5 space-y-1 text-sm" style={{color: 'var(--color-olive-dark)'}}>
+                    <li>Every companion uses the same package prices, starting at ₹399 for one hour. Longer packages cost less per hour.</li>
+                    <li>Sessions start no earlier than 7:00 AM and finish by 10:00 PM.</li>
+                    <li>You always pay exactly the price shown at checkout, whichever companion accepts. You are never charged more.</li>
+                    <li>If a backup companion takes your booking, any difference that may arise in the arrangement is retained by prsnn. to support the matching, safety and support work behind the reassignment.</li>
+                </ul>
+            </section>
 
             {/* 4. Early Termination */}
             {/* 4. Early Termination */}
@@ -185,8 +197,8 @@ export default function RefundPolicy() {
                      <div>
                         <h3 className="font-black text-lg mb-2">10. CONTACT</h3>
                         <p className="text-sm" style={{color: 'var(--color-olive)'}}>For refund-related questions:</p>
-                         <a href="mailto:admin@prsnn.com" className="text-sm font-bold text-black border-b border-black hover:bg-black hover:text-white transition-colors">
-                            admin@prsnn.com
+                         <a href="mailto:mukarramjahmm@gmail.com" className="text-sm font-bold text-black border-b border-black hover:bg-black hover:text-white transition-colors">
+                            mukarramjahmm@gmail.com
                         </a>
                      </div>
                 </div>

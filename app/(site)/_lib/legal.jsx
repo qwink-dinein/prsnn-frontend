@@ -37,12 +37,28 @@ export function Terms() {
         <li>Don’t ask for or make payments outside prsnn for a booking, and don’t use prsnn to arrange off-platform meetings.</li>
         <li>Keep your login and PIN private. You are responsible for activity on your account.</li>
       </ul>
+      <h3>5A. Content you must not share</h3>
+      <p>As required by India’s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, you must not post, send or share anything on prsnn that:</p>
+      <ul>
+        <li>belongs to someone else and you have no right to share;</li>
+        <li>is obscene, pornographic, paedophilic, invades another person’s privacy (including bodily privacy), insults or harasses on the basis of gender, or is racially or ethnically objectionable;</li>
+        <li>is harmful to children;</li>
+        <li>infringes a patent, trademark, copyright or other proprietary right;</li>
+        <li>deceives or misleads about where it came from, or knowingly shares false or misleading information;</li>
+        <li>impersonates another person;</li>
+        <li>threatens the unity, integrity, defence, security or sovereignty of India, friendly relations with other countries, or public order, incites an offence, or insults another nation;</li>
+        <li>contains software viruses or code meant to disrupt any computer resource;</li>
+        <li>promotes gambling, money laundering, or anything else that breaks any law in force.</li>
+      </ul>
+      <p>We may remove such content and suspend or close the account. We act on valid orders from courts and government agencies, and keep records as the law requires. To report content, see our <Link href="/grievance">Grievance Redressal</Link> page.</p>
       <h3>6. Content you share</h3>
       <p>You keep ownership of the photos and text you add. You allow prsnn to store and show them inside the service as your privacy settings allow (for example, a locked photo is shown only to people with a confirmed booking with you). Our team reviews photos and profiles and may reject or remove content.</p>
       <h3>7. Safety tools</h3>
       <p>The panic button alerts the prsnn team; it does not contact the police or an ambulance. In an emergency, call 112 first. We do our best to respond quickly but cannot guarantee a response time or outcome.</p>
       <h3>8. Suspension and termination</h3>
       <p>We may suspend or remove an account, cancel bookings and withhold payouts linked to a breach of these terms, fraud, or a safety risk. You can delete your account at any time from your profile; open paid bookings must be cancelled first.</p>
+      <h3>8A. Companions</h3>
+      <p>If you offer your time as a companion, the <Link href="/companion-terms">Companion Terms</Link> also apply to you.</p>
       <h3>9. Liability</h3>
       <p>prsnn provides the platform “as is”. To the extent the law allows, prsnn is not liable for the acts or omissions of members or companions, or for indirect or consequential loss. Our total liability for any booking is limited to the amount paid for that booking. Nothing in these terms limits rights you have under Indian consumer law that cannot be excluded.</p>
       <h3>10. Changes and governing law</h3>
@@ -84,14 +100,22 @@ export function Privacy() {
         <li><b>Service providers</b> who process data for us: cloud hosting and database (Supabase), messaging (WhatsApp Business via Waplify, SMS backup via MSG91), push notifications (Expo), and payments (Razorpay). They may only use it to provide their service to us.</li>
         <li><b>Authorities,</b> when the law requires it or to protect someone’s safety.</li>
       </ul>
+      <h3>Where it’s stored</h3>
+      <p>Our database and files are hosted in Mumbai, India. Some providers (for example error monitoring and push notifications) may process limited data outside India, only as the law allows.</p>
+      <h3>Consent</h3>
+      <p>We process your data on the basis of the consent you give when you sign up or leave your number, and for the legitimate uses the Digital Personal Data Protection Act, 2023 allows (such as meeting legal duties and responding to emergencies). You can withdraw consent at any time by deleting your account or writing to our Grievance Officer; this doesn’t affect processing that happened before. Some features (such as booking) can’t work without the data they need.</p>
+      <h3>Website</h3>
+      <p>Our website doesn’t use advertising or tracking cookies. See the <Link href="/cookies">Cookie Notice</Link>.</p>
       <h3>How long we keep it</h3>
       <p>We keep your data while your account is open. When you delete your account, your profile, photos and sign-in are deleted. We keep a minimal record (your number, role and the deletion date) and booking, payment and safety records for as long as the law or a dispute requires. ID documents are kept only as long as needed to verify you and handle safety issues.</p>
       <h3>Your rights</h3>
-      <p>You can ask to access, correct or erase your personal data, withdraw consent, and nominate someone to exercise your rights. Many settings (photo privacy, who you see, profile details) can be changed in the app; for anything else, contact our Grievance Officer below. You also have the right to complain to the Data Protection Board of India.</p>
+      <p>You can ask to access, correct or erase your personal data, withdraw consent, and nominate someone to exercise your rights if you die or become unable to. Many settings (photo privacy, who you see, profile details) can be changed in the app, and you can <Link href="/delete-account">delete your account</Link> yourself. For anything else, contact our Grievance Officer (see <Link href="/grievance">Grievance Redressal</Link>). We reply within the time the law sets. If you’re not satisfied, you can complain to the Data Protection Board of India.</p>
       <h3>Security</h3>
       <p>Data is encrypted in transit, ID documents are kept in private storage that only you and authorised staff can open, and access is limited by role. No system is perfectly secure; tell us at once if you think your account has been compromised.</p>
       <h3>Children</h3>
-      <p>prsnn is for people aged 18 and over. We don’t knowingly collect data from children.</p>
+      <p>prsnn is for people aged 18 and over. We don’t knowingly collect data from children, and we delete any account we find belongs to a child. See our <Link href="/child-safety">Child Safety Standards</Link>.</p>
+      <h3>Changes</h3>
+      <p>If we change this policy in a way that matters, we’ll tell you in the app before it takes effect.</p>
     </section>
   );
 }
@@ -135,12 +159,155 @@ export function Guidelines() {
   );
 }
 
+export function Grievance() {
+  return (
+    <section id="grievance">
+      <h2>Grievance Redressal</h2>
+      <p className="s-meta">Under the IT (Intermediary Guidelines) Rules, 2021, the Consumer Protection (E-Commerce) Rules, 2020 and the Digital Personal Data Protection Act, 2023</p>
+      <p>If you have a complaint about prsnn, a booking, a payment, another user, content on prsnn, or how we handle your personal data, our Grievance Officer will look into it.</p>
+      <h3>Grievance Officer</h3>
+      <ul>
+        <li><b>Name:</b> {FOUNDER}</li>
+        <li><b>Email:</b> <Email /></li>
+        <li><b>Address:</b> prsnn, Hyderabad, Telangana, India</li>
+      </ul>
+      <h3>How to raise a complaint</h3>
+      <ol>
+        <li>For a booking, use <b>Report a problem</b> on the booking in the app. It reaches our team with the booking details attached.</li>
+        <li>For anything else, email the Grievance Officer with your registered mobile number, the booking number if there is one, what happened, and what you’d like us to do.</li>
+      </ol>
+      <h3>What happens next</h3>
+      <ul>
+        <li>We acknowledge your complaint within 24 hours and give you a reference.</li>
+        <li>We resolve it within 15 days, and tell you what we decided and why.</li>
+        <li>Content that exposes someone’s private parts, shows them in a sexual act, or impersonates them (including morphed images): we act within 24 hours of the complaint.</li>
+        <li>Requests to remove unlawful content from a court or authorised government agency: we act within the time the order sets.</li>
+      </ul>
+      <h3>If you’re not satisfied</h3>
+      <ul>
+        <li>Consumer complaints: National Consumer Helpline, 1915 or consumerhelpline.gov.in.</li>
+        <li>Personal data complaints: the Data Protection Board of India, once you have raised the issue with us.</li>
+        <li>Content decisions: the Grievance Appellate Committee set up under the IT Rules.</li>
+      </ul>
+      <p>In an emergency, call 112 first.</p>
+    </section>
+  );
+}
+
+export function CompanionTerms() {
+  return (
+    <section id="companion-terms">
+      <h2>Companion Terms</h2>
+      <p className="s-meta">Effective {UPDATED} · In addition to the Terms of Service</p>
+      <p>These terms apply when you offer your time as a companion on prsnn.</p>
+      <h3>1. Your relationship with prsnn</h3>
+      <p>You are an independent individual offering your own time. You are not an employee, partner or agent of prsnn. You choose your days, hours and booking lengths, and whether to accept each booking.</p>
+      <h3>2. Joining</h3>
+      <ul>
+        <li>You must be at least 18, live in a city where prsnn operates, and be legally allowed to earn income in India.</li>
+        <li>Our team reviews every profile and photo before it’s shown to members. Photos must be recent, of you alone, and show your face.</li>
+        <li>Before your first booking you must upload a valid government ID and a selfie. Nobody meets anyone before their ID is checked.</li>
+      </ul>
+      <h3>3. Bookings</h3>
+      <ul>
+        <li>A booking is offered to you with a time limit to accept. Accept only what you can keep.</li>
+        <li>Meet only at the place in the booking: a public place, or the loved one’s home for a home visit the family requested. Never go to a hotel room, a member’s home or a private vehicle.</li>
+        <li>Company on prsnn is platonic. Romantic, sexual or escort activity of any kind leads to immediate, permanent removal and may be reported to the police.</li>
+        <li>Keep chat about the plan. Don’t ask for or share phone numbers, addresses or social media, and don’t take payment outside prsnn.</li>
+        <li>For home visits to a loved one: offer company and help with everyday things only. Don’t give medical, nursing or personal care, handle money or valuables, or enter rooms you aren’t invited into.</li>
+      </ul>
+      <h3>4. Pay</h3>
+      <ul>
+        <li>You receive 80% of the booking price for each completed booking. prsnn keeps 20% as its platform fee. The split is shown before you accept.</li>
+        <li>Payouts go to the bank account or UPI ID you give us, after the booking is completed and any dispute is settled.</li>
+        <li>If you cancel a confirmed booking, the member is refunded in full and you earn nothing for it. Repeated cancellations or no-shows can lead to removal.</li>
+        <li>You are responsible for your own income tax and, if it applies to you, GST. Where the law requires, prsnn deducts tax at source (for example under section 194-O of the Income-tax Act) and gives you a certificate.</li>
+      </ul>
+      <h3>5. Safety and reviews</h3>
+      <p>The panic button is on from the start of every session until an hour after it ends. Our team may review a booking’s chat if a problem is reported. We may pause your profile while we look into a report.</p>
+      <h3>6. Members’ privacy</h3>
+      <p>Use members’ details, and any loved one’s details, only for the booking. Don’t save, share or contact them outside prsnn.</p>
+      <h3>7. Leaving</h3>
+      <p>You can stop accepting bookings or delete your account at any time, once your confirmed bookings are finished or cancelled. We may remove you for breaking these terms, the Terms of Service or the Community Guidelines, and may withhold payouts linked to the breach.</p>
+    </section>
+  );
+}
+
+export function Cookies() {
+  return (
+    <section id="cookies">
+      <h2>Cookie Notice</h2>
+      <p className="s-meta">Effective {UPDATED}</p>
+      <p>The prsnn website doesn’t use advertising cookies, tracking pixels or third-party analytics, and we don’t sell or share your browsing with advertisers.</p>
+      <h3>What the website does store</h3>
+      <ul>
+        <li><b>Strictly necessary:</b> anything needed to show the page you asked for and to keep the interest form from being abused.</li>
+        <li><b>Error monitoring (Sentry):</b> when a page breaks, a short technical report is sent so we can fix it. It doesn’t include your IP address or anything you typed; any replay of the error masks all text and inputs.</li>
+      </ul>
+      <p>You can block or delete cookies in your browser settings; the website will still work.</p>
+    </section>
+  );
+}
+
+export function DeleteAccount() {
+  return (
+    <section id="delete-account">
+      <h2>Delete your prsnn account</h2>
+      <p className="s-meta">For members and companions</p>
+      <h3>In the app</h3>
+      <ol>
+        <li>Open prsnn and go to <b>Profile</b>.</li>
+        <li>Scroll down and tap <b>Delete account</b>.</li>
+        <li>Confirm. If you have a paid booking that hasn’t happened yet, cancel it first.</li>
+      </ol>
+      <h3>Without the app</h3>
+      <p>Email our Grievance Officer at <Email /> from any address, with your registered mobile number, and ask us to delete your account. We confirm by WhatsApp or SMS to that number before deleting.</p>
+      <h3>What’s deleted</h3>
+      <ul>
+        <li>Your profile, photos, preferences, saved companions and sign-in.</li>
+        <li>Your ID documents and selfie (companions), unless they are needed for an open safety case.</li>
+        <li>Your device’s push token. Your PIN only ever lived on your phone.</li>
+      </ul>
+      <h3>What we keep, and for how long</h3>
+      <ul>
+        <li>Booking, payment and refund records: for 8 years, as Indian tax and accounting law requires.</li>
+        <li>Safety records (panic alerts, reports, and the chat of a booking under dispute): until the matter is closed and for up to 3 years after, or longer if a law or an authority requires it.</li>
+        <li>A minimal record of the deleted account (number, role and deletion date): so a banned account can’t simply sign up again.</li>
+      </ul>
+    </section>
+  );
+}
+
+export function ChildSafety() {
+  return (
+    <section id="child-safety">
+      <h2>Child Safety Standards</h2>
+      <p className="s-meta">Effective {UPDATED}</p>
+      <p>prsnn is only for adults aged 18 and over. We have zero tolerance for child sexual abuse and exploitation (CSAE), including child sexual abuse material (CSAM), grooming, and any attempt to arrange contact with a minor.</p>
+      <h3>How we prevent it</h3>
+      <ul>
+        <li>Everyone must confirm they are 18 or older to sign up. Companions’ age is checked against a government ID before their first booking.</li>
+        <li>Our team reviews every profile photo before it’s shown. Meetings are in public places or, for loved-one visits, at a home the family names.</li>
+        <li>Phone numbers and contact details are hidden in chat, and staff can review a reported booking’s chat.</li>
+      </ul>
+      <h3>How to report</h3>
+      <p>Report a profile or booking from the app, or email our child safety contact, {FOUNDER}, at <Email />. If a child is in danger, call 112 or the Childline at 1098 straight away.</p>
+      <h3>What we do</h3>
+      <ul>
+        <li>Remove the content and the account at once, and keep the evidence securely.</li>
+        <li>Report CSAM and child exploitation to the National Cyber Crime Reporting Portal (cybercrime.gov.in) and the police, as Indian law (including the POCSO Act) requires, and cooperate with investigations.</li>
+        <li>Ban the people involved from prsnn permanently.</li>
+      </ul>
+    </section>
+  );
+}
+
 export function Contact() {
   return (
     <section id="contact">
       <h2>Contact &amp; grievances</h2>
       <p>Support: <Email /></p>
-      <p><b>Grievance Officer:</b> {FOUNDER}, <Email />. We acknowledge complaints within 24 hours and aim to resolve them within 15 days, as required by Indian law.</p>
+      <p><b>Grievance Officer:</b> {FOUNDER}, <Email />. We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
       <p>prsnn, Hyderabad, Telangana, India.</p>
     </section>
   );

@@ -31,6 +31,11 @@ export default function Footer() {
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/refunds">Cancellation &amp; Refunds</Link>
           <Link href="/guidelines">Community Guidelines</Link>
+          <Link href="/companion-terms">Companion Terms</Link>
+          <Link href="/grievance">Grievance Redressal</Link>
+          <Link href="/child-safety">Child Safety</Link>
+          <Link href="/delete-account">Delete your account</Link>
+          <Link href="/legal">All policies</Link>
           {SUPPORT_EMAIL ? <Link href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</Link> : null}
         </nav>
       </div>

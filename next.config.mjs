@@ -46,6 +46,12 @@ const nextConfig = {
       { source: '/code-of-conduct', destination: '/guidelines', permanent: true },
       { source: '/how-it-works', destination: '/#how', permanent: true },
       { source: '/about-us', destination: '/about', permanent: true },
+      // Old policy pages from the previous app: one current set of policies only.
+      { source: '/payment-terms', destination: '/refunds', permanent: true },
+      { source: '/dispute-policy', destination: '/grievance', permanent: true },
+      { source: '/fellow-training-manual', destination: '/companion-terms', permanent: true },
+      { source: '/user-instructions', destination: '/safety', permanent: true },
+      { source: '/sentry-example-page', destination: '/', permanent: false },
     ];
   },
   devIndicators: {

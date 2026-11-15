@@ -188,4 +188,10 @@ export const PAGES = [
   { path: '/privacy', title: 'Privacy Policy' },
   { path: '/refunds', title: 'Cancellation & Refunds' },
   { path: '/guidelines', title: 'Community Guidelines' },
+  { path: '/companion-terms', title: 'Companion Terms' },
+  { path: '/grievance', title: 'Grievance Redressal' },
+  { path: '/child-safety', title: 'Child Safety Standards' },
+  { path: '/cookies', title: 'Cookie Notice' },
+  { path: '/delete-account', title: 'Delete your account' },
+  { path: '/legal', title: 'All policies' },
 ];

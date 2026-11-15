@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { SITE_URL } from './(site)/_lib/content';
 
 // Everyone may read the public site, including AI assistants, so they describe prsnn accurately.

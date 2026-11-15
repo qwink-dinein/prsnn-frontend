@@ -6,7 +6,7 @@ import {
   LOWER,
   DIGIT,
   SPECIAL,
-} from "../../../app/(app)/utils/password.js";
+} from "../../../legacy/web-app/app/(app)/utils/password.js";
 
 // The exact rules the sign-up form enforces (login/page.jsx validatePassword)
 // and the strength meter's "Strong" bar (getPasswordStrength: >= 12 chars,

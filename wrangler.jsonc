@@ -1,0 +1,17 @@
+// Cloudflare Workers (static assets) deploy for the prsnn website. Same setup as Hyderabad Rishta.
+// Cloudflare build settings (Workers & Pages → Import a repository):
+//   Build command  `pnpm run build`   (Next.js static export into out/)
+//   Deploy command `npx wrangler deploy`
+//   Build variables: NEXT_PUBLIC_SITE_URL, NEXT_PUBLIC_SUPPORT_EMAIL, and later NEXT_PUBLIC_PLAY_STORE_URL /
+//   NEXT_PUBLIC_APP_STORE_URL (see DEPLOY.md).
+// public/_headers (security headers) and public/_redirects (old addresses) are applied by static assets.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "prsnn-website",
+  "compatibility_date": "2026-11-04",
+  "assets": {
+    "directory": "out",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

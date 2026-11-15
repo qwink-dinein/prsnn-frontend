@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { PAGES, SITE_URL } from './(site)/_lib/content';
 
 export default function sitemap() {

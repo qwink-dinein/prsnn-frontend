@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import NavBar from '../../../app/(app)/components/layout/NavBar.jsx';
-vi.mock('../../../app/(app)/context/AuthContext.jsx', () => ({
+import NavBar from '../../../legacy/web-app/app/(app)/components/layout/NavBar.jsx';
+vi.mock('../../../legacy/web-app/app/(app)/context/AuthContext.jsx', () => ({
   useAuth: vi.fn(),
 }));
 
-import { useAuth } from '../../../app/(app)/context/AuthContext.jsx';
+import { useAuth } from '../../../legacy/web-app/app/(app)/context/AuthContext.jsx';
 
 describe('NavBar Component', () => {
   it('renders correctly', () => {

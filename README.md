@@ -1,3 +1,5 @@
+> **Deploying:** see [DEPLOY.md](DEPLOY.md) (Cloudflare, static export). The earlier web app lives in `legacy/web-app/` and is not deployed.
+
 # prsnn website
 
 The public website for prsnn (approved "Wallet" design; see the design canvas). It sells the app,

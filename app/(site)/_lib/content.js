@@ -2,8 +2,8 @@
 // and llms.txt all read from here, so the facts stay identical everywhere (seo/README.md §1).
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
-/** Set NEXT_PUBLIC_SUPPORT_EMAIL where the site is deployed (kept out of the repo). */
-export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || '';
+/** Where people get help. The support email is shown only there, after a tap (see _lib/support.js). */
+export const SUPPORT_PATH = '/support';
 export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || '';
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
 export const FOUNDER = 'Mukarram Jah';
@@ -222,5 +222,6 @@ export const PAGES = [
   { path: '/child-safety', title: 'Child Safety Standards' },
   { path: '/cookies', title: 'Cookie Notice' },
   { path: '/delete-account', title: 'Delete your account' },
+  { path: '/support', title: 'Help & support' },
   { path: '/legal', title: 'All policies' },
 ];

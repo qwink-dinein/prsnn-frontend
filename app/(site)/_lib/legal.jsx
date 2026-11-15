@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { FOUNDER, HOUSE_RULES, NOT_FOR, SUPPORT_EMAIL } from './content';
+import { FOUNDER, HOUSE_RULES, NOT_FOR } from './content';
 
 export const UPDATED = '15 November 2026';
-const Email = () => (SUPPORT_EMAIL ? <Link href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</Link> : <span>the support email shown in the app</span>);
+/** The address itself is shown only on the Support page, after a tap. */
+const Email = () => <Link href="/support">the email on our Support page</Link>;
 
 export function Terms() {
   return (
@@ -269,7 +270,7 @@ export function DeleteAccount() {
         <li>Confirm. If you have a paid booking that hasn’t happened yet, cancel it first.</li>
       </ol>
       <h3>Without the app</h3>
-      <p>Email our Grievance Officer at <Email /> from any address, with your registered mobile number, and ask us to delete your account. We confirm by WhatsApp or SMS to that number before deleting.</p>
+      <p>Email our Grievance Officer (<Email />) from any address, with your registered mobile number, and ask us to delete your account. We confirm by WhatsApp or SMS to that number before deleting.</p>
       <h3>What’s deleted</h3>
       <ul>
         <li>Your profile, photos, preferences, saved companions and sign-in.</li>
@@ -299,7 +300,7 @@ export function ChildSafety() {
         <li>Phone numbers and contact details are hidden in chat, and staff can review a reported booking’s chat.</li>
       </ul>
       <h3>How to report</h3>
-      <p>Report a profile or booking from the app, or email our child safety contact, {FOUNDER}, at <Email />. If a child is in danger, call 112 or the Childline at 1098 straight away.</p>
+      <p>Report a profile or booking from the app, or email our child safety contact, {FOUNDER} (<Email />). If a child is in danger, call 112 or the Childline at 1098 straight away.</p>
       <h3>What we do</h3>
       <ul>
         <li>Remove the content and the account at once, and keep the evidence securely.</li>
@@ -314,8 +315,8 @@ export function Contact() {
   return (
     <section id="contact">
       <h2>Contact &amp; grievances</h2>
-      <p>Support: <Email /></p>
-      <p><b>Grievance Officer:</b> {FOUNDER}, <Email />. We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
+      <p>Support: <Link href="/support">Help &amp; support</Link></p>
+      <p><b>Grievance Officer:</b> {FOUNDER} (<Email />). We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
       <p>prsnn, Hyderabad, Telangana, India.</p>
     </section>
   );

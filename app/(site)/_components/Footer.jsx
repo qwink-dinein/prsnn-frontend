@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from './Brand';
-import { CATEGORIES, SUPPORT_EMAIL } from '../_lib/content';
+import { CATEGORIES } from '../_lib/content';
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
           <Link href="/child-safety">Child Safety</Link>
           <Link href="/delete-account">Delete your account</Link>
           <Link href="/legal">All policies</Link>
-          {SUPPORT_EMAIL ? <Link href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</Link> : null}
+          <Link href="/support">Help &amp; support</Link>
         </nav>
       </div>
       <div className="s-wrap s-footer-base">

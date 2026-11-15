@@ -1,4 +1,4 @@
-import { CATEGORIES, HOUSE_RULES, NOT_FOR, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, SUPPORT_EMAIL, hoursLabel, inr } from '../(site)/_lib/content';
+import { CATEGORIES, HOUSE_RULES, NOT_FOR, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, hoursLabel, inr } from '../(site)/_lib/content';
 
 export const dynamic = 'force-static';
 
@@ -18,7 +18,7 @@ export function GET() {
     `- Prices (fixed, same for every companion, no booking fee): ${HOURS.map((h) => `${hoursLabel(h)} ${inr(PRICES[h])}`).join(', ')}.`,
     '- Refunds: full refund if no companion accepts or if the companion cancels; 85% if the member cancels at least 15 minutes before the start.',
     '- Companions keep 80% of every booking (e.g. ₹1,039 for a 4-hour booking).',
-    ...(SUPPORT_EMAIL ? [`- Support: ${SUPPORT_EMAIL}`] : []),
+    `- Support: ${SITE_URL}/support`,
     '',
     '## Kinds of company',
     '',

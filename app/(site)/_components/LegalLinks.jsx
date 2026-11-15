@@ -11,6 +11,7 @@ export const LEGAL_PAGES = [
   ['/cookies', 'Cookie Notice'],
   ['/delete-account', 'Delete your account'],
   ['/safety', 'Safety'],
+  ['/support', 'Help & support'],
 ];
 
 export default function LegalLinks({ current }) {

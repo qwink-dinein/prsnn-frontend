@@ -20,7 +20,7 @@ What's in the repo: `wrangler.jsonc` (serves `out/`, 404 page, trailing slashes)
 | Name | Value | Notes |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://prsnn.com` | Your real domain, no trailing slash. Used in canonical links, sitemap, structured data |
-| `NEXT_PUBLIC_SUPPORT_EMAIL` | your support address | Shown as the support and Grievance Officer contact (kept out of the repo) |
+| `NEXT_PUBLIC_SUPPORT_EMAIL` | your support address | Shown only on /support, after a tap (never as text in the HTML); kept out of the repo |
 | `NEXT_PUBLIC_PLAY_STORE_URL` | later | Turns the Google Play badge from "Coming soon" into a link |
 | `NEXT_PUBLIC_APP_STORE_URL` | later | Same for the App Store badge |
 | `SENTRY_AUTH_TOKEN` | optional | Only to upload source maps to Sentry |

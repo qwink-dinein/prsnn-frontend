@@ -4,7 +4,7 @@ import './site.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 import JsonLd from './_components/JsonLd';
-import { APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SUMMARY, SUPPORT_EMAIL } from './_lib/content';
+import { APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SUMMARY } from './_lib/content';
 
 const urbanist = Urbanist({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-urbanist', display: 'swap' });
 const outfit = Outfit({ subsets: ['latin'], weight: ['700'], variable: '--font-outfit', display: 'swap' });
@@ -30,7 +30,7 @@ const graph = {
       description: SUMMARY,
       founder: { '@id': `${SITE_URL}/#founder` },
       areaServed: { '@type': 'City', name: 'Hyderabad', containedInPlace: { '@type': 'Country', name: 'India' } },
-      ...(SUPPORT_EMAIL ? { contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', email: SUPPORT_EMAIL }] } : {}),
+      contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', url: `${SITE_URL}/support` }],
       ...(sameAs.length ? { sameAs } : {}),
     },
     { '@type': 'Person', '@id': `${SITE_URL}/#founder`, name: FOUNDER, jobTitle: 'Founder', worksFor: { '@id': `${SITE_URL}/#organization` }, image: `${SITE_URL}/site/founder.jpg` },

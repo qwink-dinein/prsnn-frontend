@@ -82,7 +82,7 @@ export default function InterestForm({ initial = 'member', source = 'website' })
       <button type="submit" className="s-btn s-btn-dark" disabled={state.busy} aria-busy={state.busy}>
         {state.busy ? 'Saving…' : 'Count me in'}
       </button>
-      <p className="s-fine">Only about prsnn. Never shared. See our <Link href="/privacy">Privacy Policy</Link>.</p>
+      <p className="s-fine">By tapping Count me in, you confirm you’re 18 or older and agree that we may message you on WhatsApp about prsnn. We record this agreement with the date and time. Never shared. See our <Link href="/privacy">Privacy Policy</Link>.</p>
     </form>
   );
 }

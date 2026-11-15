@@ -10,6 +10,7 @@ import StoreButtons from './_components/StoreButtons';
 import JsonLd from './_components/JsonLd';
 import Faq from './_components/Faq';
 import FounderStory from './_components/FounderStory';
+import NotFor from './_components/NotFor';
 import { Check, Clock, Pin, Refund, Shield } from './_components/Icons';
 import { HOME_FAQ, PRICES, SITE_URL, companionShare, hoursLabel, inr } from './_lib/content';
 
@@ -89,7 +90,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="s-sec" style={{ paddingTop: 0 }} aria-label="Real people">
+      <section className="s-sec s-white" aria-labelledby="not-h">
+        <div className="s-wrap">
+          <NotFor />
+        </div>
+      </section>
+
+      <section className="s-sec" aria-label="Real people">
         <div className="s-wrap">
           <CommunityBanner />
         </div>

@@ -6,6 +6,7 @@ const I = ({ d, size = 18, width = 2, children }) => (
   </svg>
 );
 export const Check = (p) => <I d="M5 12.5 10 17l9-10" width={2.6} {...p} />;
+export const Cross = (p) => <I d="M6 6l12 12M18 6 6 18" width={2.4} {...p} />;
 export const Arrow = (p) => <I d="M5 12h14M13 6l6 6-6 6" width={2.2} {...p} />;
 export const Chevron = (p) => <I d="M9 6l6 6-6 6" width={2.2} {...p} />;
 export const Shield = (p) => (

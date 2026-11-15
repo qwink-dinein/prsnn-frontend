@@ -1,4 +1,4 @@
-import { CATEGORIES, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, SUPPORT_EMAIL, hoursLabel, inr } from '../(site)/_lib/content';
+import { CATEGORIES, HOUSE_RULES, NOT_FOR, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, SUPPORT_EMAIL, hoursLabel, inr } from '../(site)/_lib/content';
 
 export const dynamic = 'force-static';
 
@@ -23,6 +23,14 @@ export function GET() {
     '## Kinds of company',
     '',
     ...CATEGORIES.map((c) => `- [${c.title}](${SITE_URL}/${c.slug}): ${c.line}. ${c.uses.slice(0, 3).join('; ')}.`),
+    '',
+    '## What prsnn is not',
+    '',
+    ...NOT_FOR.map(([t, d]) => `- ${t}: ${d}`),
+    '',
+    '## House rules (everyone agrees before booking or applying)',
+    '',
+    ...HOUSE_RULES.map(([t, d]) => `- ${t}: ${d}`),
     '',
     '## Pages',
     '',

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FOUNDER, SUPPORT_EMAIL } from './content';
+import { FOUNDER, HOUSE_RULES, NOT_FOR, SUPPORT_EMAIL } from './content';
 
 export const UPDATED = '15 November 2026';
 const Email = () => (SUPPORT_EMAIL ? <Link href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</Link> : <span>the support email shown in the app</span>);
@@ -12,6 +12,8 @@ export function Terms() {
       <p>These terms are an agreement between you and prsnn (“prsnn”, “we”, “us”), which runs the prsnn app and website. By creating an account or making a booking, you agree to them. If you don’t agree, please don’t use prsnn.</p>
       <h3>1. What prsnn is</h3>
       <p>prsnn is a platform that connects people who want company for everyday plans (“members”) with people who offer their time as company (“companions”). Company on prsnn is strictly platonic: going to an event together, exploring a city, studying side by side, or spending time with someone’s loved one. prsnn is not a dating, escort or adult service, and it is not an emergency, medical, nursing or care service.</p>
+      <p>To be clear, prsnn is not: {NOT_FOR.map(([t]) => t.replace(/^Not (a |an )?/, '').toLowerCase()).join('; ')}. Bookings for any of these are cancelled without a refund and may lead to a ban.</p>
+      <p>Before your first booking or companion application, you agree to our house rules (the <Link href="/guidelines">Community Guidelines</Link>). We keep a timestamped record of each agreement you give: these terms, the privacy policy, that you’re 18 or older, the house rules, the Companion Terms, and the terms of each booking.</p>
       <p>Companions are independent individuals, not prsnn employees or agents. prsnn approves profiles, checks companions’ identity documents and provides the booking, payment, chat and safety tools, but does not supervise what happens during a meeting.</p>
       <h3>2. Who can use prsnn</h3>
       <ul>
@@ -104,6 +106,8 @@ export function Privacy() {
       <p>Our database and files are hosted in Mumbai, India. Some providers (for example error monitoring and push notifications) may process limited data outside India, only as the law allows.</p>
       <h3>Consent</h3>
       <p>We process your data on the basis of the consent you give when you sign up or leave your number, and for the legitimate uses the Digital Personal Data Protection Act, 2023 allows (such as meeting legal duties and responding to emergencies). You can withdraw consent at any time by deleting your account or writing to our Grievance Officer; this doesn’t affect processing that happened before. Some features (such as booking) can’t work without the data they need.</p>
+      <h3>Records of your consent</h3>
+      <p>Each time you agree to something (these policies, the house rules, the Companion Terms, a booking’s terms, opening your photo to everyone, or being contacted after leaving your number on our website), we record what you agreed to, the version, and the date and time. We keep these records even after you delete your account, so we can show what was agreed if there’s ever a question.</p>
       <h3>Website</h3>
       <p>Our website doesn’t use advertising or tracking cookies. See the <Link href="/cookies">Cookie Notice</Link>.</p>
       <h3>How long we keep it</h3>
@@ -142,19 +146,23 @@ export function Guidelines() {
   return (
     <section id="guidelines">
       <h2>Community Guidelines</h2>
-      <p className="s-meta">For members and companions alike. Breaking them can mean a permanent ban.</p>
+      <p className="s-meta">House rules for members and companions alike. Everyone agrees to them before their first booking or application. Breaking them can mean a permanent ban.</p>
+      <p>prsnn is company, and nothing more. Everyone deserves to be treated with respect: the member, the companion, and the loved one a family books for.</p>
+      <h3>What prsnn is not</h3>
       <ul>
-        <li><b>Company, never a date.</b> No romantic or sexual requests, comments or contact. No escort or adult services of any kind.</li>
-        <li><b>Public places, with one exception.</b> Meet at the place named in the booking. The only home visits allowed are ones a family books for a loved one, at that person’s home. Never ask anyone to come to your home, a hotel room or a private vehicle.</li>
-        <li><b>Respect.</b> No harassment, threats, hate speech or discrimination. Respect boundaries, including when someone says no.</li>
-        <li><b>Keep personal details private.</b> Don’t share or ask for phone numbers, addresses or social media in chat. Keep the chat about the plan; leave politics and religion out.</li>
-        <li><b>Pay only through prsnn.</b> No cash or off-platform payments for bookings, and no tips that are a condition of the meeting.</li>
-        <li><b>Be yourself.</b> Use your real name and a recent photo of you. No fake profiles.</li>
-        <li><b>Stay sober and safe.</b> No illegal drugs, and don’t pressure anyone to drink.</li>
-        <li><b>Be on time.</b> If plans change, cancel in the app as early as you can.</li>
-        <li><b>Look after loved ones.</b> When you spend time with someone booked by their family, treat them with patience and care, and follow the family’s instructions shared in the booking.</li>
+        {NOT_FOR.map(([t, d]) => (
+          <li key={t}><b>{t}.</b> {d}</li>
+        ))}
       </ul>
-      <p>See something wrong? Report it from the booking or write to us. In danger? Hold the panic button, and call 112.</p>
+      <h3>House rules</h3>
+      <ol>
+        {HOUSE_RULES.map(([t, d]) => (
+          <li key={t}><b>{t}.</b> {d}</li>
+        ))}
+      </ol>
+      <h3>Visits to a loved one</h3>
+      <p>When a family books you to spend time with their parent or grandparent, treat them with patience and care, follow the family’s instructions in the booking, and stay in the rooms you’re invited into. Company and a helping hand with everyday things only: no medicines, personal care, money or valuables.</p>
+      <p>See something wrong? Report it from the booking or contact our <Link href="/grievance">Grievance Officer</Link>. In danger? Hold the panic button, and call 112.</p>
     </section>
   );
 }

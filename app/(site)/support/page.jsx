@@ -30,7 +30,7 @@ export default function Page() {
           <h2>Complaints and your data</h2>
           <p>Our Grievance Officer is {FOUNDER}, at the same address. We acknowledge complaints within 24 hours and resolve them within 15 days. See <Link href="/grievance">Grievance Redressal</Link> for how complaints are handled, and <Link href="/delete-account">Delete your account</Link> to remove your data.</p>
 
-          <p className="s-meta">prsnn, Hyderabad, Telangana, India.</p>
+          <p className="s-meta">prsnn · India</p>
           <LegalLinks current="/support" />
         </div>
       </div>

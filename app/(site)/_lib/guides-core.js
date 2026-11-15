@@ -46,7 +46,7 @@ export const CORE_GUIDES = [
       },
       {
         h: 'Where is prsnn available?',
-        answer: 'prsnn has launched in Hyderabad, India. It will open city by city, starting with the places people ask for most, including Bengaluru, Mumbai, Delhi NCR, Chennai and Pune. If you’re outside Hyderabad, leave your number on the website and we’ll message you on WhatsApp when your city opens.',
+        answer: 'prsnn works across India, in metros like Bengaluru, Mumbai, Delhi NCR, Hyderabad, Chennai, Pune and Kolkata and in smaller cities too. Companions sign up in their own city, and your booking is offered to suitable companions where you are. If nobody can take it, you get a full refund.',
       },
     ],
     faq: [

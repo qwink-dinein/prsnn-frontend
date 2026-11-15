@@ -178,7 +178,7 @@ export function Grievance() {
       <ul>
         <li><b>Name:</b> {FOUNDER}</li>
         <li><b>Email:</b> <Email /></li>
-        <li><b>Address:</b> prsnn, Hyderabad, Telangana, India</li>
+        <li><b>Registered address:</b> prsnn, Hyderabad, Telangana, India (prsnn serves customers across India)</li>
       </ul>
       <h3>How to raise a complaint</h3>
       <ol>
@@ -213,7 +213,7 @@ export function CompanionTerms() {
       <p>You are an independent individual offering your own time. You are not an employee, partner or agent of prsnn. You choose your days, hours and booking lengths, and whether to accept each booking.</p>
       <h3>2. Joining</h3>
       <ul>
-        <li>You must be at least 18, live in a city where prsnn operates, and be legally allowed to earn income in India.</li>
+        <li>You must be at least 18, live in India, and be legally allowed to earn income in India.</li>
         <li>Our team reviews every profile and photo before it’s shown to members. Photos must be recent, of you alone, and show your face.</li>
         <li>Before your first booking you must upload a valid government ID and a selfie. Nobody meets anyone before their ID is checked.</li>
       </ul>
@@ -317,7 +317,7 @@ export function Contact() {
       <h2>Contact &amp; grievances</h2>
       <p>Support: <Link href="/support">Help &amp; support</Link></p>
       <p><b>Grievance Officer:</b> {FOUNDER} (<Email />). We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
-      <p>prsnn, Hyderabad, Telangana, India.</p>
+      <p>prsnn · India. Registered address on the <Link href="/grievance">Grievance Redressal</Link> page.</p>
     </section>
   );
 }

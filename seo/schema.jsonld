@@ -10,7 +10,7 @@
       "logo": "{{SITE_URL}}/logo.png",
       "description": "prsnn is an app for booking a verified companion for platonic company in public places: someone to go to an event with, show you around a new city, study beside you, or spend time with a parent who's alone.",
       "founder": { "@id": "{{SITE_URL}}/#founder" },
-      "areaServed": { "@type": "City", "name": "Hyderabad", "containedInPlace": { "@type": "Country", "name": "India" } },
+      "areaServed": { "@type": "Country", "name": "India" },
       "contactPoint": [{ "@type": "ContactPoint", "contactType": "customer support", "email": "{{SUPPORT_EMAIL}}", "availableLanguage": ["English", "Hindi", "Telugu"] }],
       "sameAs": ["{{LINKEDIN_COMPANY_URL}}", "{{INSTAGRAM_URL}}", "{{APP_STORE_URL}}", "{{PLAY_STORE_URL}}", "{{WIKIDATA_URL}}"]
     },
@@ -49,7 +49,7 @@
       "name": "Companion booking",
       "serviceType": "Platonic companionship for everyday plans",
       "provider": { "@id": "{{SITE_URL}}/#organization" },
-      "areaServed": { "@type": "City", "name": "Hyderabad" },
+      "areaServed": { "@type": "Country", "name": "India" },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Booking lengths",
@@ -82,7 +82,7 @@
         { "@type": "Question", "name": "How does prsnn keep people safe?", "acceptedAnswer": { "@type": "Answer", "text": "Approved, ID-checked companions, public places only, phone numbers hidden in chat, and a panic button that alerts the prsnn team at once and every five minutes until you're safe." } },
         { "@type": "Question", "name": "Can I book a companion for my elderly parent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose Companion for a Loved One, add their name and number, and pick a public place or ask for a visit at their home. Pay from anywhere, even from abroad." } },
         { "@type": "Question", "name": "How do I become a prsnn companion?", "acceptedAnswer": { "@type": "Answer", "text": "Download the app, choose Become a companion and finish the short sign-up. The prsnn team reviews your profile, and you keep 80% of every booking." } },
-        { "@type": "Question", "name": "Where is prsnn available?", "acceptedAnswer": { "@type": "Answer", "text": "prsnn has launched in Hyderabad, India, with more cities to follow." } }
+        { "@type": "Question", "name": "Where is prsnn available?", "acceptedAnswer": { "@type": "Answer", "text": "Across India. Companions sign up in their own city, and bookings are offered to suitable companions where you are, with a full refund if nobody accepts." } }
       ]
     }
   ]

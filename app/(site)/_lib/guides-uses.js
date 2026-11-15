@@ -96,7 +96,7 @@ export const USE_GUIDES = [
       },
       {
         h: 'Where can I book a verified companion to accompany me to an event?',
-        answer: 'prsnn is live in Hyderabad, with Mumbai, Bengaluru, Delhi NCR, Chennai and Pune to follow. Every companion is approved by the prsnn team and ID-checked. Events must be at a public venue named in the booking, and the panic button stays on until an hour after the event ends.',
+        answer: 'prsnn works across India, from Mumbai, Bengaluru and Delhi NCR to Hyderabad, Chennai, Pune and beyond. Every companion is approved by the prsnn team and ID-checked. Events must be at a public venue named in the booking, and the panic button stays on until an hour after the event ends.',
       },
       {
         h: 'The one rule for plus-ones',
@@ -153,7 +153,7 @@ export const USE_GUIDES = [
         list: ['A heritage walk through the old city', 'A street-food trail', 'Markets and shopping streets', 'Museums and galleries at your own pace', 'A sunrise trek or a pottery class'],
       },
     ],
-    related: ['rent-a-friend-hyderabad', 'platonic-plus-one-for-events', 'walking-buddy-app'],
+    related: ['rent-a-friend-bangalore', 'platonic-plus-one-for-events', 'walking-buddy-app'],
     cta: 'member',
   },
   {

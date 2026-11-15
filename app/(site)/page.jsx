@@ -43,7 +43,7 @@ export default function Home() {
       <section className="s-hero" aria-labelledby="hero-h">
         <div className="s-wrap">
           <div className="s-hero-copy">
-            <span className="s-badge">Now in Hyderabad</span>
+            <span className="s-badge">Across India</span>
             <h1 id="hero-h" className="s-h1">{'Everyone’s busy?\nGo anyway.'}</h1>
             <p className="s-hero-sub">prsnn finds you a verified companion for the gig, the café, the new city, or a visit for your parents. Always in public. From ₹399.</p>
             <div className="s-stores">

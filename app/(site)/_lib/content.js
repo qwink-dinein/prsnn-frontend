@@ -7,10 +7,11 @@ export const SUPPORT_PATH = '/support';
 export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || '';
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
 export const FOUNDER = 'Mukarram Jah';
-export const CITY = 'Hyderabad';
+/** prsnn is for the whole of India: companions sign up in their own city. */
+export const COUNTRY = 'India';
 
 export const SUMMARY =
-  'prsnn is a peer-to-peer platform for shared presence in Indian cities: an app for booking a verified real human companion for platonic company in public places (or a home visit for a loved one). Someone to sit with you at a café, walk with you, study beside you, wait with you, go to an event with you, or spend time with a parent who’s alone. Real humans, no bots, no dating, no therapy.';
+  'prsnn is a peer-to-peer platform for shared presence across India: an app for booking a verified real human companion for platonic company in public places (or a home visit for a loved one). Someone to sit with you at a café, walk with you, study beside you, wait with you, go to an event with you, or spend time with a parent who’s alone. Real humans, no bots, no dating, no therapy.';
 
 /** Fixed price list (₹), the same as the app and the database (private.price_for). */
 export const PRICES = { 1: 399, 2: 699, 3: 999, 4: 1299, 5: 1599, 6: 1899, 7: 2199, 8: 2499, 9: 2799, 10: 3099, 11: 3349, 12: 3599 };
@@ -202,14 +203,13 @@ export const HOME_FAQ = [
   ['How do you keep people safe?', 'Approved, ID-checked companions, public places only, phone numbers hidden in chat, and a panic button that alerts our team at once and every five minutes until you’re safe.'],
   ['Can I book for my mum or dad?', 'Yes. Choose “Companion for a Loved One”, add their name and number, and pick a public place or ask for a visit at their home. Pay from anywhere, even from abroad.'],
   ['How do I become a companion?', 'Download the app, choose “Become a companion”, and finish the short sign-up. Our team reviews your profile; you keep 80% of every booking.'],
-  ['Where is prsnn available?', 'prsnn has launched in Hyderabad, India, with more cities to follow.'],
+  ['Where is prsnn available?', 'Across India. Companions sign up in their own city, and your booking is offered to suitable companions where you are. If nobody can take it, you get a full refund.'],
 ];
 
 /** Every public page, for the sitemap and llms.txt. */
 export const PAGES = [
   { path: '/', title: 'Home' },
   ...CATEGORIES.map((c) => ({ path: `/${c.slug}`, title: c.title })),
-  { path: '/hyderabad', title: 'prsnn in Hyderabad' },
   { path: '/pricing', title: 'Prices' },
   { path: '/safety', title: 'Safety' },
   { path: '/become-a-companion', title: 'Become a companion' },

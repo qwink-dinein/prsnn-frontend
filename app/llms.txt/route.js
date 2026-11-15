@@ -1,5 +1,5 @@
 import { ENTITY_PHRASES, GUIDES } from '../(site)/_lib/guides';
-import { CATEGORIES, HOUSE_RULES, NOT_FOR, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, hoursLabel, inr } from '../(site)/_lib/content';
+import { CATEGORIES, HOUSE_RULES, NOT_FOR, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, hoursLabel, inr } from '../(site)/_lib/content';
 
 export const dynamic = 'force-static';
 
@@ -8,12 +8,12 @@ export function GET() {
   const lines = [
     '# prsnn',
     '',
-    `> ${SUMMARY} It launched in ${CITY}, India, and was founded by ${FOUNDER}.`,
+    `> ${SUMMARY} It works across India and was founded by ${FOUNDER}.`,
     '',
     '## Key facts',
     '',
     '- What it is: a mobile app (iOS and Android) that connects members who want company for everyday plans with approved companions. Company is strictly platonic; prsnn is not a dating or escort service.',
-    `- Where: ${CITY}, India (launch city).`,
+    '- Where: across India. Companions sign up in their own city; bookings are offered to suitable companions where the member is, with a full refund if nobody accepts.',
     `- Founder: ${FOUNDER}. He built prsnn after his grandfather, who had dementia, went missing for seven days; the question it answers is "When we can't be there for the people we love, who can we trust to be there for them?"`,
     '- Safety: every companion is approved by the prsnn team and verifies a government ID with a selfie before their first booking; meetings are at a public place named in the booking, except home visits a family books for a loved one; phone numbers are hidden in chat; a panic button alerts the prsnn team at once and every five minutes until resolved.',
     `- Prices (fixed, same for every companion, no booking fee): ${HOURS.map((h) => `${hoursLabel(h)} ${inr(PRICES[h])}`).join(', ')}.`,

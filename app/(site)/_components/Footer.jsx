@@ -22,7 +22,6 @@ export default function Footer() {
           <Link href="/safety">Safety</Link>
           <Link href="/become-a-companion">Become a companion</Link>
           <Link href="/rent-a-friend">Rent a friend, safely</Link>
-          <Link href="/hyderabad">prsnn in Hyderabad</Link>
           <Link href="/about">Our story</Link>
           <Link href="/guides">Guides</Link>
         </nav>
@@ -41,7 +40,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="s-wrap s-footer-base">
-        <span>© {new Date().getFullYear()} prsnn · Hyderabad, India</span>
+        <span>© {new Date().getFullYear()} prsnn · India</span>
         <span>In an emergency, call 112.</span>
       </div>
     </footer>

@@ -29,7 +29,7 @@ const graph = {
       logo: `${SITE_URL}/icon.svg`,
       description: SUMMARY,
       founder: { '@id': `${SITE_URL}/#founder` },
-      areaServed: { '@type': 'City', name: 'Hyderabad', containedInPlace: { '@type': 'Country', name: 'India' } },
+      areaServed: { '@type': 'Country', name: 'India' },
       contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', url: `${SITE_URL}/support` }],
       ...(sameAs.length ? { sameAs } : {}),
     },

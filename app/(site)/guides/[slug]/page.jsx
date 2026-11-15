@@ -2,7 +2,6 @@ import Link from 'next/link';
 import PageHead from '../../_components/PageHead';
 import JsonLd from '../../_components/JsonLd';
 import StoreButtons from '../../_components/StoreButtons';
-import InterestForm from '../../_components/InterestForm';
 import { GUIDES, GUIDES_UPDATED, guideBySlug, guideQuestions } from '../../_lib/guides';
 import { FOUNDER, SITE_URL } from '../../_lib/content';
 
@@ -22,16 +21,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function Cta({ kind, slug, city }) {
-  if (kind === 'waitlist') {
-    return (
-      <section className="s-guide-cta" aria-label="Get told when prsnn opens">
-        <h2>Be first when prsnn opens in {city}</h2>
-        <p>Leave your number and we’ll message you on WhatsApp the day it opens, to book or to become a companion.</p>
-        <InterestForm source={`guide:${slug}`.slice(0, 40)} />
-      </section>
-    );
-  }
+function Cta({ kind }) {
   if (kind === 'companion') {
     return (
       <section className="s-guide-cta" aria-label="Become a companion">
@@ -101,7 +91,7 @@ export default async function Guide({ params }) {
             ))}
           </section>
         ) : null}
-        <Cta kind={g.cta} slug={g.slug} city={g.city} />
+        <Cta kind={g.cta} />
         {related.length ? (
           <section>
             <h2>Read next</h2>

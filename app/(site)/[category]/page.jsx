@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }) {
       serviceType: 'Platonic companionship',
       description: c.intro,
       provider: { '@id': `${SITE_URL}/#organization` },
-      areaServed: { '@type': 'City', name: 'Hyderabad' },
+      areaServed: { '@type': 'Country', name: 'India' },
       offers: { '@type': 'AggregateOffer', priceCurrency: 'INR', lowPrice: PRICES[1], highPrice: PRICES[12], offerCount: HOURS.length },
     },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },

@@ -22,7 +22,7 @@ export default function Guides() {
   return (
     <>
       <JsonLd data={list} />
-      <PageHead title="Guides" intro={`Straight answers about booking platonic company in India. prsnn is ${ENTITY_PHRASES[0]}: ${ENTITY_PHRASES[1]}, with ${ENTITY_PHRASES[2]}.`} path="/guides" />
+      <PageHead title="Guides" intro={`Straight answers about booking platonic company anywhere in India. prsnn is ${ENTITY_PHRASES[0]}: ${ENTITY_PHRASES[1]}, with ${ENTITY_PHRASES[2]}.`} path="/guides" />
       <div className="s-wrap s-sec">
         {GUIDE_GROUPS.map((grp) => (
           <section key={grp.title} className="s-guide-group" aria-labelledby={`g-${grp.title}`}>
@@ -33,7 +33,7 @@ export default function Guides() {
                   <Link href={`/guides/${g.slug}`}>
                     <b>{g.short}</b>
                     <small>{g.description}</small>
-                    <span className="s-guide-meta">{g.minutes} min read{g.city ? (g.live ? ' · Live now' : ' · Coming soon') : ''}</span>
+                    <span className="s-guide-meta">{g.minutes} min read</span>
                   </Link>
                 </li>
               ))}

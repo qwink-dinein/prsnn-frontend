@@ -20,7 +20,7 @@ export default function About() {
             <h2>What we’re building</h2>
             <p>A city where nobody has to skip the plan, spend a new city’s first months alone, or worry all day about a parent at home. prsnn connects people with approved, ID-checked companions for platonic company, in public places, with a panic button in every session.</p>
             <p>In one line: prsnn is a peer-to-peer platform for shared presence. Real humans, no bots, no dating, no therapy. Manually verified companions and public meetups only, women-only matching when you choose it, and soft company with hard boundaries.</p>
-            <p>We started in Hyderabad. We’ll grow city by city, only as fast as we can keep every companion approved and every booking safe.</p>
+            <p>prsnn is for the whole of India: wherever you live, companions in your city can sign up, and you can book company where you are. We grow only as fast as we can keep every companion approved and every booking safe.</p>
           </section>
         </div>
       </section>

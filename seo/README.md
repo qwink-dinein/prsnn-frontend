@@ -30,11 +30,11 @@ app stores, LinkedIn, press, directories and social bios:
 > someone to go to an event with, show you around a new city, study beside you, or spend time
 > with a parent who's alone. Companions are approved by the prsnn team and ID-checked before
 > their first booking. Prices are fixed from ₹399 for one hour to ₹3,599 for twelve hours, and
-> companions keep 80% of every booking. prsnn launched in Hyderabad, India, and was founded by
+> companions keep 80% of every booking. prsnn works across India and was founded by
 > **Mukarram Jah**.
 
 Short form (bios, 160 characters): *prsnn: book a verified companion for platonic company in
-public places. From ₹399. Hyderabad. Founded by Mukarram Jah.*
+public places. From ₹399. Across India. Founded by Mukarram Jah.*
 
 Brand name rules: always lowercase **prsnn** (logo "prsnn."). Say "prsnn app" or "prsnn
 companions" so search engines don't read it as a typo of "person".
@@ -140,15 +140,22 @@ Do these in order; each adds a trusted source repeating the facts in section 1.
 22 question-and-answer articles at `/guides` (index) and `/guides/<slug>`, from one data source in
 `app/(site)/_lib/guides-*.js`. Each section that is a question opens with a 40–60 word answer (featured
 snippets, voice and AI answers); every guide has Article + FAQPage structured data, is in the sitemap and
-is listed in `/llms.txt`. City pages: Hyderabad is live; Bengaluru, Mumbai, Delhi NCR, Chennai and Pune
-say "coming soon" and collect numbers (source `guide:<slug>` in Admin → Interested).
+is listed in `/llms.txt`. City pages: 12 cities (Bengaluru, Mumbai, Delhi NCR, Hyderabad, Chennai, Pune, Kolkata,
+Ahmedabad, Jaipur, Kochi, Chandigarh, Lucknow), all on equal footing: prsnn works across India.
 
 Keyword check: all 68 target phrases (SEO, AEO questions, GEO prompts and entity phrases) appear in the
 visible text. Keep facts in the guides identical to the app: prices, refunds, verification, house rules.
-Don't claim a city is live until it is, and don't claim women-only by default: members choose it.
+prsnn is India-wide (owner, 2026-11-16): never position it as one city. Don't promise how many companions
+a city has, and don't claim women-only by default: members choose it.
 
 Next (owner): submit the sitemap in Google Search Console and Bing Webmaster Tools; request indexing of
 `/guides`; share guides on LinkedIn, Reddit (r/hyderabad, r/bangalore) and Quora answers where they
 genuinely answer the question; list prsnn on directories (Google Business Profile, Crunchbase, Product Hunt)
 with the same one-line description: "a peer-to-peer platform for shared presence: real humans, no bots,
 no dating, no therapy".
+
+
+**Positioning (owner, 2026-11-16): India-wide.** The Hyderabad city page (`/hyderabad`) is removed and redirects to
+`/guides/rent-a-friend-hyderabad`, one of 12 equal city guides. Older notes above that mention Hyderabad as the launch
+city are superseded. The registered address (Hyderabad, Telangana) stays only where the law needs it: Grievance
+Officer address and the Terms' courts clause.

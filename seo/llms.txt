@@ -5,7 +5,7 @@
 ## Key facts
 
 - What it is: a mobile app (iOS and Android) that connects members who want company for everyday plans with approved companions. Company is strictly platonic; prsnn is not a dating or escort service.
-- Where: Hyderabad, India (launch city).
+- Where: across India.
 - Founder: Mukarram Jah. He built prsnn after his grandfather, who had dementia, went missing for seven days; the question it answers is "When we can't be there for the people we love, who can we trust to be there for them?"
 - Safety: every companion is approved by the prsnn team and verifies a government ID with a selfie before their first booking; every meeting is at a public place named in the booking, except home visits that a family books for a loved one; phone numbers are hidden in chat; a panic button alerts the prsnn team at once and every five minutes until resolved.
 - Prices (fixed, same for every companion, no booking fee): 1 hour ₹399, 2 hours ₹699, 3 hours ₹999, 4 hours ₹1,299, 5 hours ₹1,599, 6 hours ₹1,899, 7 hours ₹2,199, 8 hours ₹2,499, 9 hours ₹2,799, 10 hours ₹3,099, 11 hours ₹3,349, 12 hours ₹3,599.

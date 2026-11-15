@@ -24,6 +24,7 @@ export default function Footer() {
           <Link href="/rent-a-friend">Rent a friend, safely</Link>
           <Link href="/hyderabad">prsnn in Hyderabad</Link>
           <Link href="/about">Our story</Link>
+          <Link href="/guides">Guides</Link>
         </nav>
         <nav aria-label="Legal and support">
           <b>Legal &amp; support</b>

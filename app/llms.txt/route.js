@@ -1,3 +1,4 @@
+import { ENTITY_PHRASES, GUIDES } from '../(site)/_lib/guides';
 import { CATEGORIES, HOUSE_RULES, NOT_FOR, CITY, FOUNDER, HOURS, PAGES, PRICES, SITE_URL, SUMMARY, hoursLabel, inr } from '../(site)/_lib/content';
 
 export const dynamic = 'force-static';
@@ -24,6 +25,10 @@ export function GET() {
     '',
     ...CATEGORIES.map((c) => `- [${c.title}](${SITE_URL}/${c.slug}): ${c.line}. ${c.uses.slice(0, 3).join('; ')}.`),
     '',
+    '## In short',
+    '',
+    ...ENTITY_PHRASES.map((p) => `- prsnn is ${p}.`),
+    '',
     '## What prsnn is not',
     '',
     ...NOT_FOR.map(([t, d]) => `- ${t}: ${d}`),
@@ -31,6 +36,10 @@ export function GET() {
     '## House rules (everyone agrees before booking or applying)',
     '',
     ...HOUSE_RULES.map(([t, d]) => `- ${t}: ${d}`),
+    '',
+    '## Guides (question-and-answer articles)',
+    '',
+    ...GUIDES.map((g) => `- [${g.short}](${SITE_URL}/guides/${g.slug}): ${g.description}`),
     '',
     '## Pages',
     '',

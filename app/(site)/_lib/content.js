@@ -10,7 +10,7 @@ export const FOUNDER = 'Mukarram Jah';
 export const CITY = 'Hyderabad';
 
 export const SUMMARY =
-  'prsnn is an app for booking a verified companion for platonic company in public places (or a home visit for a loved one): someone to go to an event with, show you around a new city, study beside you, or spend time with a parent who’s alone.';
+  'prsnn is a peer-to-peer platform for shared presence in Indian cities: an app for booking a verified real human companion for platonic company in public places (or a home visit for a loved one). Someone to sit with you at a café, walk with you, study beside you, wait with you, go to an event with you, or spend time with a parent who’s alone. Real humans, no bots, no dating, no therapy.';
 
 /** Fixed price list (₹), the same as the app and the database (private.price_for). */
 export const PRICES = { 1: 399, 2: 699, 3: 999, 4: 1299, 5: 1599, 6: 1899, 7: 2199, 8: 2499, 9: 2799, 10: 3099, 11: 3349, 12: 3599 };
@@ -190,6 +190,8 @@ export const MOMENTS = [
 ];
 
 export const HOME_FAQ = [
+  ['What is a platonic companion app?', 'A service where you book a real, verified person by the hour for friendly company on an everyday plan: a café, a walk, studying, waiting or an event. prsnn is one in India: a peer-to-peer platform for shared presence. Real humans, no bots, no dating, no therapy.'],
+  ['Do I need to talk during a quiet company session?', 'No. Tell your companion in the chat that you’d like quiet company and they’ll follow your lead: read, work or sit together without much talking.'],
   ['What is prsnn?', 'prsnn is an app for booking a verified companion for platonic company: someone to go to a concert with, show you around a new city, study beside you, or visit a parent who’s alone. Meetings happen in public places (home visits are allowed when you book for a loved one) and are booked and paid in the app, by the hour.'],
   ['What can’t I book prsnn for?', 'prsnn is company and nothing more. It isn’t dating, an escort service, errands or chores, therapy, medical or nursing care, childcare, a professional guide or driver, a pretend partner, or a business pitch. If a plan needs any of those, prsnn isn’t the right fit.'],
   ['Is this dating or an escort service?', 'No. prsnn is strictly platonic company for everyday plans. Romantic or sexual requests are against our rules and lead to a permanent ban. Meetings are in a public place named in the booking; the only home visits are ones families book for a loved one.'],

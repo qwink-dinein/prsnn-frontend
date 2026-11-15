@@ -10,6 +10,7 @@ export default function Header() {
           <Link href="/#how">How it works</Link>
           <Link href="/pricing">Prices</Link>
           <Link href="/safety">Safety</Link>
+          <Link href="/guides">Guides</Link>
           <Link href="/become-a-companion">Become a companion</Link>
           <Link href="/about">Our story</Link>
         </nav>

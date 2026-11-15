@@ -133,3 +133,22 @@ Do these in order; each adds a trusted source repeating the facts in section 1.
   mother in Hyderabad". Log whether prsnn is mentioned and what it says; fix any wrong facts at
   the source (site, listings, Wikidata).
 - Website enquiries by interest (member / companion / both) and app installs by source.
+
+
+## Guides (added 2026-11-16)
+
+22 question-and-answer articles at `/guides` (index) and `/guides/<slug>`, from one data source in
+`app/(site)/_lib/guides-*.js`. Each section that is a question opens with a 40–60 word answer (featured
+snippets, voice and AI answers); every guide has Article + FAQPage structured data, is in the sitemap and
+is listed in `/llms.txt`. City pages: Hyderabad is live; Bengaluru, Mumbai, Delhi NCR, Chennai and Pune
+say "coming soon" and collect numbers (source `guide:<slug>` in Admin → Interested).
+
+Keyword check: all 68 target phrases (SEO, AEO questions, GEO prompts and entity phrases) appear in the
+visible text. Keep facts in the guides identical to the app: prices, refunds, verification, house rules.
+Don't claim a city is live until it is, and don't claim women-only by default: members choose it.
+
+Next (owner): submit the sitemap in Google Search Console and Bing Webmaster Tools; request indexing of
+`/guides`; share guides on LinkedIn, Reddit (r/hyderabad, r/bangalore) and Quora answers where they
+genuinely answer the question; list prsnn on directories (Google Business Profile, Crunchbase, Product Hunt)
+with the same one-line description: "a peer-to-peer platform for shared presence: real humans, no bots,
+no dating, no therapy".

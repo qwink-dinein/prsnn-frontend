@@ -25,7 +25,10 @@ export const CATEGORIES = [
     slug: 'new-in-town',
     title: 'New in Town',
     line: 'Make your first days less lonely',
-    img: '/site/walks.jpg',
+    img: '/site/cat/new-in-town.jpg',
+    pain: 'New city. No one to call yet.',
+    promise: 'Find a local to help you settle in.',
+    icon: 'pin',
     hours: 4,
     suggest: '4 hours · ₹1,299',
     seoTitle: 'New in Town · A local companion for your first days | prsnn',
@@ -47,7 +50,11 @@ export const CATEGORIES = [
     slug: 'dont-go-alone',
     title: 'Don’t Go Alone',
     line: 'Good plans deserve good company',
-    img: '/site/evening.jpg',
+    img: '/site/cat/dont-go-alone.jpg',
+    pain: 'Two tickets. One you.',
+    promise: 'A trusted companion by your side.',
+    icon: 'ticket',
+    dark: true,
     hours: 4,
     suggest: '4 hours · ₹1,299',
     seoTitle: 'Don’t Go Alone · Someone to go with, not a date | prsnn',
@@ -69,7 +76,10 @@ export const CATEGORIES = [
     slug: 'explore-and-discover',
     title: 'Explore & Discover',
     line: 'See more of your city with a local',
-    img: '/site/events.jpg',
+    img: '/site/cat/explore.jpg',
+    pain: 'You live here. You’ve seen none of it.',
+    promise: 'Go further with someone who knows the way.',
+    icon: 'compass',
     hours: 4,
     suggest: '4–6 hours · ₹1,299–₹1,899',
     seoTitle: 'Explore & Discover · See your city with a local | prsnn',
@@ -91,7 +101,10 @@ export const CATEGORIES = [
     slug: 'companion-for-a-loved-one',
     title: 'Companion for a Loved One',
     line: 'Because you can’t always be there',
-    img: '/site/park.jpg',
+    img: '/site/cat/loved-one.jpg',
+    pain: 'Mom’s alone today.',
+    promise: 'Warm company for parents and grandparents.',
+    icon: 'heart',
     hours: 2,
     suggest: '2 hours · ₹699',
     seoTitle: 'Companion for elderly parents · Visits you can trust | prsnn',
@@ -115,7 +128,10 @@ export const CATEGORIES = [
     slug: 'work-and-study-together',
     title: 'Work & Study Together',
     line: 'Make working alone feel less alone',
-    img: '/site/study.jpg',
+    img: '/site/cat/work-study.jpg',
+    pain: 'Day four of working alone.',
+    promise: 'Get more done, together.',
+    icon: 'book',
     hours: 2,
     suggest: '2 hours · ₹699',
     seoTitle: 'Study buddy & co-working partner · prsnn',
@@ -134,12 +150,15 @@ export const CATEGORIES = [
     ],
   },
 ];
+/** The group photo for "Real people. Real connections." (app and website). */
+export const COMMUNITY_IMG = '/site/cat/community.jpg';
+
 export const categoryBySlug = (slug) => CATEGORIES.find((c) => c.slug === slug);
 
 export const MOMENTS = [
-  { title: 'Two tickets. One you.', body: 'The gig is Saturday and every friend is “so sorry, can’t”. Don’t skip it. Go with someone who’d love to.', slug: 'dont-go-alone', img: '/site/evening.jpg', tag: 'Don’t Go Alone · 4 h · ₹1,299' },
-  { title: 'New city, empty weekends.', body: 'You moved for the job. The city is still a stranger. Spend a Sunday with a local who knows the best spots.', slug: 'new-in-town', img: '/site/walks.jpg', tag: 'New in Town · 4 h · ₹1,299' },
-  { title: 'Mom’s alone today.', body: 'You can’t be there this week. Someone kind can: a walk, a cup of tea, a chat. Booked and paid from anywhere.', slug: 'companion-for-a-loved-one', img: '/site/park.jpg', tag: 'For a Loved One · 2 h · ₹699' },
+  { title: 'Two tickets. One you.', body: 'The gig is Saturday and every friend is “so sorry, can’t”. Don’t skip it. Go with someone who’d love to.', slug: 'dont-go-alone', img: '/site/cat/dont-go-alone.jpg', tag: 'Don’t Go Alone · 4 h · ₹1,299' },
+  { title: 'New city, empty weekends.', body: 'You moved for the job. The city is still a stranger. Spend a Sunday with a local who knows the best spots.', slug: 'new-in-town', img: '/site/cat/new-in-town.jpg', tag: 'New in Town · 4 h · ₹1,299' },
+  { title: 'Mom’s alone today.', body: 'You can’t be there this week. Someone kind can: a walk, a cup of tea, a chat. Booked and paid from anywhere.', slug: 'companion-for-a-loved-one', img: '/site/cat/loved-one.jpg', tag: 'For a Loved One · 2 h · ₹699' },
 ];
 
 export const HOME_FAQ = [

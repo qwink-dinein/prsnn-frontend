@@ -50,7 +50,7 @@ export default async function CategoryPage({ params }) {
   return (
     <>
       <JsonLd data={ld} />
-      <PageHead title={c.title} intro={c.intro} path={`/${c.slug}`} img={c.img}>
+      <PageHead title={c.title} intro={`${c.pain} ${c.intro}`} path={`/${c.slug}`} img={c.img}>
         <StoreButtons />
       </PageHead>
 

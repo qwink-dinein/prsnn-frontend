@@ -13,7 +13,7 @@ export const metadata = {
 export default function Hyderabad() {
   return (
     <>
-      <PageHead title="prsnn is live in Hyderabad." intro="Book an approved, ID-checked companion anywhere in the city: for a gig, a weekend out, a study session, or a visit to a parent. From ₹399." crumb="Hyderabad" path="/hyderabad" img="/site/events.jpg"><StoreButtons /></PageHead>
+      <PageHead title="prsnn is live in Hyderabad." intro="Book an approved, ID-checked companion anywhere in the city: for a gig, a weekend out, a study session, or a visit to a parent. From ₹399." crumb="Hyderabad" path="/hyderabad" img="/site/cat/explore.jpg"><StoreButtons /></PageHead>
       <section className="s-sec">
         <div className="s-wrap">
           <h2 className="s-h2">What people book in Hyderabad</h2>

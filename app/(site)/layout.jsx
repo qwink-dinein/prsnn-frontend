@@ -11,7 +11,7 @@ const outfit = Outfit({ subsets: ['latin'], weight: ['700'], variable: '--font-o
 
 export const metadata = {
   alternates: { canonical: '/' },
-  openGraph: { type: 'website', siteName: 'prsnn', locale: 'en_IN', images: [{ url: '/site/together.jpg', width: 600, height: 900, alt: 'prsnn' }] },
+  openGraph: { type: 'website', siteName: 'prsnn', locale: 'en_IN', images: [{ url: '/site/cat/community.jpg', width: 1047, height: 756, alt: 'prsnn: real people, real connections' }] },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
 };

@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { CategoryProvider, OpenCategory } from './_components/CategoryContext';
-import HeroWallet from './_components/HeroWallet';
+import { CategoryProvider } from './_components/CategoryContext';
+import HeroStack from './_components/HeroStack';
+import PhotoCardRow from './_components/PhotoCardRow';
+import CommunityBanner from './_components/CommunityBanner';
 import UseExplorer from './_components/UseExplorer';
 import PricePicker from './_components/PricePicker';
 import InterestForm from './_components/InterestForm';
@@ -10,7 +11,7 @@ import JsonLd from './_components/JsonLd';
 import Faq from './_components/Faq';
 import FounderStory from './_components/FounderStory';
 import { Check, Clock, Pin, Refund, Shield } from './_components/Icons';
-import { HOME_FAQ, MOMENTS, PRICES, SITE_URL, companionShare, hoursLabel, inr } from './_lib/content';
+import { HOME_FAQ, PRICES, SITE_URL, companionShare, hoursLabel, inr } from './_lib/content';
 
 export const metadata = {
   title: 'prsnn · Book a verified companion for any plan',
@@ -54,7 +55,7 @@ export default function Home() {
               ))}
             </ul>
           </div>
-          <HeroWallet />
+          <HeroStack />
         </div>
       </section>
 
@@ -72,19 +73,9 @@ export default function Home() {
       <section id="familiar" className="s-sec" style={{ paddingBottom: 0 }} aria-labelledby="familiar-h">
         <div className="s-wrap">
           <p className="s-eyebrow">Sound familiar?</p>
-          <h2 id="familiar-h" className="s-h2" style={{ marginBottom: 40 }}>The plan’s good. The company’s missing.</h2>
-          <div className="s-grid">
-            {MOMENTS.map((m) => (
-              <OpenCategory key={m.title} slug={m.slug} className="s-card s-moment">
-                <Image src={m.img} alt="" width={900} height={600} sizes="(max-width: 860px) 100vw, 400px" />
-                <div>
-                  <strong>{m.title}</strong>
-                  <p>{m.body}</p>
-                  <small>{m.tag}</small>
-                </div>
-              </OpenCategory>
-            ))}
-          </div>
+          <h2 id="familiar-h" className="s-h2" style={{ marginBottom: 36 }}>The plan’s good. The company’s missing.</h2>
+          <PhotoCardRow />
+          <p className="s-note">Tap a card to see everything you can use it for, the length and the price.</p>
         </div>
       </section>
 
@@ -95,6 +86,12 @@ export default function Home() {
           <p className="s-lead">Pick what fits your day. Every one is booked in the app, by the hour, with an approved companion.</p>
           <UseExplorer />
           <p className="s-note">Always in a public place (or at home, when you book a visit for a loved one), and always just company: never a date.</p>
+        </div>
+      </section>
+
+      <section className="s-sec" style={{ paddingTop: 0 }} aria-label="Real people">
+        <div className="s-wrap">
+          <CommunityBanner />
         </div>
       </section>
 

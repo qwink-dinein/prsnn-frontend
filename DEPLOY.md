@@ -33,7 +33,7 @@ The first deploy gives you a `*.workers.dev` address to check before the domain 
 1. Cloudflare → **Add a domain** → enter the domain → Free plan. Cloudflare shows two nameservers.
 2. Namecheap → **Domain List** → the domain → **Manage** → **Nameservers** → **Custom DNS** → paste the two
    Cloudflare nameservers → ✓. Takes from minutes to a few hours.
-3. When Cloudflare says the domain is active: Workers & Pages → `prsnn-website` → **Settings → Domains & Routes**
+3. When Cloudflare says the domain is active: Workers & Pages → `prsnn-frontend` → **Settings → Domains & Routes**
    → **Add → Custom domain** → `prsnn.com`, then again for `www.prsnn.com`.
 4. Redirect `www` to the bare domain: Rules → **Redirect Rules** → template "Redirect from WWW to root".
 5. SSL/TLS → mode **Full**; turn on **Always Use HTTPS**.

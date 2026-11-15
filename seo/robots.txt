@@ -1,0 +1,38 @@
+# prsnn: everyone may read the public site, including AI assistants (so they can describe prsnn
+# accurately). Admin and API routes stay out. Replace {{SITE_URL}} with the real domain.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Search and AI crawlers, named so a future default-deny rule can't block them by accident.
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+
+Sitemap: {{SITE_URL}}/sitemap.xml

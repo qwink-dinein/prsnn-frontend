@@ -1,0 +1,69 @@
+{
+  "_note": "Title ≤ 60 characters, description ≤ 155. og = social card. Replace {{SITE_URL}}.",
+  "pages": {
+    "/": {
+      "title": "prsnn · Book a verified companion for any plan",
+      "description": "Everyone's busy? Go anyway. Book a verified companion for concerts, a new city, study or a visit for your parents. Public places only. From ₹399.",
+      "og": "Everyone's busy? Go anyway. Verified companions for every plan, from ₹399."
+    },
+    "/new-in-town": {
+      "title": "New in Town · A local companion for your first days | prsnn",
+      "description": "Just moved? Book a verified local to show you the neighbourhood, cafés and weekend spots. Public places, by the hour, from ₹399.",
+      "og": "New city, empty weekends? Spend a Sunday with a local."
+    },
+    "/dont-go-alone": {
+      "title": "Don't Go Alone · Someone to go with, not a date | prsnn",
+      "description": "Concert, wedding, movie or dinner and no plus-one? Book a verified companion to go with you. Platonic, public places, from ₹399.",
+      "og": "Two tickets. One you. Don't skip the plan."
+    },
+    "/explore-and-discover": {
+      "title": "Explore & Discover · See your city with a local | prsnn",
+      "description": "Heritage walks, food trails, markets and museums with a verified local companion. Book by the hour in the prsnn app.",
+      "og": "See more of your city with someone who knows it."
+    },
+    "/companion-for-a-loved-one": {
+      "title": "Companion for elderly parents · Visits you can trust | prsnn",
+      "description": "Can't be there for mum or dad? Book a verified, ID-checked companion to visit, walk and spend time with them. Pay from anywhere, even abroad.",
+      "og": "Mom's alone today. Someone kind can be there."
+    },
+    "/work-and-study-together": {
+      "title": "Study buddy & co-working partner · prsnn",
+      "description": "Make working alone feel less alone. Book a verified companion for café co-working, study sessions and exam prep. From ₹399.",
+      "og": "Focus better with company."
+    },
+    "/hyderabad": {
+      "title": "Companion booking in Hyderabad · prsnn",
+      "description": "Book verified companions across Hyderabad for events, city walks, study or time with a loved one. Approved, ID-checked, public places only.",
+      "og": "prsnn is live in Hyderabad."
+    },
+    "/become-a-companion": {
+      "title": "Become a companion · Earn 80% of every booking | prsnn",
+      "description": "Be good company and get paid. Choose your days, hours and booking lengths. Keep 80%: ₹1,039 for a 4-hour booking. Apply in the app.",
+      "og": "Earn doing what you love. Keep 80%."
+    },
+    "/rent-a-friend": {
+      "title": "Rent a friend in India, safely · prsnn",
+      "description": "What renting a friend means on prsnn: platonic company for plans, verified companions, public places only, fixed prices from ₹399.",
+      "og": "Rent a friend, the safe way."
+    },
+    "/safety": {
+      "title": "Safety on prsnn · Verified companions, panic button",
+      "description": "Approved and ID-checked companions, public meeting places, hidden phone numbers, and a panic button that alerts our team at once.",
+      "og": "Safety isn't a feature. It's the whole product."
+    },
+    "/pricing": {
+      "title": "Prices · From ₹399 an hour | prsnn",
+      "description": "One fair price list for every companion: 1 hour ₹399 to 12 hours ₹3,599. No booking fee. Full refund if nobody accepts.",
+      "og": "Longer together, less per hour."
+    },
+    "/about": {
+      "title": "Why prsnn exists · Founder Mukarram Jah",
+      "description": "Mukarram Jah built prsnn after his grandfather went missing for seven days: so someone trusted can be there when you can't.",
+      "og": "When we can't be there for the people we love, who can we trust to be?"
+    },
+    "/terms": { "title": "Terms of Service · prsnn", "description": "The rules for using prsnn: bookings, prices, responsibilities and safety." },
+    "/privacy": { "title": "Privacy Policy · prsnn", "description": "What data prsnn collects, why, who sees it, and your rights under India's DPDP Act." },
+    "/refunds": { "title": "Cancellation & Refunds · prsnn", "description": "Full refund if nobody accepts or your companion cancels; 85% if you cancel 15+ minutes before." },
+    "/guidelines": { "title": "Community Guidelines · prsnn", "description": "Company, never a date. Public places only. Respect, privacy and safety for everyone." }
+  }
+}

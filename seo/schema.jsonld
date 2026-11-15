@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{SITE_URL}}/#organization",
+      "name": "prsnn",
+      "alternateName": ["prsnn app", "prsnn companions"],
+      "url": "{{SITE_URL}}/",
+      "logo": "{{SITE_URL}}/logo.png",
+      "description": "prsnn is an app for booking a verified companion for platonic company in public places: someone to go to an event with, show you around a new city, study beside you, or spend time with a parent who's alone.",
+      "founder": { "@id": "{{SITE_URL}}/#founder" },
+      "areaServed": { "@type": "City", "name": "Hyderabad", "containedInPlace": { "@type": "Country", "name": "India" } },
+      "contactPoint": [{ "@type": "ContactPoint", "contactType": "customer support", "email": "{{SUPPORT_EMAIL}}", "availableLanguage": ["English", "Hindi", "Telugu"] }],
+      "sameAs": ["{{LINKEDIN_COMPANY_URL}}", "{{INSTAGRAM_URL}}", "{{APP_STORE_URL}}", "{{PLAY_STORE_URL}}", "{{WIKIDATA_URL}}"]
+    },
+    {
+      "@type": "Person",
+      "@id": "{{SITE_URL}}/#founder",
+      "name": "Mukarram Jah",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "{{SITE_URL}}/#organization" },
+      "image": "{{SITE_URL}}/founder.jpg",
+      "description": "Founder of prsnn. Built it after his grandfather, who had dementia, went missing for seven days.",
+      "sameAs": ["{{FOUNDER_LINKEDIN_URL}}"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{SITE_URL}}/#website",
+      "url": "{{SITE_URL}}/",
+      "name": "prsnn",
+      "inLanguage": "en-IN",
+      "publisher": { "@id": "{{SITE_URL}}/#organization" }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "{{SITE_URL}}/#app",
+      "name": "prsnn",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "LifestyleApplication",
+      "description": "Book a verified companion for platonic company in public places. Approved, ID-checked companions, fixed prices from ₹399, a panic button in every session.",
+      "publisher": { "@id": "{{SITE_URL}}/#organization" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "description": "Free to download; pay per booking." },
+      "installUrl": ["{{APP_STORE_URL}}", "{{PLAY_STORE_URL}}"]
+    },
+    {
+      "@type": "Service",
+      "@id": "{{SITE_URL}}/#service",
+      "name": "Companion booking",
+      "serviceType": "Platonic companionship for everyday plans",
+      "provider": { "@id": "{{SITE_URL}}/#organization" },
+      "areaServed": { "@type": "City", "name": "Hyderabad" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Booking lengths",
+        "itemListElement": [
+          { "@type": "Offer", "name": "1 hour", "price": "399", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "2 hours", "price": "699", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "3 hours", "price": "999", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "4 hours", "price": "1299", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "5 hours", "price": "1599", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "6 hours", "price": "1899", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "7 hours", "price": "2199", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "8 hours", "price": "2499", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "9 hours", "price": "2799", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "10 hours", "price": "3099", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "11 hours", "price": "3349", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "12 hours", "price": "3599", "priceCurrency": "INR" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "{{SITE_URL}}/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is prsnn?", "acceptedAnswer": { "@type": "Answer", "text": "prsnn is an app for booking a verified companion for platonic company: someone to go to a concert with, show you around a new city, study beside you, or visit a parent who's alone. Every meeting happens in a public place and is booked and paid in the app, by the hour." } },
+        { "@type": "Question", "name": "Is prsnn a dating or escort service?", "acceptedAnswer": { "@type": "Answer", "text": "No. prsnn is strictly platonic company for everyday plans. Romantic or sexual requests are against the rules and lead to a permanent ban. Every meeting is in a public place named in the booking." } },
+        { "@type": "Question", "name": "Who are the companions?", "acceptedAnswer": { "@type": "Answer", "text": "People who enjoy good company and have been approved by the prsnn team. Every profile and photo is reviewed, and each companion's government ID is checked before their first booking." } },
+        { "@type": "Question", "name": "How much does prsnn cost?", "acceptedAnswer": { "@type": "Answer", "text": "From ₹399 for one hour to ₹3,599 for twelve hours. Longer bookings cost less per hour, the price is the same for every companion, and there is no booking fee." } },
+        { "@type": "Question", "name": "What if nobody accepts my booking?", "acceptedAnswer": { "@type": "Answer", "text": "You get a full refund, automatically." } },
+        { "@type": "Question", "name": "Can I cancel a booking?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cancel at least 15 minutes before the start and 85% is refunded. If the companion cancels, you get everything back." } },
+        { "@type": "Question", "name": "How does prsnn keep people safe?", "acceptedAnswer": { "@type": "Answer", "text": "Approved, ID-checked companions, public places only, phone numbers hidden in chat, and a panic button that alerts the prsnn team at once and every five minutes until you're safe." } },
+        { "@type": "Question", "name": "Can I book a companion for my elderly parent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose Companion for a Loved One, add their name and number, and pay from anywhere, even from abroad." } },
+        { "@type": "Question", "name": "How do I become a prsnn companion?", "acceptedAnswer": { "@type": "Answer", "text": "Download the app, choose Become a companion and finish the short sign-up. The prsnn team reviews your profile, and you keep 80% of every booking." } },
+        { "@type": "Question", "name": "Where is prsnn available?", "acceptedAnswer": { "@type": "Answer", "text": "prsnn has launched in Hyderabad, India, with more cities to follow." } }
+      ]
+    }
+  ]
+}

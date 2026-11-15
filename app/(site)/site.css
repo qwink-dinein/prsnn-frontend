@@ -141,13 +141,14 @@
 .s-utab small { font-size: 14px; line-height: 1.35; color: var(--muted); }
 .s-utab[aria-selected='true'] { background: var(--midnight); border-color: var(--midnight); color: var(--porcelain); box-shadow: 0 12px 24px rgba(24, 27, 52, 0.2); }
 .s-utab[aria-selected='true'] small { color: var(--on-dark); }
-.s-panel { flex: 999 1 560px; min-width: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 28px; box-shadow: 0 16px 32px rgba(24, 27, 52, 0.08); }
-.s-panel-photo { position: relative; height: 260px; background: var(--midnight); color: var(--porcelain); }
-.s-panel-photo img { width: 100%; height: 100%; object-fit: cover; }
-.s-panel-photo div { position: absolute; left: 28px; right: 28px; bottom: 22px; display: flex; flex-direction: column; gap: 4px; }
-.s-panel-photo strong { font-size: 34px; font-weight: 600; letter-spacing: -0.8px; line-height: 1.05; }
-.s-panel-photo span { font-size: 17px; color: #dadbe3; }
-.s-panel-body { padding: 28px; display: flex; flex-direction: column; gap: 18px; flex: 1; }
+.s-panel { flex: 999 1 560px; min-width: 0; overflow: hidden; display: flex; flex-wrap: wrap; border-radius: 28px; box-shadow: 0 16px 32px rgba(24, 27, 52, 0.08); }
+/* Photo column: the full illustration (contain) over a blurred copy, so nothing is cropped or upscaled. */
+.s-panel-photo { position: relative; flex: 1 1 300px; min-height: 360px; background: var(--midnight); overflow: hidden; }
+.s-panel-photo .s-panel-bg { object-fit: cover; filter: blur(28px) saturate(1.1) brightness(0.62); transform: scale(1.2); }
+.s-panel-photo .s-panel-img { object-fit: contain; }
+.s-panel-body { padding: 28px; display: flex; flex-direction: column; gap: 18px; flex: 1.35 1 340px; min-width: 0; }
+.s-panel-title h3 { margin: 0; font-size: 30px; font-weight: 600; letter-spacing: -0.7px; line-height: 1.1; }
+.s-panel-title p { margin: 4px 0 0; font-size: 17px; color: var(--muted); }
 .s-uses { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px 24px; }
 .s-uses li { display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.45; }
 .s-tick { flex: none; margin-top: 1px; width: 22px; height: 22px; border-radius: 50%; background: var(--champagne-mist); display: flex; align-items: center; justify-content: center; color: var(--champagne-text); }
@@ -254,7 +255,7 @@
 .s-pagehead .s-wrap > div { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
 .s-pagehead h1 { margin: 0; font-size: 56px; line-height: 1.02; letter-spacing: -1.8px; font-weight: 600; }
 .s-pagehead p { margin: 0; font-size: 19px; line-height: 1.6; color: var(--on-dark); max-width: 620px; }
-.s-pagehead img { object-position: center 25%; flex: 1 1 360px; max-width: 520px; width: 100%; height: 340px; object-fit: cover; border-radius: 28px; margin: 0 auto; }
+.s-pagehead img { object-position: center 30%; flex: 1 1 360px; max-width: 480px; width: 100%; height: auto; aspect-ratio: 7 / 6; object-fit: cover; border-radius: 28px; margin: 0 auto; }
 .s-crumbs { font-size: 14px; color: var(--on-dark-dim); }
 .s-crumbs a { color: #d9dae3; }
 .s-prose { max-width: 820px; }
@@ -332,10 +333,10 @@
 .s-stack-dots button.on { width: 22px; background: var(--champagne); }
 
 /* Community banner */
-.s-community { position: relative; min-height: 340px; border-radius: 32px; overflow: hidden; background: var(--midnight); color: var(--porcelain); box-shadow: 0 22px 44px rgba(24, 27, 52, 0.18); display: flex; align-items: center; }
-.s-community-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 62%; }
+.s-community { position: relative; min-height: 420px; border-radius: 32px; overflow: hidden; background: var(--midnight); color: var(--porcelain); box-shadow: 0 22px 44px rgba(24, 27, 52, 0.18); display: flex; align-items: center; }
+.s-community-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 54%; }
 .s-community-photo img { object-fit: cover; }
-.s-community-shade { position: absolute; left: 36%; top: 0; bottom: 0; width: 22%; background: linear-gradient(90deg, var(--midnight), rgba(24, 27, 52, 0)); }
+.s-community-shade { position: absolute; left: 44%; top: 0; bottom: 0; width: 22%; background: linear-gradient(90deg, var(--midnight), rgba(24, 27, 52, 0)); }
 .s-community-text { position: relative; width: 46%; padding: 44px 48px; display: flex; flex-direction: column; gap: 14px; }
 .s-community-text p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--on-dark); }
 .s-btn-outline { background: transparent; color: var(--porcelain); border: 1px solid rgba(241, 241, 244, 0.3); }
@@ -353,8 +354,8 @@
   .s-stack-left { transform: translateX(-96%) rotate(-8deg); }
   .s-stack-right { transform: translateX(-4%) rotate(8deg); }
   .s-community { flex-direction: column; align-items: stretch; }
-  .s-community-photo { position: relative; width: 100%; height: 240px; }
-  .s-community-shade { left: 0; top: 160px; width: 100%; height: 80px; background: linear-gradient(180deg, rgba(24, 27, 52, 0), var(--midnight)); }
+  .s-community-photo { position: relative; width: 100%; height: auto; aspect-ratio: 1047 / 756; }
+  .s-community-shade { left: 0; top: auto; bottom: auto; width: 100%; height: 80px; margin-top: -80px; position: relative; background: linear-gradient(180deg, rgba(24, 27, 52, 0), var(--midnight)); }
   .s-community-text { width: 100%; padding: 24px 22px 28px; }
 }
 
@@ -367,3 +368,7 @@
 .s-not-list small { display: block; font-size: 14px; color: var(--muted); line-height: 1.45; }
 .s-not-x { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--midnight); color: var(--champagne); margin-top: 1px; }
 @media (max-width: 860px) { .s-not { grid-template-columns: 1fr; gap: 24px; } }
+
+@media (max-width: 860px) {
+  .s-panel-photo { flex-basis: 100%; min-height: 0; aspect-ratio: 7 / 6; }
+}

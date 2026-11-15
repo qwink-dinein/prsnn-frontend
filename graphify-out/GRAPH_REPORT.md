@@ -1,7 +1,7 @@
 # Graph Report - prsnn-frontend  (2026-11-15)
 
 ## Corpus Check
-- 137 files · ~68,233 words
+- 137 files · ~68,259 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .css 2, .jsonld 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `99416a76`
+- Built from commit: `7df016aa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,14 +56,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `TestConsumer()` --calls--> `useAuth()`  [EXTRACTED]
   src/tests/context/AuthContext.test.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
+- `VerificationGuard()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/common/VerificationGuard.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
+- `Hero()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/home/Hero.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 - `CompanionsContent()` --calls--> `useAuth()`  [EXTRACTED]
   legacy/web-app/app/(app)/companions/page.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
-- `NotificationProvider()` --calls--> `Notification()`  [EXTRACTED]
-  legacy/web-app/app/(app)/context/NotificationContext.jsx → legacy/web-app/app/(app)/components/common/Alert.jsx
-- `UsersList()` --calls--> `Notification()`  [EXTRACTED]
-  legacy/web-app/app/(app)/super-admin/users/page.jsx → legacy/web-app/app/(app)/components/common/Alert.jsx
-- `LegalHero()` --calls--> `Reveal()`  [EXTRACTED]
-  legacy/web-app/app/(app)/components/common/LegalLayout.jsx → legacy/web-app/app/(app)/components/common/Reveal.jsx
+- `BecomeCompanion()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/home/BecomeCompanion.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 
 ## Import Cycles
 - None detected.

@@ -43,12 +43,16 @@ export default function UseExplorer() {
         ))}
       </div>
       <div id="use-panel" role="tabpanel" aria-labelledby={`tab-${c.slug}`} className="s-panel s-card">
+        {/* The whole illustration, never stretched: shown at its own shape over a soft, blurred copy of itself. */}
         <div className="s-panel-photo">
-          <Image src={c.img} alt="" fill sizes="(max-width: 860px) 100vw, 760px" style={{ objectFit: 'cover', objectPosition: 'center 22%' }} />
-          <span className="s-shade" />
-          <div><strong>{c.title}</strong><span>{c.line}</span></div>
+          <Image src={c.img} alt="" fill sizes="(max-width: 860px) 100vw, 380px" className="s-panel-bg" aria-hidden="true" />
+          <Image src={c.img} alt={`${c.title}: ${c.pain}`} fill sizes="(max-width: 860px) 100vw, 380px" className="s-panel-img" />
         </div>
         <div className="s-panel-body">
+          <div className="s-panel-title">
+            <h3>{c.title}</h3>
+            <p>{c.line}</p>
+          </div>
           <p className="s-eyebrow" style={{ margin: 0 }}>Use it for</p>
           <ul className="s-uses">
             {c.uses.map((u) => (

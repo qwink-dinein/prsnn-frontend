@@ -386,3 +386,15 @@
 .s-guide-cta h2 { color: var(--porcelain); }
 .s-guide-cta p { color: var(--on-dark) !important; }
 @media (prefers-reduced-motion: reduce) { .s-guide-list a { transition: none; } }
+
+/* Hero deck: swipeable. Cards follow the finger while dragging, then ease into place (one curve everywhere). */
+.s-deck { touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; outline: none; }
+.s-deck.is-dragging { cursor: grabbing; }
+.s-deck:focus-visible { outline: 2px solid var(--champagne); outline-offset: 6px; border-radius: 32px; }
+.s-deck-card { position: absolute; left: 50%; top: 10px; width: 320px; transform-origin: 50% 100%; will-change: transform, opacity; transition: transform 0.62s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.s-deck.is-dragging .s-deck-card { transition: none; }
+.s-deck-card .s-pc { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.42); }
+.s-deck-card .s-pc:hover { transform: none; }
+.s-deck-card img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
+@media (max-width: 860px) { .s-deck-card { width: 270px; } .s-deck-card .s-pc { height: 440px; } }
+@media (prefers-reduced-motion: reduce) { .s-deck-card { transition: opacity 0.2s linear; } }

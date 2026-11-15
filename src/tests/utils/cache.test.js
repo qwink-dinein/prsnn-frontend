@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { cachedFetch, clearCache } from '../../../app/utils/cache.js'; 
+import { cachedFetch, clearCache } from '../../../app/(app)/utils/cache.js'; 
 
 // Mock global fetch
 global.fetch = vi.fn();

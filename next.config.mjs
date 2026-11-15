@@ -28,15 +28,25 @@ const nextConfig = {
         hostname: '*.render.com',
         pathname: '/uploads/**',
       },
-      {
-        protocol: 'https',
-        hostname: process.env.NEXT_PUBLIC_API_URL?.replace(/^https?:\/\//, '').replace(/:\d+/, '') || '',
-        pathname: '/uploads/**',
-      }
+      // The old API's own host, only when it's configured (an empty hostname breaks the build).
+      ...(process.env.NEXT_PUBLIC_API_URL
+        ? [{ protocol: 'https', hostname: process.env.NEXT_PUBLIC_API_URL.replace(/^https?:\/\//, '').replace(/:\d+/, '').replace(/\/.*$/, ''), pathname: '/uploads/**' }]
+        : []),
     ],
     formats: ['image/avif', 'image/webp'], // Use modern image formats
     deviceSizes: [640, 750, 828, 1080, 1200], // Optimize for common device sizes
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // Optimize for common image sizes
+  },
+  // Old policy pages → the new ones (keeps any search ranking they had).
+  async redirects() {
+    return [
+      { source: '/terms-of-service', destination: '/terms', permanent: true },
+      { source: '/privacy-policy', destination: '/privacy', permanent: true },
+      { source: '/refund-policy', destination: '/refunds', permanent: true },
+      { source: '/code-of-conduct', destination: '/guidelines', permanent: true },
+      { source: '/how-it-works', destination: '/#how', permanent: true },
+      { source: '/about-us', destination: '/about', permanent: true },
+    ];
   },
   devIndicators: {
     buildActivity: false,

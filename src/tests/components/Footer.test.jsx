@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import Footer from '../../../app/components/layout/Footer.jsx';
+import Footer from '../../../app/(app)/components/layout/Footer.jsx';
 
-vi.mock('../../../app/context/AuthContext.jsx', () => ({
+vi.mock('../../../app/(app)/context/AuthContext.jsx', () => ({
   useAuth: vi.fn(() => ({ userData: null })),
 }));
 

@@ -1,6 +1,6 @@
 import { render, screen, act, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { AuthProvider, useAuth } from '../../../app/context/AuthContext.jsx';
+import { AuthProvider, useAuth } from '../../../app/(app)/context/AuthContext.jsx';
 
 vi.mock('axios', () => ({
   default: {

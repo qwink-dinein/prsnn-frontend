@@ -1,3 +1,43 @@
+# prsnn website
+
+The public website for prsnn (approved "Wallet" design; see the design canvas). It sells the app,
+answers what prsnn is for, and collects interest (mobile number + member / companion / both).
+Nobody signs up on the web: booking happens in the app.
+
+## Structure
+
+- `app/(site)/`: the website. Home, five category pages (`/new-in-town` …), `/hyderabad`,
+  `/pricing`, `/safety`, `/become-a-companion`, `/rent-a-friend`, `/about`, and the legal pages
+  (`/terms`, `/privacy`, `/refunds`, `/guidelines`). All content comes from
+  `app/(site)/_lib/content.js` and `_lib/legal.jsx`.
+- `app/robots.js`, `app/sitemap.js`, `app/llms.txt/route.js`: for search engines and AI
+  assistants (see `seo/README.md` for the full SEO/GEO plan and off-site checklist).
+- `app/(app)/`: the earlier web app (Express API era), unchanged and not linked from the site.
+  Old policy URLs redirect to the new pages (`next.config.mjs`).
+
+The interest form calls the database function `submit_enquiry` (validated, throttled, one row
+per number). Staff read the list with `admin_enquiries`.
+
+## Settings (set where the site is deployed, e.g. Vercel → Environment Variables)
+
+| Variable | What |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | The live domain, e.g. `https://…` (canonical links, sitemap, llms.txt). Set before building. |
+| `NEXT_PUBLIC_SUPPORT_EMAIL` | Support address shown on the site and in structured data. Kept out of the repo. |
+| `NEXT_PUBLIC_APP_STORE_URL`, `NEXT_PUBLIC_PLAY_STORE_URL` | Store links. Until set, the buttons say "Coming soon" and lead to the interest form. |
+| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Optional; default to the prsnn project's public (publishable) values. |
+
+## Commands
+
+```
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm build && pnpm start
+pnpm test && pnpm lint
+```
+
+---
+
 
 # prsnn. Frontend
 

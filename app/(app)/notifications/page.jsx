@@ -24,7 +24,7 @@ const timeAgo = (dateInput) => {
 };
 
 const NotificationsPage = () => {
-    const { userData, token } = useAuth();
+    const { token } = useAuth();
     const router = useRouter();
     const { showNotification } = useNotification();
     const [notifications, setNotifications] = useState([]);

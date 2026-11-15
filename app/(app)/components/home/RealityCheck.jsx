@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import Reveal from '../common/Reveal';
 import SectionHeader from '../common/SectionHeader';
 
@@ -49,12 +50,12 @@ const RealityCheck = () => {
                 Every session begins with a mutual agreement: public spaces, no
                 contact, silence is valid, leave anytime.
               </p>
-              <a
+              <Link
                 href="/handshake"
                 className="inline-flex items-center gap-2 text-signal font-semibold text-sm hover:gap-3 transition-all"
               >
                 Read the full protocol →
-              </a>
+              </Link>
             </div>
           </Reveal>
 

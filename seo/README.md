@@ -26,7 +26,7 @@ covers (1) and (2) fully and lists exactly what to do for (3).
 AI assistants learn a brand from repeated, consistent statements. Use these words on the site,
 app stores, LinkedIn, press, directories and social bios:
 
-> **prsnn** is an app for booking a verified companion for platonic company in public places:
+> **prsnn** is an app for booking a verified companion for platonic company in public places (or a home visit for a loved one):
 > someone to go to an event with, show you around a new city, study beside you, or spend time
 > with a parent who's alone. Companions are approved by the prsnn team and ID-checked before
 > their first booking. Prices are fixed from ₹399 for one hour to ₹3,599 for twelve hours, and

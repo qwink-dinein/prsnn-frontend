@@ -247,10 +247,11 @@ export function Cookies() {
     <section id="cookies">
       <h2>Cookie Notice</h2>
       <p className="s-meta">Effective {UPDATED}</p>
-      <p>The prsnn website doesn’t use advertising cookies, tracking pixels or third-party analytics, and we don’t sell or share your browsing with advertisers.</p>
+      <p>The prsnn website doesn’t use advertising cookies or tracking pixels, and we don’t sell or share your browsing with advertisers. To count visits we use Cloudflare Web Analytics, which sets no cookies and doesn’t identify you.</p>
       <h3>What the website does store</h3>
       <ul>
         <li><b>Strictly necessary:</b> anything needed to show the page you asked for and to keep the interest form from being abused.</li>
+        <li><b>Visit counts (Cloudflare Web Analytics):</b> how many people visit each page, from which country and type of device. No cookies, no fingerprinting, nothing that identifies you.</li>
         <li><b>Error monitoring (Sentry):</b> when a page breaks, a short technical report is sent so we can fix it. It doesn’t include your IP address or anything you typed; any replay of the error masks all text and inputs.</li>
       </ul>
       <p>You can block or delete cookies in your browser settings; the website will still work.</p>

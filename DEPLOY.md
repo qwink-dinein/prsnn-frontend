@@ -58,3 +58,20 @@ npx wrangler dev                     # serve out/ exactly as Cloudflare will (he
 
 The earlier Express-era web app (login, bookings, admin) is in `legacy/web-app/` and is not deployed: its API
 is retired and the app and admin run on Supabase in prsnn-mobile.
+
+
+## Website traffic and search consoles
+
+**Cloudflare Web Analytics (visits, pages, countries, devices; cookieless):** Cloudflare → **Analytics & Logs →
+Web Analytics** → **Add a site** → choose `prsnn.com` → **Automatic setup** (Cloudflare adds its small beacon to
+every page; `public/_headers` already allows it). Data shows there within minutes. Zone-level traffic is also at
+prsnn.com → **Analytics & Logs → Traffic**.
+
+**Google Search Console (searches, clicks, indexing):** https://search.google.com/search-console → **Add property →
+Domain** → `prsnn.com` → copy the TXT record → Cloudflare → prsnn.com → **DNS → Records → Add record**: Type TXT,
+Name `@`, Content the `google-site-verification=…` value → back in Search Console click **Verify**. Then
+**Sitemaps** → submit `https://prsnn.com/sitemap.xml`, and **URL inspection** → request indexing of `/` and `/guides`.
+(Alternative: the HTML-tag method, with the code in the build variable `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.)
+
+**Bing Webmaster Tools (Bing, Copilot, DuckDuckGo):** https://www.bing.com/webmasters → **Import from Google Search
+Console** (fastest), or add the site and use `NEXT_PUBLIC_BING_SITE_VERIFICATION`. Submit the same sitemap.

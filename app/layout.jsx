@@ -7,6 +7,11 @@ export const metadata = {
   title: { default: 'prsnn · Book a verified companion for any plan', template: '%s' },
   description: 'Everyone’s busy? Go anyway. Book a verified companion for concerts, a new city, study or a visit for your parents. Public places only. From ₹399.',
   applicationName: 'prsnn',
+  // Search console ownership checks (optional; set in Cloudflare build variables). DNS verification works too.
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { other: { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } } : {}),
+  },
 };
 
 export const viewport = { width: 'device-width', initialScale: 1, themeColor: '#181B34' };

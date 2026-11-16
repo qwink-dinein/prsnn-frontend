@@ -63,8 +63,8 @@ is retired and the app and admin run on Supabase in prsnn-mobile.
 ## Website traffic and search consoles
 
 **Cloudflare Web Analytics (visits, pages, countries, devices; cookieless):** Cloudflare → **Analytics & Logs →
-Web Analytics** → **Add a site** → choose `prsnn.com` → **Automatic setup** (Cloudflare adds its small beacon to
-every page; `public/_headers` already allows it). Data shows there within minutes. Zone-level traffic is also at
+Web Analytics** → **Add a site** → choose `prsnn.com` → the site's beacon is already in every page
+(`app/layout.jsx`, token `5c43f384…`, override with `NEXT_PUBLIC_CF_BEACON_TOKEN`); `public/_headers` allows it. Data shows there within minutes. Zone-level traffic is also at
 prsnn.com → **Analytics & Logs → Traffic**.
 
 **Google Search Console (searches, clicks, indexing):** https://search.google.com/search-console → **Add property →

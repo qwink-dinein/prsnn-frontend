@@ -1,6 +1,8 @@
 // Root shell only. The website lives in app/(site) with its own look; the earlier web app
 // (Express API era) lives in app/(app) with its own navbar, providers and fonts.
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
+/** Cloudflare Web Analytics site token (public: it's sent in every page). Cookieless visit counts. */
+const CF_BEACON = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN || '5c43f3844aa243be98697402c7325da9';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -21,6 +23,8 @@ export default function RootLayout({ children }) {
     <html lang="en-IN" suppressHydrationWarning>
       <body suppressHydrationWarning style={{ margin: 0 }}>
         {children}
+        {/* Cloudflare Web Analytics: real visitors only (no cookies, nothing that identifies anyone). */}
+        {CF_BEACON ? <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF_BEACON })} /> : null}
       </body>
     </html>
   );

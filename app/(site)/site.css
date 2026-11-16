@@ -77,7 +77,7 @@
 /* Hero */
 .s-hero { background: var(--midnight); color: var(--porcelain); overflow: hidden; }
 .s-hero .s-wrap { display: flex; flex-wrap: wrap; gap: 56px; align-items: center; padding-top: 48px; padding-bottom: 96px; }
-.s-hero-copy { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.s-hero-copy { position: relative; z-index: 2; flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
 .s-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(201, 182, 142, 0.45); color: var(--champagne); font-size: 13px; font-weight: 600; }
 .s-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--champagne); }
 .s-hero-sub { margin: 0; font-size: 19px; line-height: 1.55; color: var(--on-dark); max-width: 560px; }
@@ -388,6 +388,7 @@
 @media (prefers-reduced-motion: reduce) { .s-guide-list a { transition: none; } }
 
 /* Hero deck: swipeable. Cards follow the finger while dragging, then ease into place (one curve everywhere). */
+.s-hero .s-deck { flex: 0 1 540px; z-index: 1; }
 .s-deck { touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; outline: none; }
 .s-deck.is-dragging { cursor: grabbing; }
 .s-deck:focus-visible { outline: 2px solid var(--champagne); outline-offset: 6px; border-radius: 32px; }

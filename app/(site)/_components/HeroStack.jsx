@@ -21,7 +21,19 @@ export default function HeroStack() {
   const g = useRef({ id: null, x0: 0, y0: 0, t0: 0, lastX: 0, lastT: 0, v: 0, axis: null, moved: false });
   const raf = useRef(0);
 
-  const width = () => (wrapRef.current?.querySelector('.s-deck-card')?.offsetWidth || 300) * 0.62;
+  /**
+   * How far a side card sits from the front card, in px. Ideally 62% of a card, but never so far that a side
+   * card (scaled and tilted) pokes out of the deck's own box and covers the hero text beside it.
+   */
+  const width = () => {
+    const box = wrapRef.current;
+    const card = box?.querySelector('.s-deck-card');
+    if (!box || !card) return 200;
+    const w = card.offsetWidth;
+    const tilt = card.offsetHeight * Math.sin((7 * Math.PI) / 180) * 0.89; // top corner swings out this far
+    const fits = box.clientWidth / 2 - (w * 0.89) / 2 - tilt;
+    return Math.max(w * 0.22, Math.min(w * 0.62, fits));
+  };
   const go = useCallback((d) => select((((index + d) % N) + N) % N), [index, select]);
 
   const onDown = (e) => {
@@ -83,8 +95,10 @@ export default function HeroStack() {
   useEffect(() => {
     const measure = () => setStep(width());
     measure();
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(measure) : null;
+    if (ro && wrapRef.current) ro.observe(wrapRef.current);
+    else window.addEventListener('resize', measure);
+    return () => (ro ? ro.disconnect() : window.removeEventListener('resize', measure));
   }, []);
   return (
     <div
@@ -105,7 +119,7 @@ export default function HeroStack() {
         const p = wrap(i - index) + drag / step; // position: 0 front, ±1 beside it, ±2 hidden
         const a = Math.abs(p);
         const style = {
-          transform: `translateX(calc(-50% + ${p * 62}%)) translateY(${Math.min(a, 1.5) * 26}px) rotate(${Math.max(-1.6, Math.min(1.6, p)) * 7}deg) scale(${1 - Math.min(a, 1.6) * 0.11})`,
+          transform: `translateX(calc(-50% + ${p * step}px)) translateY(${Math.min(a, 1.5) * 26}px) rotate(${Math.max(-1.6, Math.min(1.6, p)) * 7}deg) scale(${1 - Math.min(a, 1.6) * 0.11})`,
           opacity: a <= 1.15 ? 1 : Math.max(0, 1 - (a - 1.15) * 1.6),
           zIndex: 10 - Math.round(a * 3),
           pointerEvents: a > 1.4 ? 'none' : undefined,

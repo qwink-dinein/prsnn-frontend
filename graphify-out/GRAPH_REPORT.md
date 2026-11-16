@@ -1,17 +1,17 @@
 # Graph Report - prsnn-frontend  (2026-11-16)
 
 ## Corpus Check
-- 145 files · ~78,783 words
+- 146 files · ~79,039 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .css 2, .jsonld 1)
 
 ## Summary
-- 552 nodes · 1467 edges · 29 communities (24 shown, 5 thin omitted)
+- 554 nodes · 1471 edges · 28 communities (23 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f1baf91e`
+- Built from commit: `3955b1fe`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,8 +22,7 @@
 - LegalLayout.jsx
 - @sentry/nextjs
 - login/page.jsx
-- (app)/layout.jsx
-- StoreButtons.jsx
+- InterestForm.jsx
 - devDependencies
 - legal.jsx
 - package.json
@@ -49,7 +48,7 @@
 ## God Nodes (most connected - your core abstractions)
 1. `next` - 72 edges
 2. `useAuth()` - 60 edges
-3. `react` - 58 edges
+3. `react` - 59 edges
 4. `Reveal()` - 37 edges
 5. `Loading()` - 36 edges
 6. `PageHead()` - 24 edges
@@ -63,21 +62,21 @@
   src/tests/context/AuthContext.test.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 - `Home()` --calls--> `CommunityBanner()`  [EXTRACTED]
   app/(site)/page.jsx → app/(site)/_components/CommunityBanner.jsx
-- `PhotoCard()` --calls--> `inr()`  [EXTRACTED]
-  app/(site)/_components/PhotoCard.jsx → app/(site)/_lib/content.js
-- `PricePicker()` --calls--> `inr()`  [EXTRACTED]
-  app/(site)/_components/PricePicker.jsx → app/(site)/_lib/content.js
-- `Home()` --calls--> `inr()`  [EXTRACTED]
-  app/(site)/page.jsx → app/(site)/_lib/content.js
+- `Home()` --calls--> `Faq()`  [EXTRACTED]
+  app/(site)/page.jsx → app/(site)/_components/Faq.jsx
+- `Home()` --calls--> `FounderStory()`  [EXTRACTED]
+  app/(site)/page.jsx → app/(site)/_components/FounderStory.jsx
+- `Home()` --calls--> `HeroStack()`  [EXTRACTED]
+  app/(site)/page.jsx → app/(site)/_components/HeroStack.jsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 5 thin omitted)
+## Communities (28 total, 5 thin omitted)
 
 ### Community 0 - "next"
-Cohesion: 0.08
-Nodes (39): AdminLayout(), AdminOnboardingPage(), AdminPanel(), UserDetailsPage(), FellowProfile(), Chat(), Loading(), VerificationGuard() (+31 more)
+Cohesion: 0.06
+Nodes (53): AdminLayout(), AdminOnboardingPage(), AdminPanel(), UserDetailsPage(), FellowProfile(), GlobalClickGuard(), Chat(), EnvBanner() (+45 more)
 
 ### Community 1 - "Reveal"
 Cohesion: 0.08
@@ -85,7 +84,7 @@ Nodes (38): AboutUs(), values, Reveal(), SectionHeader(), BecomeCompanion(), ben
 
 ### Community 2 - "companions/page.jsx"
 Cohesion: 0.15
-Nodes (16): allInterestTags, CompanionCard(), CompanionsContent(), CompanionsPage(), daysOfWeek, EmptyState(), FilterChip(), modeApiLabels (+8 more)
+Nodes (15): allInterestTags, CompanionCard(), CompanionsContent(), CompanionsPage(), daysOfWeek, EmptyState(), FilterChip(), modeApiLabels (+7 more)
 
 ### Community 3 - "LegalLayout.jsx"
 Cohesion: 0.50
@@ -99,21 +98,17 @@ Nodes (10): onRouterTransitionStart, onRequestError, register(), dynamic, GET(),
 Cohesion: 0.10
 Nodes (32): AuthField(), AuthShell(), AuthSubmit(), EyeToggle(), IconEye(), IconEyeOff(), IconLock(), IconMail() (+24 more)
 
-### Community 6 - "(app)/layout.jsx"
-Cohesion: 0.16
-Nodes (13): GlobalClickGuard(), EnvBanner(), Footer(), marketingLinks, NavBar(), NavBarInner(), NotificationProvider(), AppLayout() (+5 more)
-
-### Community 7 - "StoreButtons.jsx"
-Cohesion: 0.29
-Nodes (8): Apple(), Play(), StoreButtons(), ANDROID_APK_URL, APP_STORE_URL, PLAY_STORE_URL, metadata, RentAFriend()
+### Community 6 - "InterestForm.jsx"
+Cohesion: 0.48
+Nodes (4): CHOICES, COUNTRY_CODES, phoneError(), submitEnquiry()
 
 ### Community 8 - "devDependencies"
 Cohesion: 0.18
 Nodes (11): devDependencies, jsdom@^29.0.1, tailwindcss@^4, @tailwindcss/postcss@^4, @types/react@19.2.9, @types/react-dom@^19, jsdom, tailwindcss (+3 more)
 
 ### Community 9 - "legal.jsx"
-Cohesion: 0.10
-Nodes (44): metadata, Page(), metadata, Page(), JsonLd(), LEGAL_PAGES, LegalLinks(), PageHead() (+36 more)
+Cohesion: 0.11
+Nodes (39): metadata, Page(), metadata, Page(), LEGAL_PAGES, LegalLinks(), PageHead(), metadata (+31 more)
 
 ### Community 10 - "package.json"
 Cohesion: 0.18
@@ -124,12 +119,12 @@ Cohesion: 0.40
 Nodes (3): metadata, SITE_URL, viewport
 
 ### Community 14 - "PricePicker.jsx"
-Cohesion: 0.39
-Nodes (7): Guilloche(), Mark(), CHOICES, MAT, PricePicker(), hoursLabel(), savingFor()
+Cohesion: 0.43
+Nodes (6): Guilloche(), Mark(), CHOICES, MAT, PricePicker(), savingFor()
 
 ### Community 15 - "[slug]/page.jsx"
-Cohesion: 0.09
-Nodes (21): AI_AND_SEARCH, dynamic, PRIVATE, list, metadata, Cta(), dynamicParams, generateMetadata() (+13 more)
+Cohesion: 0.11
+Nodes (18): Guides(), list, metadata, Cta(), dynamicParams, generateMetadata(), Guide(), PAGES (+10 more)
 
 ### Community 16 - "allowBuilds"
 Cohesion: 0.40
@@ -152,24 +147,24 @@ Cohesion: 0.33
 Nodes (6): scripts, build, dev, lint, start, test
 
 ### Community 24 - "content.js"
-Cohesion: 0.20
-Nodes (11): About(), metadata, OpenCategory(), CommunityBanner(), FounderStory(), COMMUNITY_IMG, COUNTRY, FOUNDER (+3 more)
+Cohesion: 0.14
+Nodes (13): AI_AND_SEARCH, dynamic, PRIVATE, CommunityBanner(), Cross(), NotFor(), COMMUNITY_IMG, COUNTRY (+5 more)
 
 ### Community 25 - "(site)/layout.jsx"
-Cohesion: 0.15
-Nodes (15): metadata, NotFound(), outfit, urbanist, Logo(), Footer(), ICONS, Header() (+7 more)
+Cohesion: 0.12
+Nodes (19): metadata, NotFound(), outfit, urbanist, Logo(), Footer(), ICONS, Header() (+11 more)
 
 ### Community 26 - "(site)/page.jsx"
-Cohesion: 0.15
-Nodes (21): Faq(), Arrow(), base, Chevron(), Clock(), Cross(), I(), Mail() (+13 more)
+Cohesion: 0.16
+Nodes (20): Faq(), Apple(), Arrow(), base, Chevron(), Clock(), I(), Mail() (+12 more)
 
 ### Community 27 - "[category]/page.jsx"
-Cohesion: 0.16
-Nodes (18): Become(), metadata, STEPS, CategoryPage(), dynamicParams, generateMetadata(), SHARED_FAQ, Check() (+10 more)
+Cohesion: 0.14
+Nodes (24): Become(), metadata, STEPS, CategoryPage(), dynamicParams, generateMetadata(), SHARED_FAQ, CategoryProvider() (+16 more)
 
 ### Community 28 - "CategoryContext.jsx"
-Cohesion: 0.27
-Nodes (11): CategoryProvider(), Ctx, useCategory(), HeroStack(), wrap(), ICONS, PhotoCard(), PhotoCardRow() (+3 more)
+Cohesion: 0.17
+Nodes (14): About(), metadata, Ctx, OpenCategory(), useCategory(), FounderStory(), HeroStack(), wrap() (+6 more)
 
 ## Knowledge Gaps
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
@@ -177,17 +172,17 @@ Nodes (11): CategoryProvider(), Ctx, useCategory(), HeroStack(), wrap(), ICONS, 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `next` to `Reveal`, `companions/page.jsx`, `LegalLayout.jsx`, `@sentry/nextjs`, `login/page.jsx`, `(app)/layout.jsx`, `StoreButtons.jsx`, `legal.jsx`, `package.json`, `PricePicker.jsx`, `[slug]/page.jsx`, `dependencies`, `content.js`, `(site)/layout.jsx`, `(site)/page.jsx`, `[category]/page.jsx`, `CategoryContext.jsx`?**
-  _High betweenness centrality (0.514) - this node is a cross-community bridge._
+- **Why does `next` connect `next` to `Reveal`, `companions/page.jsx`, `LegalLayout.jsx`, `@sentry/nextjs`, `login/page.jsx`, `InterestForm.jsx`, `legal.jsx`, `package.json`, `PricePicker.jsx`, `[slug]/page.jsx`, `dependencies`, `content.js`, `(site)/layout.jsx`, `(site)/page.jsx`, `[category]/page.jsx`, `CategoryContext.jsx`?**
+  _High betweenness centrality (0.512) - this node is a cross-community bridge._
 - **Should `next` be split into smaller, more focused modules?**
-  _Cohesion score 0.08406361570918533 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `next` to `Reveal`, `companions/page.jsx`, `LegalLayout.jsx`, `@sentry/nextjs`, `login/page.jsx`, `(app)/layout.jsx`, `package.json`, `ProcessIllustrations.jsx`, `WhyChooseUs.jsx`, `PricePicker.jsx`, `dependencies`, `(site)/page.jsx`, `[category]/page.jsx`, `CategoryContext.jsx`?**
-  _High betweenness centrality (0.183) - this node is a cross-community bridge._
+  _Cohesion score 0.062424242424242424 - nodes in this community are weakly interconnected._
+- **Why does `react` connect `next` to `Reveal`, `companions/page.jsx`, `LegalLayout.jsx`, `@sentry/nextjs`, `login/page.jsx`, `InterestForm.jsx`, `package.json`, `ProcessIllustrations.jsx`, `WhyChooseUs.jsx`, `PricePicker.jsx`, `dependencies`, `(site)/page.jsx`, `[category]/page.jsx`, `CategoryContext.jsx`?**
+  _High betweenness centrality (0.185) - this node is a cross-community bridge._
 - **Should `Reveal` be split into smaller, more focused modules?**
   _Cohesion score 0.07792207792207792 - nodes in this community are weakly interconnected._
 - **Why does `@sentry/nextjs` connect `@sentry/nextjs` to `next`, `dependencies`, `package.json`?**
   _High betweenness centrality (0.055) - this node is a cross-community bridge._
-- **Should `companions/page.jsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.14761904761904762 - nodes in this community are weakly interconnected._
 - **Should `@sentry/nextjs` be split into smaller, more focused modules?**
   _Cohesion score 0.12380952380952381 - nodes in this community are weakly interconnected._
+- **Should `login/page.jsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._

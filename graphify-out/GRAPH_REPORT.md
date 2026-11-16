@@ -1,7 +1,7 @@
 # Graph Report - prsnn-frontend  (2026-11-16)
 
 ## Corpus Check
-- 146 files · ~79,274 words
+- 146 files · ~79,299 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .css 2, .jsonld 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1729233`
+- Built from commit: `6f17ff83`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,12 +62,12 @@
   src/tests/context/AuthContext.test.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 - `Home()` --calls--> `CommunityBanner()`  [EXTRACTED]
   app/(site)/page.jsx → app/(site)/_components/CommunityBanner.jsx
-- `CategoryPage()` --calls--> `inr()`  [EXTRACTED]
-  app/(site)/[category]/page.jsx → app/(site)/_lib/content.js
-- `PhotoCard()` --calls--> `inr()`  [EXTRACTED]
-  app/(site)/_components/PhotoCard.jsx → app/(site)/_lib/content.js
-- `CategoryPage()` --calls--> `hoursLabel()`  [EXTRACTED]
-  app/(site)/[category]/page.jsx → app/(site)/_lib/content.js
+- `SiteLayout()` --calls--> `Header()`  [EXTRACTED]
+  app/(site)/layout.jsx → app/(site)/_components/Header.jsx
+- `VerificationGuard()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/common/VerificationGuard.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
+- `BecomeCompanion()` --calls--> `Reveal()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/home/BecomeCompanion.jsx → legacy/web-app/app/(app)/components/common/Reveal.jsx
 
 ## Import Cycles
 - None detected.

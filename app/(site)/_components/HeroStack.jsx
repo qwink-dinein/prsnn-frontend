@@ -8,14 +8,26 @@ const N = CATEGORIES.length;
 /** Signed distance from the front card, the short way round the loop (−2…2 for five cards). */
 const wrap = (d) => ((((d + N / 2) % N) + N) % N) - N / 2;
 
+/** Auto-rotation: the next card comes forward every second (paused while someone is using the deck). */
+const AUTO_MS = 1000;
+
 /**
  * Hero: a swipeable deck of the photo cards. Drag (finger or mouse) and every card follows; let go and
  * it eases onto the next card. A quick flick counts even if it's short. The front card opens its page,
- * a side card comes forward when tapped, arrow keys and the dots work too. Reduced motion: no easing.
+ * a side card comes forward when tapped, arrow keys and the dots work too. On its own it turns every
+ * second, round and round; it pauses while hovered, focused or dragged, when off screen or in a background
+ * tab, and doesn't turn at all with reduced motion. Only a person's choice moves the explorer below.
  */
 export default function HeroStack() {
-  const { index, select } = useCategory();
+  const { index: chosen, select } = useCategory();
+  const [index, setFront] = useState(chosen);
   const wrapRef = useRef(null);
+  const hold = useRef({ hover: false, focus: false, drag: false, seen: true });
+  // A person's choice: move the deck and the explorer below.
+  const pick = useCallback((i) => {
+    setFront(i);
+    select(i);
+  }, [select]);
   const [drag, setDrag] = useState(0); // px the deck has been dragged; 0 when resting
   const [dragging, setDragging] = useState(false);
   const g = useRef({ id: null, x0: 0, y0: 0, t0: 0, lastX: 0, lastT: 0, v: 0, axis: null, moved: false });
@@ -34,7 +46,7 @@ export default function HeroStack() {
     const fits = box.clientWidth / 2 - (w * 0.89) / 2 - tilt;
     return Math.max(w * 0.22, Math.min(w * 0.62, fits));
   };
-  const go = useCallback((d) => select((((index + d) % N) + N) % N), [index, select]);
+  const go = useCallback((d) => pick((((index + d) % N) + N) % N), [index, pick]);
 
   const onDown = (e) => {
     if (e.button !== undefined && e.button !== 0) return;
@@ -50,6 +62,7 @@ export default function HeroStack() {
       s.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
       if (s.axis === 'y') return; // a vertical scroll: let the page have it
       wrapRef.current?.setPointerCapture?.(e.pointerId);
+      hold.current.drag = true;
       setDragging(true);
     }
     if (s.axis !== 'x') return;
@@ -65,6 +78,7 @@ export default function HeroStack() {
     const s = g.current;
     if (s.id !== e.pointerId) return;
     s.id = null;
+    hold.current.drag = false;
     if (s.axis !== 'x') return;
     cancelAnimationFrame(raf.current);
     const dx = e.clientX - s.x0;
@@ -90,6 +104,22 @@ export default function HeroStack() {
     if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   };
   useEffect(() => () => cancelAnimationFrame(raf.current), []);
+  // Turn by itself, round and round.
+  useEffect(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return undefined;
+    const el = wrapRef.current;
+    const io = typeof IntersectionObserver !== 'undefined' && el ? new IntersectionObserver(([e]) => { hold.current.seen = e.isIntersecting; }, { threshold: 0.25 }) : null;
+    if (io && el) io.observe(el);
+    const t = setInterval(() => {
+      const h = hold.current;
+      if (h.hover || h.focus || h.drag || !h.seen || document.hidden) return;
+      setFront((f) => (f + 1) % N);
+    }, AUTO_MS);
+    return () => {
+      clearInterval(t);
+      io?.disconnect();
+    };
+  }, []);
   // How far one card is from the next (measured, and again when the screen size changes).
   const [step, setStep] = useState(200);
   useEffect(() => {
@@ -110,6 +140,10 @@ export default function HeroStack() {
       onPointerCancel={onUp}
       onClickCapture={onClickCapture}
       onKeyDown={onKey}
+      onPointerEnter={(e) => { if (e.pointerType === 'mouse') hold.current.hover = true; }}
+      onPointerLeave={() => { hold.current.hover = false; }}
+      onFocus={() => { hold.current.focus = true; }}
+      onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) hold.current.focus = false; }}
       role="region"
       aria-roledescription="carousel"
       aria-label="Kinds of company. Swipe or use the arrow keys."
@@ -130,14 +164,14 @@ export default function HeroStack() {
             {front ? (
               <PhotoCard c={c} size="lg" priority={i === index} />
             ) : (
-              <PhotoCard c={c} size="lg" price={false} onClick={() => select(i)} />
+              <PhotoCard c={c} size="lg" price={false} onClick={() => pick(i)} />
             )}
           </div>
         );
       })}
       <div className="s-stack-dots" role="tablist" aria-label="Choose a kind of company">
         {CATEGORIES.map((c, i) => (
-          <button key={c.slug} type="button" role="tab" aria-selected={i === index} aria-label={c.title} onClick={() => select(i)} className={i === index ? 'on' : ''} />
+          <button key={c.slug} type="button" role="tab" aria-selected={i === index} aria-label={c.title} onClick={() => pick(i)} className={i === index ? 'on' : ''} />
         ))}
       </div>
     </div>

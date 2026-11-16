@@ -1,18 +1,38 @@
-# Cloudflare static assets: old addresses → current pages (301 keeps any search ranking they had).
+# Cloudflare static assets: old addresses → current pages. 301 = permanent, so Google replaces the old
+# results (the old site's "Find Companion", "Let's talk", "How It Works"…) with the current pages.
 /terms-of-service       /terms              301
 /privacy-policy         /privacy            301
 /refund-policy          /refunds            301
 /code-of-conduct        /guidelines         301
 /how-it-works           /#how               301
+/how-it-works/          /#how               301
 /about-us               /about              301
 /payment-terms          /refunds            301
 /dispute-policy         /grievance          301
 /fellow-training-manual /companion-terms    301
 /user-instructions      /safety             301
-/sentry-example-page    /                   302
-/login                  /                   302
-/admin                  /                   302
-/super-admin            /                   302
-/my-bookings            /                   302
-/profile                /                   302
+/contact                /support            301
+/contact/               /support            301
+/companions             /                   301
+/companions/            /                   301
+/companions/*           /                   301
 /hyderabad              /guides/rent-a-friend-hyderabad 301
+/login                  /                   301
+/admin                  /                   301
+/admin/*                /                   301
+/super-admin            /                   301
+/super-admin/*          /                   301
+/my-bookings            /                   301
+/profile                /                   301
+/notifications          /                   301
+/onboarding             /                   301
+/onboarding/*           /                   301
+/handshake              /                   301
+/handshake/*            /                   301
+/session                /                   301
+/session/*              /                   301
+/forgot-password        /                   301
+/reset-password         /                   301
+/verify-email           /                   301
+/sentry-example-page    /                   301
+/icon.svg               /icon-512.png       301

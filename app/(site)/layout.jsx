@@ -14,6 +14,15 @@ export const metadata = {
   openGraph: { type: 'website', siteName: 'prsnn', locale: 'en_IN', images: [{ url: '/site/cat/community-cafe.jpg', width: 1600, height: 781, alt: 'prsnn: real people, real connections' }] },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },
+  // The brand mark (midnight square, white "p", champagne dot), the same as the app icon.
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
 };
 
 const sameAs = [...SOCIALS.map((s) => s.url), APP_STORE_URL, PLAY_STORE_URL].filter(Boolean);
@@ -26,7 +35,7 @@ const graph = {
       name: 'prsnn',
       alternateName: ['prsnn app', 'prsnn companions'],
       url: `${SITE_URL}/`,
-      logo: `${SITE_URL}/icon.svg`,
+      logo: `${SITE_URL}/icon-512.png`,
       description: SUMMARY,
       founder: { '@id': `${SITE_URL}/#founder` },
       areaServed: { '@type': 'Country', name: 'India' },

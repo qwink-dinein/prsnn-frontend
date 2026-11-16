@@ -1,7 +1,7 @@
 # Graph Report - prsnn-frontend  (2026-11-16)
 
 ## Corpus Check
-- 145 files · ~78,300 words
+- 145 files · ~78,424 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .css 2, .jsonld 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ef7deda8`
+- Built from commit: `49de9053`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,12 +64,12 @@
   src/tests/context/AuthContext.test.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 - `Home()` --calls--> `CommunityBanner()`  [EXTRACTED]
   app/(site)/page.jsx → app/(site)/_components/CommunityBanner.jsx
-- `Become()` --calls--> `StoreButtons()`  [EXTRACTED]
-  app/(site)/become-a-companion/page.jsx → app/(site)/_components/StoreButtons.jsx
-- `Cta()` --calls--> `StoreButtons()`  [EXTRACTED]
-  app/(site)/guides/[slug]/page.jsx → app/(site)/_components/StoreButtons.jsx
-- `Home()` --calls--> `StoreButtons()`  [EXTRACTED]
-  app/(site)/page.jsx → app/(site)/_components/StoreButtons.jsx
+- `Home()` --calls--> `HeroStack()`  [EXTRACTED]
+  app/(site)/page.jsx → app/(site)/_components/HeroStack.jsx
+- `VerificationGuard()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/common/VerificationGuard.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
+- `FinalCTA()` --calls--> `Reveal()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/home/FinalCTA.jsx → legacy/web-app/app/(app)/components/common/Reveal.jsx
 
 ## Import Cycles
 - None detected.

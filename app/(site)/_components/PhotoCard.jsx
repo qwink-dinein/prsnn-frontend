@@ -1,3 +1,4 @@
+import { rich } from './Brand';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PRICES, inr } from '../_lib/content';
@@ -23,11 +24,11 @@ export default function PhotoCard({ c, href, onClick, size = 'md', price = true,
       <span className="s-pc-fade" />
       <span className="s-pc-text">
         <span className="s-pc-pill">
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{ICONS[c.icon]}</svg>
-          {c.title}
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{rich(ICONS[c.icon])}</svg>
+          {rich(c.title)}
         </span>
-        <span className="s-pc-h">{c.pain}</span>
-        <span className="s-pc-p">{c.promise}{price ? ` From ${inr(PRICES[1])}.` : ''}</span>
+        <span className="s-pc-h">{rich(c.pain)}</span>
+        <span className="s-pc-p">{rich(c.promise)}{rich(price ? ` From ${inr(PRICES[1])}.` : '')}</span>
       </span>
       <span className="s-pc-go" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -36,6 +37,6 @@ export default function PhotoCard({ c, href, onClick, size = 'md', price = true,
   );
   const cls = `s-pc ${c.dark ? 's-pc-dark' : 's-pc-light'} s-pc-${size} ${className}`;
   const label = `${c.title}. ${c.pain} ${c.promise}`;
-  if (onClick) return <button type="button" className={cls} onClick={onClick} aria-label={label}>{body}</button>;
-  return <Link className={cls} href={href || `/${c.slug}`} aria-label={label}>{body}</Link>;
+  if (onClick) return <button type="button" className={cls} onClick={onClick} aria-label={label}>{rich(body)}</button>;
+  return <Link className={cls} href={href || `/${c.slug}`} aria-label={label}>{rich(body)}</Link>;
 }

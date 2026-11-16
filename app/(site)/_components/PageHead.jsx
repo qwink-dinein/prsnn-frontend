@@ -1,3 +1,4 @@
+import { rich } from './Brand';
 import Link from 'next/link';
 import Image from 'next/image';
 import JsonLd from './JsonLd';
@@ -14,12 +15,12 @@ export default function PageHead({ title, intro, crumb, path, img, children }) {
       <JsonLd data={crumbs} />
       <div className="s-wrap">
         <div>
-          <nav className="s-crumbs" aria-label="Breadcrumb"><Link href="/">Home</Link> / <span aria-current="page">{crumb || title}</span></nav>
-          <h1>{title}</h1>
-          {intro ? <p>{intro}</p> : null}
-          {children}
+          <nav className="s-crumbs" aria-label="Breadcrumb"><Link href="/">Home</Link> / <span aria-current="page">{rich(crumb || title)}</span></nav>
+          <h1>{rich(title)}</h1>
+          {rich(intro ? <p>{rich(intro)}</p> : null)}
+          {rich(children)}
         </div>
-        {img ? <Image src={img} alt="" width={900} height={600} sizes="(max-width: 860px) 100vw, 520px" priority /> : null}
+        {rich(img ? <Image src={img} alt="" width={900} height={600} sizes="(max-width: 860px) 100vw, 520px" priority /> : null)}
       </div>
     </section>
   );

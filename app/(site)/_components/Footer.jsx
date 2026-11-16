@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Logo } from './Brand';
+import { Logo, Name, rich } from './Brand';
 import { CATEGORIES, SOCIALS } from '../_lib/content';
 
 /** Brand marks (simple-icons paths), drawn in the footer's text colour. */
@@ -28,13 +28,13 @@ export default function Footer() {
           </ul>
         </div>
         <nav aria-label="Kinds of company">
-          <b>Use prsnn for</b>
+          <b>Use <Name /> for</b>
           {CATEGORIES.map((c) => (
-            <Link key={c.slug} href={`/${c.slug}`}>{c.title}</Link>
+            <Link key={c.slug} href={`/${c.slug}`}>{rich(c.title)}</Link>
           ))}
         </nav>
         <nav aria-label="prsnn">
-          <b>prsnn</b>
+          <b><Name /></b>
           <Link href="/pricing">Prices</Link>
           <Link href="/safety">Safety</Link>
           <Link href="/become-a-companion">Become a companion</Link>
@@ -57,7 +57,7 @@ export default function Footer() {
         </nav>
       </div>
       <div className="s-wrap s-footer-base">
-        <span>© {new Date().getFullYear()} prsnn · India</span>
+        <span>© {rich(new Date().getFullYear())} <Name /> · India</span>
         <span>In an emergency, call 112.</span>
       </div>
     </footer>

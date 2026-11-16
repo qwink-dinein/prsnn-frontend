@@ -1,3 +1,4 @@
+import { rich } from './Brand';
 import Link from 'next/link';
 
 export const LEGAL_PAGES = [
@@ -17,11 +18,11 @@ export const LEGAL_PAGES = [
 export default function LegalLinks({ current }) {
   return (
     <p className="s-meta">
-      Also see:{' '}
+      Also see:{rich(' ')}
       {LEGAL_PAGES.filter(([href]) => href !== current).map(([href, label], i) => (
         <span key={href}>
-          {i ? ' · ' : ''}
-          <Link href={href}>{label}</Link>
+          {rich(i ? ' · ' : '')}
+          <Link href={href}>{rich(label)}</Link>
         </span>
       ))}
     </p>

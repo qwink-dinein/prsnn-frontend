@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import PageHead from '../_components/PageHead';
 import StoreButtons from '../_components/StoreButtons';
 import InterestForm from '../_components/InterestForm';
@@ -29,7 +30,7 @@ export default function Become() {
             <h2 className="s-h2">Five steps to your first booking.</h2>
             <ol className="s-steps" style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 24 }}>
               {STEPS.map(([t, b], i) => (
-                <li key={t} className="s-card" style={{ padding: 22 }}><span className="s-num" style={{ fontSize: 28 }}>{i + 1}</span><h3 style={{ margin: '4px 0 6px' }}>{t}</h3><p>{b}</p></li>
+                <li key={t} className="s-card" style={{ padding: 22 }}><span className="s-num" style={{ fontSize: 28 }}>{rich(i + 1)}</span><h3 style={{ margin: '4px 0 6px' }}>{rich(t)}</h3><p>{rich(b)}</p></li>
               ))}
             </ol>
           </div>
@@ -39,7 +40,7 @@ export default function Become() {
               <thead><tr><th scope="col">LENGTH</th><th scope="col">PRICE</th><th scope="col">YOU GET</th></tr></thead>
               <tbody>
                 {HOURS.map((h) => (
-                  <tr key={h}><th scope="row" style={{ fontWeight: 500 }}>{hoursLabel(h)}</th><td style={{ color: 'var(--muted)' }}>{inr(PRICES[h])}</td><td className="s-num" style={{ fontSize: 19 }}>{inr(companionShare(PRICES[h]))}</td></tr>
+                  <tr key={h}><th scope="row" style={{ fontWeight: 500 }}>{rich(hoursLabel(h))}</th><td style={{ color: 'var(--muted)' }}>{rich(inr(PRICES[h]))}</td><td className="s-num" style={{ fontSize: 19 }}>{rich(inr(companionShare(PRICES[h])))}</td></tr>
                 ))}
               </tbody>
             </table>

@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHead from '../_components/PageHead';
@@ -58,22 +59,22 @@ export default async function CategoryPage({ params }) {
         <div className="s-wrap s-split" style={{ alignItems: 'flex-start' }}>
           <div>
             <p className="s-eyebrow">Use it for</p>
-            <h2 className="s-h2">{c.line}.</h2>
+            <h2 className="s-h2">{rich(c.line)}.</h2>
             <ul className="s-uses" style={{ gridTemplateColumns: '1fr', marginTop: 24 }}>
               {c.uses.map((u) => (
-                <li key={u}><span className="s-tick"><Check size={12} /></span><span>{u}</span></li>
+                <li key={u}><span className="s-tick"><Check size={12} /></span><span>{rich(u)}</span></li>
               ))}
             </ul>
           </div>
           <div className="s-card" style={{ padding: 28 }}>
             <p className="s-eyebrow">Suggested</p>
-            <p className="s-num" style={{ fontSize: 34, margin: '0 0 6px', letterSpacing: -1 }}>{c.suggest}</p>
+            <p className="s-num" style={{ fontSize: 34, margin: '0 0 6px', letterSpacing: -1 }}>{rich(c.suggest)}</p>
             <p style={{ margin: '0 0 18px', color: 'var(--muted)' }}>Book any length from 1 to 12 hours. Longer bookings cost less per hour.</p>
             <table className="s-table">
               <caption className="s-sr">Popular lengths and prices</caption>
               <tbody>
                 {[1, 2, 4, 6, 8].map((h) => (
-                  <tr key={h}><th scope="row" style={{ fontWeight: 500 }}>{hoursLabel(h)}</th><td className="s-num">{inr(PRICES[h])}</td></tr>
+                  <tr key={h}><th scope="row" style={{ fontWeight: 500 }}>{rich(hoursLabel(h))}</th><td className="s-num">{rich(inr(PRICES[h]))}</td></tr>
                 ))}
               </tbody>
             </table>
@@ -84,7 +85,7 @@ export default async function CategoryPage({ params }) {
 
       <section className="s-sec s-white">
         <div className="s-wrap" style={{ maxWidth: 900 }}>
-          <h2 className="s-h2">Questions about {c.title}</h2>
+          <h2 className="s-h2">Questions about {rich(c.title)}</h2>
           <Faq items={faq} />
         </div>
       </section>
@@ -95,8 +96,8 @@ export default async function CategoryPage({ params }) {
           <div className="s-grid" style={{ marginTop: 20 }}>
             {others.map((o) => (
               <Link key={o.slug} href={`/${o.slug}`} className="s-card s-moment" style={{ padding: 24 }}>
-                <strong style={{ fontSize: 22 }}>{o.title}</strong>
-                <p>{o.line}</p>
+                <strong style={{ fontSize: 22 }}>{rich(o.title)}</strong>
+                <p>{rich(o.line)}</p>
               </Link>
             ))}
           </div>
@@ -107,7 +108,7 @@ export default async function CategoryPage({ params }) {
         <div className="s-wrap">
           <div className="s-join">
             <div>
-              <h2 className="s-h2">Book {c.title.toLowerCase()} in the app.</h2>
+              <h2 className="s-h2">Book {rich(c.title.toLowerCase())} in the app.</h2>
               <p className="s-lead" style={{ margin: 0 }}>Free to download; pay only when you book.</p>
               <StoreButtons />
             </div>

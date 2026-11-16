@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import Link from 'next/link';
 import PageHead from '../_components/PageHead';
 import JsonLd from '../_components/JsonLd';
@@ -26,14 +27,14 @@ export default function Guides() {
       <div className="s-wrap s-sec">
         {GUIDE_GROUPS.map((grp) => (
           <section key={grp.title} className="s-guide-group" aria-labelledby={`g-${grp.title}`}>
-            <h2 id={`g-${grp.title}`} className="s-h2" style={{ fontSize: 30 }}>{grp.title}</h2>
+            <h2 id={`g-${grp.title}`} className="s-h2" style={{ fontSize: 30 }}>{rich(grp.title)}</h2>
             <ul className="s-guide-list">
               {grp.guides.map((g) => (
                 <li key={g.slug}>
                   <Link href={`/guides/${g.slug}`}>
-                    <b>{g.short}</b>
-                    <small>{g.description}</small>
-                    <span className="s-guide-meta">{g.minutes} min read</span>
+                    <b>{rich(g.short)}</b>
+                    <small>{rich(g.description)}</small>
+                    <span className="s-guide-meta">{rich(g.minutes)} min read</span>
                   </Link>
                 </li>
               ))}

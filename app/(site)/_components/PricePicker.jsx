@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { PRICES, hoursLabel, inr, savingFor } from '../_lib/content';
-import { Guilloche, Mark } from './Brand';
+import { Guilloche, Mark, rich } from './Brand';
 
 const MAT = { 1: 'pearl', 2: 'mist', 4: 'midnight', 6: 'steel', 12: 'champagne' };
 const CHOICES = [1, 2, 4, 6, 12];
@@ -21,7 +21,7 @@ export default function PricePicker() {
         <div className="s-pills" role="radiogroup" aria-label="How long">
           {CHOICES.map((x) => (
             <button key={x} type="button" role="radio" aria-checked={h === x} className="s-pill" onClick={() => setH(x)}>
-              {hoursLabel(x)}
+              {rich(hoursLabel(x))}
             </button>
           ))}
         </div>
@@ -32,12 +32,12 @@ export default function PricePicker() {
           <Guilloche tall />
           <div className="s-pricecard-top">
             <Mark />
-            {tag ? <span className="s-tag">{tag}</span> : null}
+            {rich(tag ? <span className="s-tag">{rich(tag)}</span> : null)}
           </div>
           <div className="s-pricecard-body">
-            <small>{hoursLabel(h)}</small>
-            <strong>{inr(PRICES[h])}</strong>
-            <p>{inr(Math.round(PRICES[h] / h))} an hour{save ? `  ·  Save ${inr(save)}` : ''}</p>
+            <small>{rich(hoursLabel(h))}</small>
+            <strong>{rich(inr(PRICES[h]))}</strong>
+            <p>{rich(inr(Math.round(PRICES[h] / h)))} an hour{rich(save ? `  ·  Save ${inr(save)}` : '')}</p>
           </div>
         </div>
         <p className="s-small">Tickets, food and travel on the day are yours. The price is the companion’s time.</p>

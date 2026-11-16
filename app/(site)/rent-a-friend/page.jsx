@@ -1,3 +1,4 @@
+import { Name, rich } from '../_components/Brand';
 import Link from 'next/link';
 import PageHead from '../_components/PageHead';
 import StoreButtons from '../_components/StoreButtons';
@@ -18,7 +19,7 @@ export default function RentAFriend() {
         <div className="s-wrap s-prose">
           <section>
             <h2>What it is</h2>
-            <p>On prsnn you book a companion’s time, by the hour, for a plan: an event, a walk, a meal, a study session, or a visit to someone you love. Companions are approved by our team and ID-checked before their first booking. Prices are fixed, from ₹399 for an hour to ₹3,599 for twelve.</p>
+            <p>On <Name /> you book a companion’s time, by the hour, for a plan: an event, a walk, a meal, a study session, or a visit to someone you love. Companions are approved by our team and ID-checked before their first booking. Prices are fixed, from ₹399 for an hour to ₹3,599 for twelve.</p>
             <h2 style={{ marginTop: 28 }}>What it isn’t</h2>
             <ul>
               <li>Not dating, and never romantic or sexual. Requests like that get an account banned.</li>
@@ -26,7 +27,7 @@ export default function RentAFriend() {
               <li>Not paid in cash: everything is paid in the app, with a full refund if nobody accepts.</li>
             </ul>
             <h2 style={{ marginTop: 28 }}>Popular reasons</h2>
-            <ul>{CATEGORIES.map((c) => <li key={c.slug}><Link href={`/${c.slug}`}>{c.title}</Link>: {c.line.toLowerCase()}.</li>)}</ul>
+            <ul>{CATEGORIES.map((c) => <li key={c.slug}><Link href={`/${c.slug}`}>{rich(c.title)}</Link>: {rich(c.line.toLowerCase())}.</li>)}</ul>
           </section>
           <Faq items={[
             ['Is renting a friend legal in India?', 'Booking someone’s company for a platonic plan in a public place is legal. prsnn forbids anything romantic or sexual.'],

@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import PageHead from '../_components/PageHead';
 import StoreButtons from '../_components/StoreButtons';
 import JsonLd from '../_components/JsonLd';
@@ -29,10 +30,10 @@ export default function Pricing() {
               <tbody>
                 {HOURS.map((h) => (
                   <tr key={h}>
-                    <th scope="row" style={{ fontWeight: 500 }}>{hoursLabel(h)}{h === 4 ? <span className="s-tag" style={{ marginLeft: 8, background: 'var(--midnight)', color: 'var(--porcelain)' }}>Suggested</span> : null}{h === 12 ? <span className="s-tag" style={{ marginLeft: 8 }}>Best value</span> : null}</th>
-                    <td style={{ color: 'var(--muted)' }}>{inr(Math.round(PRICES[h] / h))}</td>
-                    <td style={{ color: 'var(--champagne-text)', fontWeight: 600 }}>{savingFor(h) ? inr(savingFor(h)) : '—'}</td>
-                    <td className="s-num" style={{ fontSize: 19 }}>{inr(PRICES[h])}</td>
+                    <th scope="row" style={{ fontWeight: 500 }}>{rich(hoursLabel(h))}{rich(h === 4 ? <span className="s-tag" style={{ marginLeft: 8, background: 'var(--midnight)', color: 'var(--porcelain)' }}>Suggested</span> : null)}{rich(h === 12 ? <span className="s-tag" style={{ marginLeft: 8 }}>Best value</span> : null)}</th>
+                    <td style={{ color: 'var(--muted)' }}>{rich(inr(Math.round(PRICES[h] / h)))}</td>
+                    <td style={{ color: 'var(--champagne-text)', fontWeight: 600 }}>{rich(savingFor(h) ? inr(savingFor(h)) : '—')}</td>
+                    <td className="s-num" style={{ fontSize: 19 }}>{rich(inr(PRICES[h]))}</td>
                   </tr>
                 ))}
               </tbody>

@@ -1,4 +1,5 @@
 'use client';
+import { rich } from './Brand';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -37,7 +38,7 @@ export default function UseExplorer() {
             onClick={() => select(i)}
           >
             <Image src={t.img} alt="" width={52} height={52} />
-            <span><b>{t.title}</b><small>{t.line}</small></span>
+            <span><b>{rich(t.title)}</b><small>{rich(t.line)}</small></span>
             <Chevron size={16} />
           </button>
         ))}
@@ -50,19 +51,19 @@ export default function UseExplorer() {
         </div>
         <div className="s-panel-body">
           <div className="s-panel-title">
-            <h3>{c.title}</h3>
-            <p>{c.line}</p>
+            <h3>{rich(c.title)}</h3>
+            <p>{rich(c.line)}</p>
           </div>
           <p className="s-eyebrow" style={{ margin: 0 }}>Use it for</p>
           <ul className="s-uses">
             {c.uses.map((u) => (
-              <li key={u}><span className="s-tick"><Check size={12} /></span><span>{u}</span></li>
+              <li key={u}><span className="s-tick"><Check size={12} /></span><span>{rich(u)}</span></li>
             ))}
           </ul>
           <div className="s-panel-foot">
-            <span><small>Suggested</small><b className="s-num">{c.suggest}</b></span>
+            <span><small>Suggested</small><b className="s-num">{rich(c.suggest)}</b></span>
             <span style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <Link className="s-btn s-btn-light" href={`/${c.slug}`} style={{ border: '1px solid var(--line-strong)' }}>More about {c.title}</Link>
+              <Link className="s-btn s-btn-light" href={`/${c.slug}`} style={{ border: '1px solid var(--line-strong)' }}>More about {rich(c.title)}</Link>
               <Link className="s-btn s-btn-dark" href="/#join">Book in the app <Arrow size={16} /></Link>
             </span>
           </div>

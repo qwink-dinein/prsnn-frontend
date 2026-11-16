@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import Link from 'next/link';
 import PageHead from '../_components/PageHead';
 import { LEGAL_PAGES } from '../_components/LegalLinks';
@@ -17,7 +18,7 @@ export default function Page() {
         <div className="s-prose">
           <ul>
             {LEGAL_PAGES.map(([href, label]) => (
-              <li key={href}><Link href={href}>{label}</Link></li>
+              <li key={href}><Link href={href}>{rich(label)}</Link></li>
             ))}
           </ul>
           <Contact />

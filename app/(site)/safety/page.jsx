@@ -1,3 +1,4 @@
+import { rich } from '../_components/Brand';
 import PageHead from '../_components/PageHead';
 import Faq from '../_components/Faq';
 import { Clock, Pin, Shield } from '../_components/Icons';
@@ -27,8 +28,8 @@ export default function Safety() {
             {ITEMS.map(({ Icon, title, body }) => (
               <div key={title} className="s-card" style={{ padding: 28 }}>
                 <span className="s-icon-well"><Icon size={20} /></span>
-                <h2 style={{ margin: '14px 0 8px', fontSize: 22, fontWeight: 600 }}>{title}</h2>
-                <p style={{ margin: 0, color: 'var(--muted)', lineHeight: 1.6 }}>{body}</p>
+                <h2 style={{ margin: '14px 0 8px', fontSize: 22, fontWeight: 600 }}>{rich(title)}</h2>
+                <p style={{ margin: 0, color: 'var(--muted)', lineHeight: 1.6 }}>{rich(body)}</p>
               </div>
             ))}
           </div>

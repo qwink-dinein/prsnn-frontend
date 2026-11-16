@@ -1,4 +1,5 @@
 'use client';
+import { rich } from './Brand';
 import { createContext, useCallback, useContext, useState } from 'react';
 import { CATEGORIES } from '../_lib/content';
 
@@ -14,7 +15,7 @@ export function CategoryProvider({ children }) {
     if (i >= 0) setIndex(i);
     document.getElementById('kinds')?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }, []);
-  return <Ctx.Provider value={{ index, select, open }}>{children}</Ctx.Provider>;
+  return <Ctx.Provider value={{ index, select, open }}>{rich(children)}</Ctx.Provider>;
 }
 export const useCategory = () => useContext(Ctx);
 
@@ -30,7 +31,7 @@ export function OpenCategory({ slug, className, children }) {
         open(slug);
       }}
     >
-      {children}
+      {rich(children)}
     </a>
   );
 }

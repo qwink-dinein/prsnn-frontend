@@ -1,4 +1,5 @@
 'use client';
+import { Name, rich } from './Brand';
 import Link from 'next/link';
 import { useState } from 'react';
 import { COUNTRY_CODES, phoneError, submitEnquiry } from '../_lib/enquiry';
@@ -37,8 +38,8 @@ export default function InterestForm({ initial = 'member', source = 'website' })
           <span className="s-icon-well" style={{ width: 52, height: 52 }}><Check size={24} /></span>
           <h3 style={{ margin: 0, fontSize: 24, fontWeight: 600 }}>You’re on the list.</h3>
           <p style={{ margin: 0, fontSize: 16, color: 'var(--muted)' }}>
-            We’ll message {cc} {phone} on WhatsApp when the app is ready to download.
-            {interest !== 'member' ? ' We’ll include the companion sign-up steps.' : ''}
+            We’ll message {rich(cc)} {rich(phone)} on WhatsApp when the app is ready to download.
+            {rich(interest !== 'member' ? ' We’ll include the companion sign-up steps.' : '')}
           </p>
           <button type="button" className="s-link" style={{ color: 'var(--midnight)', background: 'none', border: 0, padding: 0, cursor: 'pointer', font: 'inherit' }} onClick={() => { setPhone(''); setState({ busy: false, error: null, done: false }); }}>
             Use another number
@@ -56,7 +57,7 @@ export default function InterestForm({ initial = 'member', source = 'website' })
         <div role="radiogroup" aria-label="I’m interested in" style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {CHOICES.map((c) => (
             <button key={c.key} type="button" role="radio" aria-checked={interest === c.key} className="s-choice" onClick={() => setInterest(c.key)}>
-              <span><b>{c.title}</b><small>{c.sub}</small></span>
+              <span><b>{rich(c.title)}</b><small>{rich(c.sub)}</small></span>
               <i />
             </button>
           ))}
@@ -78,11 +79,11 @@ export default function InterestForm({ initial = 'member', source = 'website' })
           onChange={(e) => { setPhone(e.target.value.replace(/[^\d ]/g, '').slice(0, 15)); if (state.error) setState((s) => ({ ...s, error: null })); }}
         />
       </div>
-      {state.error ? <p id={`phone-${source}-err`} role="alert" className="s-error">{state.error}</p> : null}
+      {rich(state.error ? <p id={`phone-${source}-err`} role="alert" className="s-error">{rich(state.error)}</p> : null)}
       <button type="submit" className="s-btn s-btn-dark" disabled={state.busy} aria-busy={state.busy}>
-        {state.busy ? 'Saving…' : 'Count me in'}
+        {rich(state.busy ? 'Saving…' : 'Count me in')}
       </button>
-      <p className="s-fine">By tapping Count me in, you confirm you’re 18 or older and agree that we may message you on WhatsApp about prsnn. We record this agreement with the date and time. Never shared. See our <Link href="/privacy">Privacy Policy</Link>.</p>
+      <p className="s-fine">By tapping Count me in, you confirm you’re 18 or older and agree that we may message you on WhatsApp about <Name /> We record this agreement with the date and time. Never shared. See our <Link href="/privacy">Privacy Policy</Link>.</p>
     </form>
   );
 }

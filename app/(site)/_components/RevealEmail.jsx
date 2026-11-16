@@ -1,4 +1,5 @@
 'use client';
+import { rich } from './Brand';
 import { useState } from 'react';
 import { Mail } from './Icons';
 
@@ -19,8 +20,8 @@ export default function RevealEmail({ code }) {
   };
   return (
     <span style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center' }}>
-      <a className="s-btn s-btn-dark" href={`mailto:${email}`}><Mail size={18} /> {email}</a>
-      <button type="button" className="s-btn s-btn-light" style={{ border: '1px solid var(--line-strong)' }} onClick={copy}>{copied ? 'Copied' : 'Copy'}</button>
+      <a className="s-btn s-btn-dark" href={`mailto:${email}`}><Mail size={18} /> {rich(email)}</a>
+      <button type="button" className="s-btn s-btn-light" style={{ border: '1px solid var(--line-strong)' }} onClick={copy}>{rich(copied ? 'Copied' : 'Copy')}</button>
     </span>
   );
 }

@@ -1,3 +1,4 @@
+import { Name, rich } from '../_components/Brand';
 import Link from 'next/link';
 import PageHead from '../_components/PageHead';
 import LegalLinks from '../_components/LegalLinks';
@@ -18,7 +19,7 @@ export default function Page() {
       <div className="s-wrap s-sec">
         <div className="s-prose">
           <h2>In danger?</h2>
-          <p>Call <b>112</b> first. Then hold the panic button in your booking or chat: the prsnn team is alerted at once and every five minutes until you’re safe.</p>
+          <p>Call <b>112</b> first. Then hold the panic button in your booking or chat: the <Name /> team is alerted at once and every five minutes until you’re safe.</p>
 
           <h2>A problem with a booking</h2>
           <p>Open the booking in the app and tap <b>Report a problem</b>. It reaches our team with the booking details attached, so it’s the quickest way to a refund or a fix.</p>
@@ -28,9 +29,9 @@ export default function Page() {
           <RevealEmail code={encodedSupportEmail()} />
 
           <h2>Complaints and your data</h2>
-          <p>Our Grievance Officer is {FOUNDER}, at the same address. We acknowledge complaints within 24 hours and resolve them within 15 days. See <Link href="/grievance">Grievance Redressal</Link> for how complaints are handled, and <Link href="/delete-account">Delete your account</Link> to remove your data.</p>
+          <p>Our Grievance Officer is {rich(FOUNDER)}, at the same address. We acknowledge complaints within 24 hours and resolve them within 15 days. See <Link href="/grievance">Grievance Redressal</Link> for how complaints are handled, and <Link href="/delete-account">Delete your account</Link> to remove your data.</p>
 
-          <p className="s-meta">prsnn · India</p>
+          <p className="s-meta"><Name /> · India</p>
           <LegalLinks current="/support" />
         </div>
       </div>

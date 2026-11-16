@@ -32,3 +32,34 @@ export function Guilloche({ tall = false }) {
     </svg>
   );
 }
+
+/**
+ * The company name in running text: always "prsnn." (with the dot), in italics, so it stands apart from
+ * the words around it. The logo (Logo / Mark) and the opening film keep their own designed wordmark.
+ */
+export function Name() {
+  return <em className="s-brand">prsnn.</em>;
+}
+
+// "prsnn" as a word, not a web address (prsnn.com), handle (prsnn_india) or path; a dot right after it is
+// taken in, so it never doubles.
+const NAME_RE = /\bprsnn(?![\w-]|\.\w)\.?/g;
+
+/**
+ * Text that may mention the company: every "prsnn" becomes <Name />. Anything that isn't a string
+ * (an element, a number, nothing) is returned unchanged, so it's safe to wrap any rendered value.
+ */
+export function rich(value) {
+  if (typeof value !== 'string' || !value.includes('prsnn')) return value;
+  const out = [];
+  let last = 0;
+  let k = 0;
+  for (const m of value.matchAll(NAME_RE)) {
+    if (m.index > last) out.push(value.slice(last, m.index));
+    out.push(<Name key={`n${k++}`} />);
+    last = m.index + m[0].length;
+  }
+  if (!out.length) return value;
+  if (last < value.length) out.push(value.slice(last));
+  return out;
+}

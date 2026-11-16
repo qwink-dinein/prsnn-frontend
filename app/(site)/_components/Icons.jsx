@@ -1,8 +1,9 @@
+import { rich } from './Brand';
 // Stroke icons, one colour (currentColor). Decorative unless a label is given.
 const base = { fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round' };
 const I = ({ d, size = 18, width = 2, children }) => (
   <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" strokeWidth={width} {...base}>
-    {d ? <path d={d} /> : children}
+    {rich(d ? <path d={d} /> : children)}
   </svg>
 );
 export const Check = (p) => <I d="M5 12.5 10 17l9-10" width={2.6} {...p} />;

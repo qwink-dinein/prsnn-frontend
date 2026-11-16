@@ -1,3 +1,4 @@
+import { Name, rich } from './Brand';
 import Link from 'next/link';
 import Image from 'next/image';
 import { OpenCategory } from './CategoryContext';
@@ -15,10 +16,10 @@ export default function FounderStory({ onHome = true }) {
       <div className="s-wrap s-sec" style={{ display: 'flex', flexWrap: 'wrap', gap: 56, alignItems: 'center' }}>
         <figure>
           <Image src="/site/founder-mukarram.jpg" alt={`${FOUNDER}, founder of prsnn`} width={1206} height={1203} sizes="(max-width: 860px) 100vw, 420px" />
-          <figcaption><b>{FOUNDER}</b><small>Founder, prsnn</small></figcaption>
+          <figcaption><b>{rich(FOUNDER)}</b><small>Founder, <Name /></small></figcaption>
         </figure>
         <div className="s-story">
-          <p className="s-eyebrow" style={{ margin: 0 }}>Why prsnn exists</p>
+          <p className="s-eyebrow" style={{ margin: 0 }}>Why <Name /> exists</p>
           <h2 id="story-h" className="s-h2" style={{ fontSize: 44, marginBottom: 6 }}>I lost my grandfather for seven days. It was my fault.</h2>
           <p>My grandfather was 90 and had dementia. He couldn’t remember our names or find his way home, so someone always stayed with him.</p>
           <p>One day it was my turn. I left for two hours to finish some work.</p>
@@ -26,11 +27,11 @@ export default function FounderStory({ onHome = true }) {
           <p>For seven days we searched the streets, went to the police and put up posters. My father cried every day.</p>
           <p>On the seventh day, a relative found him asleep at a bus stand, under a blanket. He was alive.</p>
           <blockquote>When we can’t be there for the people we love, who can we trust to be there for them?</blockquote>
-          <p>I built prsnn to answer that: a trusted person who can be there, keep them company and look out for them, when you can’t.</p>
+          <p>I built <Name /> to answer that: a trusted person who can be there, keep them company and look out for them, when you can’t.</p>
           <p className="s-beat" style={{ fontSize: 19 }}>I hope you never learn this the way I did.</p>
           <div style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
-            {cta}
-            <span style={{ fontSize: 15, color: 'var(--on-dark-dim)' }}>— {FOUNDER}, Founder</span>
+            {rich(cta)}
+            <span style={{ fontSize: 15, color: 'var(--on-dark-dim)' }}>— {rich(FOUNDER)}, Founder</span>
           </div>
         </div>
       </div>

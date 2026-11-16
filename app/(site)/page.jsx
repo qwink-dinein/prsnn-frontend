@@ -1,3 +1,4 @@
+import { Name, rich } from './_components/Brand';
 import Link from 'next/link';
 import { CategoryProvider } from './_components/CategoryContext';
 import HeroStack from './_components/HeroStack';
@@ -47,15 +48,15 @@ export default function Home() {
         <div className="s-wrap">
           <div className="s-hero-copy">
             <span className="s-badge">Across India</span>
-            <h1 id="hero-h" className="s-h1">{'Everyone’s busy?\nGo anyway.'}</h1>
-            <p className="s-hero-sub">prsnn finds you a verified companion for the gig, the café, the new city, or a visit for your parents. Always in public. From ₹399.</p>
+            <h1 id="hero-h" className="s-h1">{rich('Everyone’s busy?\nGo anyway.')}</h1>
+            <p className="s-hero-sub"><Name /> finds you a verified companion for the gig, the café, the new city, or a visit for your parents. Always in public. From ₹399.</p>
             <div className="s-stores">
               <StoreButtons />
               <Link className="s-link" href="#familiar">See how it works</Link>
             </div>
             <ul className="s-checks">
               {['Not dating. Just good company.', 'Public places, or home for loved ones', 'Full refund if nobody accepts'].map((t) => (
-                <li key={t}><span style={{ color: 'var(--champagne)' }}><Check size={14} /></span>{t}</li>
+                <li key={t}><span style={{ color: 'var(--champagne)' }}><Check size={14} /></span>{rich(t)}</li>
               ))}
             </ul>
           </div>
@@ -68,7 +69,7 @@ export default function Home() {
           {PROMISES.map(({ Icon, title, sub }) => (
             <div key={title} className="s-promise">
               <span className="s-icon-well"><Icon size={20} /></span>
-              <span><b>{title}</b><small>{sub}</small></span>
+              <span><b>{rich(title)}</b><small>{rich(sub)}</small></span>
             </div>
           ))}
         </div>
@@ -85,7 +86,7 @@ export default function Home() {
 
       <section id="kinds" className="s-sec" aria-labelledby="kinds-h" style={{ scrollMarginTop: 16 }}>
         <div className="s-wrap">
-          <p className="s-eyebrow">What you can use prsnn for</p>
+          <p className="s-eyebrow">What you can use <Name /> for</p>
           <h2 id="kinds-h" className="s-h2">Five kinds of company. Endless plans.</h2>
           <p className="s-lead">Pick what fits your day. Every one is booked in the app, by the hour, with an approved companion.</p>
           <UseExplorer />
@@ -128,8 +129,8 @@ export default function Home() {
           <div><div className="s-sos" aria-hidden="true"><span><b>SOS</b><small>hold 3 s</small></span></div></div>
           <div style={{ flexBasis: 460 }}>
             <p className="s-eyebrow">Safety, built in</p>
-            <h2 id="safety-h" className="s-h2">{'Hold three seconds.\nWe’re there.'}</h2>
-            <p className="s-lead">Press and hold the panic button in the booking or the chat. Every prsnn admin gets your details and the meeting place at once, and again every five minutes until you’re safe.</p>
+            <h2 id="safety-h" className="s-h2">{rich('Hold three seconds.\nWe’re there.')}</h2>
+            <p className="s-lead">Press and hold the panic button in the booking or the chat. Every <Name /> admin gets your details and the meeting place at once, and again every five minutes until you’re safe.</p>
             <ul className="s-boxes">
               <li>Every companion approved by our team</li>
               <li>ID checked before their first booking</li>
@@ -151,8 +152,8 @@ export default function Home() {
           <div className="s-card s-rows">
             {[2, 4, 6, 8].map((h) => (
               <div key={h} className="s-row">
-                <span>{hoursLabel(h)}</span>
-                <span><b className="s-num">{inr(companionShare(PRICES[h]))}</b><small>you get, of {inr(PRICES[h])}</small></span>
+                <span>{rich(hoursLabel(h))}</span>
+                <span><b className="s-num">{rich(inr(companionShare(PRICES[h])))}</b><small>you get, of {rich(inr(PRICES[h]))}</small></span>
               </div>
             ))}
           </div>
@@ -164,7 +165,7 @@ export default function Home() {
           <div className="s-join">
             <div>
               <h2 id="join-h" className="s-h2">Your next plan is a tap away.</h2>
-              <p className="s-lead" style={{ margin: 0 }}>Download prsnn, pick a plan, and a verified companion confirms. Free to download; pay only when you book.</p>
+              <p className="s-lead" style={{ margin: 0 }}>Download <Name />, pick a plan, and a verified companion confirms. Free to download; pay only when you book.</p>
               <StoreButtons />
               <p className="s-fine" style={{ margin: 0 }}>Android: tap Download for Android, then Download in Google Drive, open the file and tap Install (allow installs from your browser if asked). iPhone: coming soon to the App Store.</p>
             </div>

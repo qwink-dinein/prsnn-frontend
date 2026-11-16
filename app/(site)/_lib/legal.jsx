@@ -1,3 +1,4 @@
+import { Name, rich } from '../_components/Brand';
 import Link from 'next/link';
 import { FOUNDER, HOUSE_RULES, NOT_FOR } from './content';
 
@@ -9,14 +10,14 @@ export function Terms() {
   return (
     <section id="terms">
       <h2>Terms of Service</h2>
-      <p className="s-meta">Effective {UPDATED}</p>
-      <p>These terms are an agreement between you and prsnn (“prsnn”, “we”, “us”), which runs the prsnn app and website. By creating an account or making a booking, you agree to them. If you don’t agree, please don’t use prsnn.</p>
-      <h3>1. What prsnn is</h3>
-      <p>prsnn is a platform that connects people who want company for everyday plans (“members”) with people who offer their time as company (“companions”). Company on prsnn is strictly platonic: going to an event together, exploring a city, studying side by side, or spending time with someone’s loved one. prsnn is not a dating, escort or adult service, and it is not an emergency, medical, nursing or care service.</p>
-      <p>To be clear, prsnn is not: {NOT_FOR.map(([t]) => t.replace(/^Not (a |an )?/, '').toLowerCase()).join('; ')}. Bookings for any of these are cancelled without a refund and may lead to a ban.</p>
+      <p className="s-meta">Effective {rich(UPDATED)}</p>
+      <p>These terms are an agreement between you and <Name /> (“<Name />”, “we”, “us”), which runs the <Name /> app and website. By creating an account or making a booking, you agree to them. If you don’t agree, please don’t use <Name /></p>
+      <h3>1. What <Name /> is</h3>
+      <p><Name /> is a platform that connects people who want company for everyday plans (“members”) with people who offer their time as company (“companions”). Company on <Name /> is strictly platonic: going to an event together, exploring a city, studying side by side, or spending time with someone’s loved one. <Name /> is not a dating, escort or adult service, and it is not an emergency, medical, nursing or care service.</p>
+      <p>To be clear, <Name /> is not: {rich(NOT_FOR.map(([t]) => t.replace(/^Not (a |an )?/, '').toLowerCase()).join('; '))}. Bookings for any of these are cancelled without a refund and may lead to a ban.</p>
       <p>Before your first booking or companion application, you agree to our house rules (the <Link href="/guidelines">Community Guidelines</Link>). We keep a timestamped record of each agreement you give: these terms, the privacy policy, that you’re 18 or older, the house rules, the Companion Terms, and the terms of each booking.</p>
-      <p>Companions are independent individuals, not prsnn employees or agents. prsnn approves profiles, checks companions’ identity documents and provides the booking, payment, chat and safety tools, but does not supervise what happens during a meeting.</p>
-      <h3>2. Who can use prsnn</h3>
+      <p>Companions are independent individuals, not <Name /> employees or agents. <Name /> approves profiles, checks companions’ identity documents and provides the booking, payment, chat and safety tools, but does not supervise what happens during a meeting.</p>
+      <h3>2. Who can use <Name /></h3>
       <ul>
         <li>You must be at least 18 years old and able to enter a binding contract.</li>
         <li>One account per person. The details you give us (name, photo, number) must be true and your own.</li>
@@ -29,19 +30,19 @@ export function Terms() {
         <li>Members pay the full price in the app when they book. The booking is offered to the chosen companion and, if they can’t accept, to other suitable companions. A booking is confirmed only when a companion accepts.</li>
         <li>If no companion accepts in time, the booking is cancelled and the member is refunded in full.</li>
         <li>Unpaid bookings lapse after the payment window shown in the app.</li>
-        <li>The price covers the companion’s time only. Tickets, food, travel and other costs on the day are paid by whoever agrees to pay them, outside prsnn.</li>
+        <li>The price covers the companion’s time only. Tickets, food, travel and other costs on the day are paid by whoever agrees to pay them, outside <Name /></li>
       </ul>
       <h3>4. Prices and fees</h3>
-      <p>Prices are fixed per length and are the same for every companion. They are shown in the app before you pay. There is no separate booking fee. Of each booking, the companion receives 80% and prsnn keeps 20% as its platform fee, unless the app shows a different split before the companion accepts. Companions are paid for completed bookings and are responsible for their own taxes.</p>
+      <p>Prices are fixed per length and are the same for every companion. They are shown in the app before you pay. There is no separate booking fee. Of each booking, the companion receives 80% and <Name /> keeps 20% as its platform fee, unless the app shows a different split before the companion accepts. Companions are paid for completed bookings and are responsible for their own taxes.</p>
       <h3>5. Your responsibilities</h3>
       <ul>
         <li>Meet only at the place named in the booking (a public place, or the loved one’s home for a home visit the family requested), and keep to the booked time.</li>
         <li>Follow the Community Guidelines in every message and meeting.</li>
-        <li>Don’t ask for or make payments outside prsnn for a booking, and don’t use prsnn to arrange off-platform meetings.</li>
+        <li>Don’t ask for or make payments outside <Name /> for a booking, and don’t use <Name /> to arrange off-platform meetings.</li>
         <li>Keep your login and PIN private. You are responsible for activity on your account.</li>
       </ul>
       <h3>5A. Content you must not share</h3>
-      <p>As required by India’s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, you must not post, send or share anything on prsnn that:</p>
+      <p>As required by India’s Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, you must not post, send or share anything on <Name /> that:</p>
       <ul>
         <li>belongs to someone else and you have no right to share;</li>
         <li>is obscene, pornographic, paedophilic, invades another person’s privacy (including bodily privacy), insults or harasses on the basis of gender, or is racially or ethnically objectionable;</li>
@@ -55,15 +56,15 @@ export function Terms() {
       </ul>
       <p>We may remove such content and suspend or close the account. We act on valid orders from courts and government agencies, and keep records as the law requires. To report content, see our <Link href="/grievance">Grievance Redressal</Link> page.</p>
       <h3>6. Content you share</h3>
-      <p>You keep ownership of the photos and text you add. You allow prsnn to store and show them inside the service as your privacy settings allow (for example, a locked photo is shown only to people with a confirmed booking with you). Our team reviews photos and profiles and may reject or remove content.</p>
+      <p>You keep ownership of the photos and text you add. You allow <Name /> to store and show them inside the service as your privacy settings allow (for example, a locked photo is shown only to people with a confirmed booking with you). Our team reviews photos and profiles and may reject or remove content.</p>
       <h3>7. Safety tools</h3>
-      <p>The panic button alerts the prsnn team; it does not contact the police or an ambulance. In an emergency, call 112 first. We do our best to respond quickly but cannot guarantee a response time or outcome.</p>
+      <p>The panic button alerts the <Name /> team; it does not contact the police or an ambulance. In an emergency, call 112 first. We do our best to respond quickly but cannot guarantee a response time or outcome.</p>
       <h3>8. Suspension and termination</h3>
       <p>We may suspend or remove an account, cancel bookings and withhold payouts linked to a breach of these terms, fraud, or a safety risk. You can delete your account at any time from your profile; open paid bookings must be cancelled first.</p>
       <h3>8A. Companions</h3>
       <p>If you offer your time as a companion, the <Link href="/companion-terms">Companion Terms</Link> also apply to you.</p>
       <h3>9. Liability</h3>
-      <p>prsnn provides the platform “as is”. To the extent the law allows, prsnn is not liable for the acts or omissions of members or companions, or for indirect or consequential loss. Our total liability for any booking is limited to the amount paid for that booking. Nothing in these terms limits rights you have under Indian consumer law that cannot be excluded.</p>
+      <p><Name /> provides the platform “as is”. To the extent the law allows, <Name /> is not liable for the acts or omissions of members or companions, or for indirect or consequential loss. Our total liability for any booking is limited to the amount paid for that booking. Nothing in these terms limits rights you have under Indian consumer law that cannot be excluded.</p>
       <h3>10. Changes and governing law</h3>
       <p>We may update these terms; we’ll tell you in the app before important changes take effect. These terms are governed by the laws of India, and the courts of Hyderabad, Telangana have jurisdiction.</p>
     </section>
@@ -74,8 +75,8 @@ export function Privacy() {
   return (
     <section id="privacy">
       <h2>Privacy Policy</h2>
-      <p className="s-meta">Effective {UPDATED} · Written for India’s Digital Personal Data Protection Act, 2023</p>
-      <p>This policy explains what personal data prsnn collects, why, who we share it with, and the choices you have. prsnn is the data fiduciary responsible for your data.</p>
+      <p className="s-meta">Effective {rich(UPDATED)} · Written for India’s Digital Personal Data Protection Act, 2023</p>
+      <p>This policy explains what personal data <Name /> collects, why, who we share it with, and the choices you have. <Name /> is the data fiduciary responsible for your data.</p>
       <h3>What we collect</h3>
       <ul>
         <li><b>Account details:</b> mobile number (or email for sign-ups from outside India), name, gender, who you’d like to meet, city and area, the kinds of company you’re interested in, and your photo.</li>
@@ -99,7 +100,7 @@ export function Privacy() {
       <h3>Who sees it</h3>
       <ul>
         <li><b>Other users:</b> members see a companion’s first name, photo (or a locked placeholder), area and profile. Full names unlock after a confirmed, paid booking.</li>
-        <li><b>The prsnn team:</b> staff can see what they need to approve profiles, check IDs, resolve disputes and respond to safety alerts. This may include reading the chat for a booking under dispute. Every staff action is logged.</li>
+        <li><b>The <Name /> team:</b> staff can see what they need to approve profiles, check IDs, resolve disputes and respond to safety alerts. This may include reading the chat for a booking under dispute. Every staff action is logged.</li>
         <li><b>Service providers</b> who process data for us: cloud hosting and database (Supabase), messaging (WhatsApp Business via Waplify, SMS backup via MSG91), push notifications (Expo), and payments (Razorpay). They may only use it to provide their service to us.</li>
         <li><b>Authorities,</b> when the law requires it or to protect someone’s safety.</li>
       </ul>
@@ -118,7 +119,7 @@ export function Privacy() {
       <h3>Security</h3>
       <p>Data is encrypted in transit, ID documents are kept in private storage that only you and authorised staff can open, and access is limited by role. No system is perfectly secure; tell us at once if you think your account has been compromised.</p>
       <h3>Children</h3>
-      <p>prsnn is for people aged 18 and over. We don’t knowingly collect data from children, and we delete any account we find belongs to a child. See our <Link href="/child-safety">Child Safety Standards</Link>.</p>
+      <p><Name /> is for people aged 18 and over. We don’t knowingly collect data from children, and we delete any account we find belongs to a child. See our <Link href="/child-safety">Child Safety Standards</Link>.</p>
       <h3>Changes</h3>
       <p>If we change this policy in a way that matters, we’ll tell you in the app before it takes effect.</p>
     </section>
@@ -129,13 +130,13 @@ export function Refunds() {
   return (
     <section id="refunds">
       <h2>Cancellation &amp; Refunds</h2>
-      <p className="s-meta">Applies to every booking made through the prsnn app</p>
+      <p className="s-meta">Applies to every booking made through the <Name /> app</p>
       <ul>
         <li><b>Nobody accepts:</b> if no companion confirms your booking in time, it’s cancelled and you get a 100% refund automatically.</li>
         <li><b>You cancel 15 minutes or more before the start:</b> 85% is refunded; 15% is kept as a cancellation fee.</li>
         <li><b>You cancel less than 15 minutes before the start, or after it begins:</b> no automatic refund. If something went wrong, use “Report a problem” on the booking.</li>
         <li><b>Your companion cancels:</b> you get a 100% refund.</li>
-        <li><b>prsnn cancels</b> (for example for a safety reason): our team decides the refund and tells you why.</li>
+        <li><b><Name /> cancels</b> (for example for a safety reason): our team decides the refund and tells you why.</li>
         <li><b>Problems during a booking:</b> report them from the booking. Our team reviews the chat and details and may refund all or part of the amount.</li>
       </ul>
       <p>Refunds go back to the original payment method. They usually appear within 5–7 working days, depending on your bank. The exact rules shown in the app when you book apply to that booking.</p>
@@ -148,17 +149,17 @@ export function Guidelines() {
     <section id="guidelines">
       <h2>Community Guidelines</h2>
       <p className="s-meta">House rules for members and companions alike. Everyone agrees to them before their first booking or application. Breaking them can mean a permanent ban.</p>
-      <p>prsnn is company, and nothing more. Everyone deserves to be treated with respect: the member, the companion, and the loved one a family books for.</p>
-      <h3>What prsnn is not</h3>
+      <p><Name /> is company, and nothing more. Everyone deserves to be treated with respect: the member, the companion, and the loved one a family books for.</p>
+      <h3>What <Name /> is not</h3>
       <ul>
         {NOT_FOR.map(([t, d]) => (
-          <li key={t}><b>{t}.</b> {d}</li>
+          <li key={t}><b>{rich(`${t}.`)}</b> {rich(d)}</li>
         ))}
       </ul>
       <h3>House rules</h3>
       <ol>
         {HOUSE_RULES.map(([t, d]) => (
-          <li key={t}><b>{t}.</b> {d}</li>
+          <li key={t}><b>{rich(`${t}.`)}</b> {rich(d)}</li>
         ))}
       </ol>
       <h3>Visits to a loved one</h3>
@@ -173,12 +174,12 @@ export function Grievance() {
     <section id="grievance">
       <h2>Grievance Redressal</h2>
       <p className="s-meta">Under the IT (Intermediary Guidelines) Rules, 2021, the Consumer Protection (E-Commerce) Rules, 2020 and the Digital Personal Data Protection Act, 2023</p>
-      <p>If you have a complaint about prsnn, a booking, a payment, another user, content on prsnn, or how we handle your personal data, our Grievance Officer will look into it.</p>
+      <p>If you have a complaint about <Name />, a booking, a payment, another user, content on <Name />, or how we handle your personal data, our Grievance Officer will look into it.</p>
       <h3>Grievance Officer</h3>
       <ul>
-        <li><b>Name:</b> {FOUNDER}</li>
+        <li><b>Name:</b> {rich(FOUNDER)}</li>
         <li><b>Email:</b> <Email /></li>
-        <li><b>Registered address:</b> prsnn, Hyderabad, Telangana, India (prsnn serves customers across India)</li>
+        <li><b>Registered address:</b> <Name />, Hyderabad, Telangana, India (<Name /> serves customers across India)</li>
       </ul>
       <h3>How to raise a complaint</h3>
       <ol>
@@ -207,10 +208,10 @@ export function CompanionTerms() {
   return (
     <section id="companion-terms">
       <h2>Companion Terms</h2>
-      <p className="s-meta">Effective {UPDATED} · In addition to the Terms of Service</p>
-      <p>These terms apply when you offer your time as a companion on prsnn.</p>
-      <h3>1. Your relationship with prsnn</h3>
-      <p>You are an independent individual offering your own time. You are not an employee, partner or agent of prsnn. You choose your days, hours and booking lengths, and whether to accept each booking.</p>
+      <p className="s-meta">Effective {rich(UPDATED)} · In addition to the Terms of Service</p>
+      <p>These terms apply when you offer your time as a companion on <Name /></p>
+      <h3>1. Your relationship with <Name /></h3>
+      <p>You are an independent individual offering your own time. You are not an employee, partner or agent of <Name /> You choose your days, hours and booking lengths, and whether to accept each booking.</p>
       <h3>2. Joining</h3>
       <ul>
         <li>You must be at least 18, live in India, and be legally allowed to earn income in India.</li>
@@ -221,21 +222,21 @@ export function CompanionTerms() {
       <ul>
         <li>A booking is offered to you with a time limit to accept. Accept only what you can keep.</li>
         <li>Meet only at the place in the booking: a public place, or the loved one’s home for a home visit the family requested. Never go to a hotel room, a member’s home or a private vehicle.</li>
-        <li>Company on prsnn is platonic. Romantic, sexual or escort activity of any kind leads to immediate, permanent removal and may be reported to the police.</li>
-        <li>Keep chat about the plan. Don’t ask for or share phone numbers, addresses or social media, and don’t take payment outside prsnn.</li>
+        <li>Company on <Name /> is platonic. Romantic, sexual or escort activity of any kind leads to immediate, permanent removal and may be reported to the police.</li>
+        <li>Keep chat about the plan. Don’t ask for or share phone numbers, addresses or social media, and don’t take payment outside <Name /></li>
         <li>For home visits to a loved one: offer company and help with everyday things only. Don’t give medical, nursing or personal care, handle money or valuables, or enter rooms you aren’t invited into.</li>
       </ul>
       <h3>4. Pay</h3>
       <ul>
-        <li>You receive 80% of the booking price for each completed booking. prsnn keeps 20% as its platform fee. The split is shown before you accept.</li>
+        <li>You receive 80% of the booking price for each completed booking. <Name /> keeps 20% as its platform fee. The split is shown before you accept.</li>
         <li>Payouts go to the bank account or UPI ID you give us, after the booking is completed and any dispute is settled.</li>
         <li>If you cancel a confirmed booking, the member is refunded in full and you earn nothing for it. Repeated cancellations or no-shows can lead to removal.</li>
-        <li>You are responsible for your own income tax and, if it applies to you, GST. Where the law requires, prsnn deducts tax at source (for example under section 194-O of the Income-tax Act) and gives you a certificate.</li>
+        <li>You are responsible for your own income tax and, if it applies to you, GST. Where the law requires, <Name /> deducts tax at source (for example under section 194-O of the Income-tax Act) and gives you a certificate.</li>
       </ul>
       <h3>5. Safety and reviews</h3>
       <p>The panic button is on from the start of every session until an hour after it ends. Our team may review a booking’s chat if a problem is reported. We may pause your profile while we look into a report.</p>
       <h3>6. Members’ privacy</h3>
-      <p>Use members’ details, and any loved one’s details, only for the booking. Don’t save, share or contact them outside prsnn.</p>
+      <p>Use members’ details, and any loved one’s details, only for the booking. Don’t save, share or contact them outside <Name /></p>
       <h3>7. Leaving</h3>
       <p>You can stop accepting bookings or delete your account at any time, once your confirmed bookings are finished or cancelled. We may remove you for breaking these terms, the Terms of Service or the Community Guidelines, and may withhold payouts linked to the breach.</p>
     </section>
@@ -246,8 +247,8 @@ export function Cookies() {
   return (
     <section id="cookies">
       <h2>Cookie Notice</h2>
-      <p className="s-meta">Effective {UPDATED}</p>
-      <p>The prsnn website doesn’t use advertising cookies or tracking pixels, and we don’t sell or share your browsing with advertisers. To count visits we use Cloudflare Web Analytics, which sets no cookies and doesn’t identify you.</p>
+      <p className="s-meta">Effective {rich(UPDATED)}</p>
+      <p>The <Name /> website doesn’t use advertising cookies or tracking pixels, and we don’t sell or share your browsing with advertisers. To count visits we use Cloudflare Web Analytics, which sets no cookies and doesn’t identify you.</p>
       <h3>What the website does store</h3>
       <ul>
         <li><b>Strictly necessary:</b> anything needed to show the page you asked for and to keep the interest form from being abused.</li>
@@ -262,11 +263,11 @@ export function Cookies() {
 export function DeleteAccount() {
   return (
     <section id="delete-account">
-      <h2>Delete your prsnn account</h2>
+      <h2>Delete your <Name /> account</h2>
       <p className="s-meta">For members and companions</p>
       <h3>In the app</h3>
       <ol>
-        <li>Open prsnn and go to <b>Profile</b>.</li>
+        <li>Open <Name /> and go to <b>Profile</b>.</li>
         <li>Scroll down and tap <b>Delete account</b>.</li>
         <li>Confirm. If you have a paid booking that hasn’t happened yet, cancel it first.</li>
       </ol>
@@ -292,8 +293,8 @@ export function ChildSafety() {
   return (
     <section id="child-safety">
       <h2>Child Safety Standards</h2>
-      <p className="s-meta">Effective {UPDATED}</p>
-      <p>prsnn is only for adults aged 18 and over. We have zero tolerance for child sexual abuse and exploitation (CSAE), including child sexual abuse material (CSAM), grooming, and any attempt to arrange contact with a minor.</p>
+      <p className="s-meta">Effective {rich(UPDATED)}</p>
+      <p><Name /> is only for adults aged 18 and over. We have zero tolerance for child sexual abuse and exploitation (CSAE), including child sexual abuse material (CSAM), grooming, and any attempt to arrange contact with a minor.</p>
       <h3>How we prevent it</h3>
       <ul>
         <li>Everyone must confirm they are 18 or older to sign up. Companions’ age is checked against a government ID before their first booking.</li>
@@ -301,12 +302,12 @@ export function ChildSafety() {
         <li>Phone numbers and contact details are hidden in chat, and staff can review a reported booking’s chat.</li>
       </ul>
       <h3>How to report</h3>
-      <p>Report a profile or booking from the app, or email our child safety contact, {FOUNDER} (<Email />). If a child is in danger, call 112 or the Childline at 1098 straight away.</p>
+      <p>Report a profile or booking from the app, or email our child safety contact, {rich(FOUNDER)} (<Email />). If a child is in danger, call 112 or the Childline at 1098 straight away.</p>
       <h3>What we do</h3>
       <ul>
         <li>Remove the content and the account at once, and keep the evidence securely.</li>
         <li>Report CSAM and child exploitation to the National Cyber Crime Reporting Portal (cybercrime.gov.in) and the police, as Indian law (including the POCSO Act) requires, and cooperate with investigations.</li>
-        <li>Ban the people involved from prsnn permanently.</li>
+        <li>Ban the people involved from <Name /> permanently.</li>
       </ul>
     </section>
   );
@@ -317,8 +318,8 @@ export function Contact() {
     <section id="contact">
       <h2>Contact &amp; grievances</h2>
       <p>Support: <Link href="/support">Help &amp; support</Link></p>
-      <p><b>Grievance Officer:</b> {FOUNDER} (<Email />). We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
-      <p>prsnn · India. Registered address on the <Link href="/grievance">Grievance Redressal</Link> page.</p>
+      <p><b>Grievance Officer:</b> {rich(FOUNDER)} (<Email />). We acknowledge complaints within 24 hours and resolve them within 15 days, as Indian law requires. <Link href="/grievance">How to raise a complaint</Link>.</p>
+      <p><Name /> · India. Registered address on the <Link href="/grievance">Grievance Redressal</Link> page.</p>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import { rich } from './Brand';
 import Link from 'next/link';
 import { Mail } from './Icons';
 
@@ -8,12 +9,12 @@ export default function Faq({ items, help = true }) {
       <div className="s-card s-faq">
         {items.map(([q, a]) => (
           <details key={q}>
-            <summary>{q}</summary>
-            <p>{a}</p>
+            <summary>{rich(q)}</summary>
+            <p>{rich(a)}</p>
           </details>
         ))}
       </div>
-      {help ? (
+      {rich(help ? (
         <div className="s-help">
           <span style={{ display: 'flex', flexDirection: 'column' }}>
             <b style={{ fontSize: 18 }}>Need help?</b>
@@ -21,7 +22,7 @@ export default function Faq({ items, help = true }) {
           </span>
           <Link className="s-btn s-btn-dark" href="/support"><Mail size={18} />Contact support</Link>
         </div>
-      ) : null}
+      ) : null)}
     </>
   );
 }

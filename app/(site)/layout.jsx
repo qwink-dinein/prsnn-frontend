@@ -1,3 +1,4 @@
+import { rich } from './_components/Brand';
 import Link from 'next/link';
 import { Outfit, Urbanist } from 'next/font/google';
 import './site.css';
@@ -64,7 +65,7 @@ export default function SiteLayout({ children }) {
       <Link className="s-skip" href="#main">Skip to content</Link>
       <JsonLd data={graph} />
       <Header />
-      <main id="main">{children}</main>
+      <main id="main">{rich(children)}</main>
       <Footer />
     </div>
   );

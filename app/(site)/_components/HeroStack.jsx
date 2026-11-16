@@ -1,4 +1,5 @@
 'use client';
+import { rich } from './Brand';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { CATEGORIES } from '../_lib/content';
 import { useCategory } from './CategoryContext';
@@ -161,11 +162,11 @@ export default function HeroStack() {
         const front = a < 0.5;
         return (
           <div key={c.slug} className="s-deck-card" style={style} aria-hidden={!front} inert={!front && a > 1.4 ? true : undefined}>
-            {front ? (
+            {rich(front ? (
               <PhotoCard c={c} size="lg" priority={i === index} />
             ) : (
               <PhotoCard c={c} size="lg" price={false} onClick={() => pick(i)} />
-            )}
+            ))}
           </div>
         );
       })}

@@ -4,6 +4,13 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000').replace(/\/$/, '');
 /** Where people get help. The support email is shown only there, after a tap (see _lib/support.js). */
 export const SUPPORT_PATH = '/support';
+/** prsnn's social profiles (tracking parameters removed). Shown in the footer and listed as `sameAs` for search engines. */
+export const SOCIALS = [
+  { key: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/prsnn_india/' },
+  { key: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61594025475254' },
+  { key: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/company/prsnn/' },
+  { key: 'x', label: 'X (Twitter)', url: 'https://x.com/prsnn_india' },
+];
 export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || '';
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
 /** Android app file (APK) to download directly until the Google Play listing is live. Update after each new build. */

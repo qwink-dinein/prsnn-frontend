@@ -247,6 +247,9 @@
 .s-footer b { color: var(--porcelain); }
 .s-footer a { color: #d9dae3; text-decoration: none; }
 .s-footer a:hover { color: var(--white); text-decoration: underline; }
+.s-social { list-style: none; margin: 6px 0 0; padding: 0; display: flex; gap: 10px; }
+.s-footer .s-social a { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid rgba(241, 241, 244, 0.16); color: #d9dae3; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+.s-footer .s-social a:hover, .s-footer .s-social a:focus-visible { color: var(--midnight); background: var(--champagne); border-color: var(--champagne); text-decoration: none; }
 .s-footer-base { border-top: 1px solid rgba(241, 241, 244, 0.1); padding-top: 18px; padding-bottom: 32px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; }
 
 /* Sub-pages */

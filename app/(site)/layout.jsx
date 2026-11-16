@@ -4,7 +4,7 @@ import './site.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 import JsonLd from './_components/JsonLd';
-import { ANDROID_APK_URL, APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SUMMARY } from './_lib/content';
+import { ANDROID_APK_URL, APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SOCIALS, SUMMARY } from './_lib/content';
 
 const urbanist = Urbanist({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-urbanist', display: 'swap' });
 const outfit = Outfit({ subsets: ['latin'], weight: ['700'], variable: '--font-outfit', display: 'swap' });
@@ -16,7 +16,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-const sameAs = [APP_STORE_URL, PLAY_STORE_URL].filter(Boolean);
+const sameAs = [...SOCIALS.map((s) => s.url), APP_STORE_URL, PLAY_STORE_URL].filter(Boolean);
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [

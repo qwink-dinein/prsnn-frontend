@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CategoryProvider } from './_components/CategoryContext';
 import HeroStack from './_components/HeroStack';
+import FilmHero from './_components/FilmHero';
 import PhotoCardRow from './_components/PhotoCardRow';
 import CommunityBanner from './_components/CommunityBanner';
 import UseExplorer from './_components/UseExplorer';
@@ -39,6 +40,8 @@ export default function Home() {
   return (
     <CategoryProvider>
       <JsonLd data={faqLd} />
+
+      <FilmHero />
 
       <section className="s-hero" aria-labelledby="hero-h">
         <div className="s-wrap">

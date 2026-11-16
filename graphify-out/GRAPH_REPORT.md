@@ -1,7 +1,7 @@
 # Graph Report - prsnn-frontend  (2026-11-16)
 
 ## Corpus Check
-- 146 files · ~79,039 words
+- 146 files · ~79,266 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .css 2, .jsonld 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3955b1fe`
+- Built from commit: `0a060361`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,12 +62,12 @@
   src/tests/context/AuthContext.test.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 - `Home()` --calls--> `CommunityBanner()`  [EXTRACTED]
   app/(site)/page.jsx → app/(site)/_components/CommunityBanner.jsx
-- `Home()` --calls--> `Faq()`  [EXTRACTED]
-  app/(site)/page.jsx → app/(site)/_components/Faq.jsx
-- `Home()` --calls--> `FounderStory()`  [EXTRACTED]
-  app/(site)/page.jsx → app/(site)/_components/FounderStory.jsx
 - `Home()` --calls--> `HeroStack()`  [EXTRACTED]
   app/(site)/page.jsx → app/(site)/_components/HeroStack.jsx
+- `VerificationGuard()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/common/VerificationGuard.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
+- `Hero()` --calls--> `useAuth()`  [EXTRACTED]
+  legacy/web-app/app/(app)/components/home/Hero.jsx → legacy/web-app/app/(app)/context/AuthContext.jsx
 
 ## Import Cycles
 - None detected.

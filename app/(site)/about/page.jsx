@@ -6,7 +6,7 @@ export const metadata = {
   title: `Why prsnn exists · Founder ${FOUNDER}`,
   description: `${FOUNDER} built prsnn after his grandfather went missing for seven days: so someone trusted can be there when you can’t.`,
   alternates: { canonical: '/about' },
-  openGraph: { images: [{ url: '/site/founder.jpg', width: 1024, height: 1536 }] },
+  openGraph: { images: [{ url: '/site/founder-mukarram.jpg', width: 1206, height: 1203 }] },
 };
 
 export default function About() {

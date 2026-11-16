@@ -33,7 +33,7 @@ const graph = {
       contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', url: `${SITE_URL}/support` }],
       ...(sameAs.length ? { sameAs } : {}),
     },
-    { '@type': 'Person', '@id': `${SITE_URL}/#founder`, name: FOUNDER, jobTitle: 'Founder', worksFor: { '@id': `${SITE_URL}/#organization` }, image: `${SITE_URL}/site/founder.jpg` },
+    { '@type': 'Person', '@id': `${SITE_URL}/#founder`, name: FOUNDER, jobTitle: 'Founder', worksFor: { '@id': `${SITE_URL}/#organization` }, image: `${SITE_URL}/site/founder-mukarram.jpg` },
     { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: 'prsnn', inLanguage: 'en-IN', publisher: { '@id': `${SITE_URL}/#organization` } },
     {
       '@type': 'MobileApplication',

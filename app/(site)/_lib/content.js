@@ -161,7 +161,8 @@ export const CATEGORIES = [
   },
 ];
 /** The group photo for "Real people. Real connections." (app and website). */
-export const COMMUNITY_IMG = '/site/cat/community.jpg';
+export const COMMUNITY_IMG = '/site/cat/community-cafe.jpg';
+export const BECOME_COMPANION_IMG = '/site/cat/become-companion.jpg';
 
 /** What prsnn is not. Same words in the app (src/domain/rules.ts). */
 export const NOT_FOR = [

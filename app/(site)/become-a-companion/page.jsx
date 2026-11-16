@@ -21,7 +21,7 @@ const STEPS = [
 export default function Become() {
   return (
     <>
-      <PageHead title="Earn doing what you love." intro="Be good company for people who could use some: a concert, a walk, a quiet afternoon of study, a visit to someone’s parent. Your days, your hours, your lengths. Keep 80% of every booking." crumb="Become a companion" path="/become-a-companion" img="/site/cat/community.jpg"><StoreButtons /></PageHead>
+      <PageHead title="Earn doing what you love." intro="Be good company for people who could use some: a concert, a walk, a quiet afternoon of study, a visit to someone’s parent. Your days, your hours, your lengths. Keep 80% of every booking." crumb="Become a companion" path="/become-a-companion" img="/site/cat/become-companion.jpg"><StoreButtons /></PageHead>
       <section className="s-sec">
         <div className="s-wrap s-split" style={{ alignItems: 'flex-start' }}>
           <div>

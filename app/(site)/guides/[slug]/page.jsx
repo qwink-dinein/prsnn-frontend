@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     description: g.description,
     keywords: g.keywords,
     alternates: { canonical: `/guides/${g.slug}` },
-    openGraph: { type: 'article', title: g.title, description: g.description, url: `/guides/${g.slug}`, images: [{ url: '/site/cat/community.jpg', width: 1047, height: 756 }] },
+    openGraph: { type: 'article', title: g.title, description: g.description, url: `/guides/${g.slug}`, images: [{ url: '/site/cat/community-cafe.jpg', width: 1600, height: 781 }] },
   };
 }
 

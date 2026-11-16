@@ -6,7 +6,7 @@ import { COMMUNITY_IMG } from '../_lib/content';
 export default function CommunityBanner() {
   return (
     <div className="s-community">
-      <span className="s-community-photo"><Image src={COMMUNITY_IMG} alt="Four friends laughing together outdoors" fill sizes="(max-width: 860px) 100vw, 760px" /></span>
+      <span className="s-community-photo"><Image src={COMMUNITY_IMG} alt="Four friends laughing over coffee at a café" fill sizes="(max-width: 860px) 100vw, 760px" /></span>
       <span className="s-community-shade" />
       <div className="s-community-text">
         <h2 className="s-h2" style={{ margin: 0 }}>{'Real people.\nReal connections.'}</h2>

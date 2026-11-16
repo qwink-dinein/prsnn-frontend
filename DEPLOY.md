@@ -21,7 +21,8 @@ What's in the repo: `wrangler.jsonc` (serves `out/`, 404 page, trailing slashes)
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://prsnn.com` | Your real domain, no trailing slash. Used in canonical links, sitemap, structured data |
 | `NEXT_PUBLIC_SUPPORT_EMAIL` | your support address | Shown only on /support, after a tap (never as text in the HTML); kept out of the repo |
-| `NEXT_PUBLIC_PLAY_STORE_URL` | later | Turns the Google Play badge from "Coming soon" into a link |
+| `NEXT_PUBLIC_ANDROID_APK_URL` | optional | The Android APK download (Google Drive link); defaults to the one in `_lib/content.js`. Update after each new build |
+| `NEXT_PUBLIC_PLAY_STORE_URL` | later | Once set, the Android button becomes Google Play instead of the APK |
 | `NEXT_PUBLIC_APP_STORE_URL` | later | Same for the App Store badge |
 | `SENTRY_AUTH_TOKEN` | optional | Only to upload source maps to Sentry |
 

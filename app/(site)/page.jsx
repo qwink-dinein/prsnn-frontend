@@ -163,6 +163,7 @@ export default function Home() {
               <h2 id="join-h" className="s-h2">Your next plan is a tap away.</h2>
               <p className="s-lead" style={{ margin: 0 }}>Download prsnn, pick a plan, and a verified companion confirms. Free to download; pay only when you book.</p>
               <StoreButtons />
+              <p className="s-fine" style={{ margin: 0 }}>Android: tap Download for Android, then Download in Google Drive, open the file and tap Install (allow installs from your browser if asked). iPhone: coming soon to the App Store.</p>
             </div>
             <InterestForm />
           </div>

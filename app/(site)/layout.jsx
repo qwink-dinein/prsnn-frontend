@@ -4,7 +4,7 @@ import './site.css';
 import Header from './_components/Header';
 import Footer from './_components/Footer';
 import JsonLd from './_components/JsonLd';
-import { APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SUMMARY } from './_lib/content';
+import { ANDROID_APK_URL, APP_STORE_URL, FOUNDER, PLAY_STORE_URL, SITE_URL, SUMMARY } from './_lib/content';
 
 const urbanist = Urbanist({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-urbanist', display: 'swap' });
 const outfit = Outfit({ subsets: ['latin'], weight: ['700'], variable: '--font-outfit', display: 'swap' });
@@ -43,6 +43,7 @@ const graph = {
       applicationCategory: 'LifestyleApplication',
       description: 'Book a verified companion for platonic company in public places. Approved, ID-checked companions, fixed prices from ₹399, a panic button in every session.',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+      ...(PLAY_STORE_URL || ANDROID_APK_URL ? { downloadUrl: PLAY_STORE_URL || ANDROID_APK_URL } : {}),
       publisher: { '@id': `${SITE_URL}/#organization` },
     },
   ],

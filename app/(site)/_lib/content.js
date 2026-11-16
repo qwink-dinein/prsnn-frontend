@@ -6,6 +6,8 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3
 export const SUPPORT_PATH = '/support';
 export const APP_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || '';
 export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '';
+/** Android app file (APK) to download directly until the Google Play listing is live. Update after each new build. */
+export const ANDROID_APK_URL = process.env.NEXT_PUBLIC_ANDROID_APK_URL || 'https://drive.google.com/file/d/1Sil5PPOlmbVIL8gSCacvM7tJdopW1hGp/view?usp=sharing';
 export const FOUNDER = 'Mukarram Jah';
 /** prsnn is for the whole of India: companions sign up in their own city. */
 export const COUNTRY = 'India';
@@ -202,6 +204,7 @@ export const HOME_FAQ = [
   ['Can I cancel?', 'Yes, from the booking. Cancel at least 15 minutes before the start and 85% is refunded. If the companion cancels, you get everything back.'],
   ['How do you keep people safe?', 'Approved, ID-checked companions, public places only, phone numbers hidden in chat, and a panic button that alerts our team at once and every five minutes until you’re safe.'],
   ['Can I book for my mum or dad?', 'Yes. Choose “Companion for a Loved One”, add their name and number, and pick a public place or ask for a visit at their home. Pay from anywhere, even from abroad.'],
+  ['How do I install the Android app?', 'Tap “Download for Android” on this site. Google Drive opens: tap Download, then open the file. If your phone asks, allow your browser or Files app to install apps, then tap Install. The Google Play and App Store versions are coming soon.'],
   ['How do I become a companion?', 'Download the app, choose “Become a companion”, and finish the short sign-up. Our team reviews your profile; you keep 80% of every booking.'],
   ['Where is prsnn available?', 'Across India. Companions sign up in their own city, and your booking is offered to suitable companions where you are. If nobody can take it, you get a full refund.'],
 ];

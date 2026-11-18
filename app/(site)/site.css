@@ -73,6 +73,17 @@
 .s-nav a { color: #d9dae3; text-decoration: none; }
 .s-nav a:hover { color: var(--white); }
 .s-header .s-btn { min-height: 44px; border-radius: 999px; font-size: 15px; padding: 0 20px; }
+.s-head-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.s-head-earn .s-narrow { display: none; }
+@media (max-width: 560px) {
+  .s-head-earn .s-wide { display: none; }
+  .s-head-earn .s-narrow { display: inline; }
+  .s-header .s-btn { padding: 0 14px; font-size: 14px; }
+  .s-head-cta { gap: 8px; }
+}
+@media (max-width: 380px) {
+  .s-header .s-head-cta .s-btn-gold { display: none; }
+}
 
 /* Hero */
 .s-hero { background: var(--midnight); color: var(--porcelain); overflow: hidden; }
